@@ -1,0 +1,17 @@
+
+const string TOPIC_Trader_OC = "Händler in der Burg.";
+const string TOPIC_CityTrader = "Händler in Khorinis.";
+const string Topic_OutTrader = "Händler der Außenwelt";
+const string Topic_SoldierTrader = "Händler auf Onar's Hof.";
+const string TOPIC_Teacher = "Lehrer";
+const string TOPIC_Teacher_OC = "Lehrer in der Burg";
+const string Topic_SoldierTeacher = "Lehrer auf Onar's Hof.";
+const string Topic_OutTeacher = "Lehrer der Außenwelt";
+const string TOPIC_CityTeacher = "Lehrer in Khorinis.";
+const string TOPIC_TalentSmith = "Das Schmieden";
+const string TOPIC_TalentRunes = "Die Runen";
+const string TOPIC_TalentAlchemy = "Die Tränke";
+const string TOPIC_TalentAnimalTrophy = "Die Tierverwertung";
+const string TOPIC_TalentMagicCircle = "Die Kreise der Magie";
+const string Topic_Bonus = "Besonderes";
+const string Topic_Diebesgilde = "Diebesgilde";

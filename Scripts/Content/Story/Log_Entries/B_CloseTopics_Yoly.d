@@ -1,0 +1,59 @@
+
+func void B_CloseTopics_Yoly()
+{
+	B_CloseTopic(TOPIC_Bronkoeingeschuechtert,MIS_Sekob_Bronko_eingeschuechtert,0,6);
+	B_CloseTopic(TOPIC_BalthasarsSchafe,MIS_Balthasar_BengarsWeide,0,6);
+	if((hero.guild != GIL_NONE) && (hero.guild != GIL_SLD) && (hero.guild != GIL_DJG))
+	{
+		Log_SetTopicStatus(TOPIC_BalthasarsSchafe,LOG_OBSOLETE);
+	};
+	B_CloseTopic(TOPIC_AkilsSLDStillthere,0,TOPIC_END_AkilsSLDStillthere,6);
+	B_CloseTopic(TOPIC_Wettsaufen,MIS_Rukhar_Wettkampf,0,6);
+	B_CloseTopic(TOPIC_GaanSchnaubi,MIS_Gaan_Snapper,0,6);
+	B_CloseTopic(TOPIC_GromAskTeacher,0,Grom_TeachAnimalTrophy,6);
+	B_CloseTopic(TOPIC_DragomirsArmbrust,MIS_DragomirsArmbrust,0,6);
+	B_CloseTopic(TOPIC_KillLighthouseBandits,MIS_Jack_KillLighthouseBandits,0,6);
+	B_CloseTopic(TOPIC_Torlof_Dmt,MIS_Torlof_Dmt,0,6);
+	B_CloseTopic(TOPIC_HannaRetrieveLetter,MIS_HannaRetrieveLetter,0,6);
+	B_CloseTopic(Topic_MarcosJungs,MIS_Marcos_Jungs,0,6);
+	B_CloseTopic(TOPIC_Buster_KillShadowbeasts,MIS_Buster_KillShadowbeasts_DJG,0,6);
+	B_CloseTopic(TOPIC_Ulthar_HeileSchreine_PAL,MIS_Ulthar_HeileSchreine_PAL,0,6);
+	B_CloseTopic(TOPIC_DEMENTOREN,0,TOPIC_END_DEMENTOREN,999);
+	B_CloseTopic(TOPIC_INNOSEYE,0,TOPIC_END_INNOSEYE,4);
+	B_CloseTopic(TOPIC_TraitorPedro,0,SCFoundPedro,999);
+	B_CloseTopic(TOPIC_SekobDMT,0,TOPIC_END_SekobDMT,6);
+	B_CloseTopic(TOPIC_AkilSchafDiebe,MIS_Akil_SchafDiebe,0,6);
+	B_CloseTopic(TOPIC_HealHilda,MIS_HealHilda,0,6);
+	B_CloseTopic(TOPIC_MalethsGehstock,0,TOPIC_END_MalethsGehstock,6);
+	B_CloseTopic(TOPIC_BengarALLEIN,MIS_GetMalakBack,0,6);
+	B_CloseTopic(TOPIC_BengarALLEIN,MIS_BengarsHelpingSLD,0,6);
+	B_CloseTopic(TOPIC_MinenAnteile,0,TOPIC_END_MinenAnteile,6);
+	B_CloseTopic(TOPIC_RichterLakai,MIS_Lee_JudgeRichter,0,6);
+	B_CloseTopic(TOPIC_KillHoshPak,MIS_KillHoshPak,0,6);
+	B_CloseTopic(TOPIC_Urshak,0,URSHAK_SUCKED,6);
+	B_CloseTopic(TOPIC_DRACHENJAGD,0,MIS_AllDragonsDead,5);
+	B_CloseTopic(TOPIC_LobartsOrKProblem,0,TOPIC_END_LobartsOrKProblem,6);
+	B_CloseTopic(TOPIC_SylvioKillIceGolem,MIS_DJG_Sylvio_KillIceGolem,TOPIC_END_SylvioKillIceGolem,6);
+	B_CloseTopic(TOPIC_Dragonhunter,0,MIS_AllDragonsDead,5);
+	B_CloseTopic(TOPIC_AngarsAmulett,0,DJG_AngarGotAmulett,5);
+	B_CloseTopic(TOPIC_JanBecomesSmith,MIS_JanBecomesSmith,0,6);
+	B_CloseTopic(TOPIC_FerrosSword,MIS_FErrosSword,0,6);
+	B_CloseTopic(TOPIC_DRACHENEIER,0,TOPIC_END_DRACHENEIER,6);
+	B_CloseTopic(TOPIC_DRACHENEIERNeoras,MIS_Neoras_DragonEgg,0,6);
+	B_CloseTopic(TOPIC_OrcElite,0,TOPIC_END_OrcElite,6);
+	B_CloseTopic(TOPIC_KillTrollBlack,MIS_Raoul_KillTrollBlack,0,6);
+	B_CloseTopic(TOPIC_Dar_BringOrcEliteRing,MIS_Dar_BringOrcEliteRing,0,6);
+	B_CloseTopic(TOPIC_FoundVinosKellerei,0,FoundVinosKellerei,6);
+	B_CloseTopic(TOPIC_BrutusMeatbugs,0,TOPIC_END_BrutusMeatbugs,6);
+	B_CloseTopic(TOPIC_GeroldGiveFood,MIS_GeroldGiveFood,0,6);
+	B_CloseTopic(TOPIC_Sengrath_Missing,0,TOPIC_END_Sengrath_Missing,6);
+	B_CloseTopic(TOPIC_Talbin_Runs,0,TOPIC_END_Talbin_Runs,6);
+	B_CloseTopic(TOPIC_KerolothsGeldbeutel,0,TOPIC_END_KerolothsGeldbeutel,6);
+	B_CloseTopic(TOPIC_BuchHallenVonIrdorath,0,MIS_SCKnowsWayToIrdorath,6);
+	B_CloseTopic(TOPIC_bringRosiBackToSekob,MIS_bringRosiBackToSekob,0,6);
+	B_CloseTopic(TOPIC_RosisFlucht,MIS_RosisFlucht,0,6);
+	B_CloseTopic(TOPIC_HealRandolph,MIS_HealRandolph,0,6);
+	B_CloseTopic(TOPIC_HallenVonIrdorath,0,UndeadDragonIsDead,999);
+	B_CloseTopic(TOPIC_MyCrew,0,UndeadDragonIsDead,999);
+};
+

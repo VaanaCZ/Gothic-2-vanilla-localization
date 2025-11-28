@@ -1,0 +1,390 @@
+
+instance DIA_Halvor_EXIT(C_Info)
+{
+	npc = VLK_469_Halvor;
+	nr = 999;
+	condition = DIA_Halvor_EXIT_Condition;
+	information = DIA_Halvor_EXIT_Info;
+	permanent = TRUE;
+	description = Dialog_Ende;
+};
+
+
+func int DIA_Halvor_EXIT_Condition()
+{
+	return TRUE;
+};
+
+func void DIA_Halvor_EXIT_Info()
+{
+	AI_StopProcessInfos(self);
+};
+
+
+instance DIA_Halvor_PICKPOCKET(C_Info)
+{
+	npc = VLK_469_Halvor;
+	nr = 900;
+	condition = DIA_Halvor_PICKPOCKET_Condition;
+	information = DIA_Halvor_PICKPOCKET_Info;
+	permanent = TRUE;
+	description = Pickpocket_80;
+};
+
+
+func int DIA_Halvor_PICKPOCKET_Condition()
+{
+	return C_Beklauen(78,150);
+};
+
+func void DIA_Halvor_PICKPOCKET_Info()
+{
+	Info_ClearChoices(DIA_Halvor_PICKPOCKET);
+	Info_AddChoice(DIA_Halvor_PICKPOCKET,Dialog_Back,DIA_Halvor_PICKPOCKET_BACK);
+	Info_AddChoice(DIA_Halvor_PICKPOCKET,DIALOG_PICKPOCKET,DIA_Halvor_PICKPOCKET_DoIt);
+};
+
+func void DIA_Halvor_PICKPOCKET_DoIt()
+{
+	B_Beklauen();
+	Info_ClearChoices(DIA_Halvor_PICKPOCKET);
+};
+
+func void DIA_Halvor_PICKPOCKET_BACK()
+{
+	Info_ClearChoices(DIA_Halvor_PICKPOCKET);
+};
+
+
+instance DIA_Halvor_Hallo(C_Info)
+{
+	npc = VLK_469_Halvor;
+	nr = 2;
+	condition = DIA_Halvor_Hallo_Condition;
+	information = DIA_Halvor_Hallo_Info;
+	permanent = FALSE;
+	important = TRUE;
+};
+
+
+func int DIA_Halvor_Hallo_Condition()
+{
+	if(Npc_IsInState(self,ZS_Talk) && Wld_IsTime(5,0,20,0))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Halvor_Hallo_Info()
+{
+	AI_Output(self,other,"DIA_Halvor_Hallo_06_00");	//Hey, brauchst du Fisch? Bei mir bekommst du Fisch, ganz frisch aus den Tiefen des Meeres!
+	Log_CreateTopic(TOPIC_CityTrader,LOG_NOTE);
+	B_LogEntry(TOPIC_CityTrader,"Halvor handelt am Hafen mit Fischen.");
+};
+
+
+instance DIA_Halvor_TRADE(C_Info)
+{
+	npc = VLK_469_Halvor;
+	nr = 2;
+	condition = DIA_Halvor_TRADE_Condition;
+	information = DIA_Halvor_TRADE_Info;
+	permanent = TRUE;
+	trade = TRUE;
+	description = "Zeig mir deine Fische";
+};
+
+
+func int DIA_Halvor_TRADE_Condition()
+{
+	if(Npc_KnowsInfo(hero,DIA_Halvor_Hallo) && Wld_IsTime(5,0,20,0) && (Halvor_Ausgeliefert == FALSE))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Halvor_TRADE_Info()
+{
+	B_GiveTradeInv(self);
+	AI_Output(other,self,"DIA_Halvor_TRADE_15_00");	//Zeig mir deine Fische.
+};
+
+
+instance DIA_Halvor_Night(C_Info)
+{
+	npc = VLK_469_Halvor;
+	nr = 2;
+	condition = DIA_Halvor_Night_Condition;
+	information = DIA_Halvor_Night_Info;
+	permanent = TRUE;
+	important = TRUE;
+};
+
+
+func int DIA_Halvor_Night_Condition()
+{
+	if(Wld_IsTime(20,0,0,0) && Npc_IsInState(self,ZS_Talk) && (Halvor_Ausgeliefert == FALSE))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Halvor_Night_Info()
+{
+	AI_Output(self,other,"DIA_Halvor_Night_06_00");	//Hey, wenn du Fische kaufen willst, komm morgen an meinen Stand, okay?
+};
+
+
+instance DIA_Halvor_MESSAGE(C_Info)
+{
+	npc = VLK_469_Halvor;
+	nr = 2;
+	condition = DIA_Halvor_MESSAGE_Condition;
+	information = DIA_Halvor_MESSAGE_Info;
+	permanent = FALSE;
+	description = "Ich glaube, dieser Zettel gehört dir ...";
+	trade = FALSE;
+};
+
+
+func int DIA_Halvor_MESSAGE_Condition()
+{
+	if(Knows_Halvor == TRUE)
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Halvor_MESSAGE_Info()
+{
+	AI_Output(other,self,"DIA_Halvor_MESSAGE_15_00");	//Ich glaube, dieser Zettel gehört dir ...
+	AI_Output(self,other,"DIA_Halvor_MESSAGE_06_01");	//Was...? Lass mal sehen.
+	B_UseFakeScroll();
+	AI_Output(self,other,"DIA_Halvor_MESSAGE_06_02");	//(schwitzt) Äh... okay, ganz ruhig bleiben - äh ... hör zu. Du hast gewonnen. Ich habe die Waren von den Banditen weiterverkauft.
+	AI_Output(self,other,"DIA_Halvor_MESSAGE_06_03");	//(eilig) Aber kein Grund, direkt damit zur Miliz zu gehen, oder? Wir können uns doch ganz bestimmt einigen, oder?
+	Info_ClearChoices(DIA_Halvor_MESSAGE);
+	Info_AddChoice(DIA_Halvor_MESSAGE,"Dann lass mal dein Angebot hören",DIA_Halvor_MESSAGE_OFFER);
+	Info_AddChoice(DIA_Halvor_MESSAGE,"Dafür wanderst du in den Knast!",DIA_Halvor_MESSAGE_PRISON);
+};
+
+func void DIA_Halvor_MESSAGE_OFFER()
+{
+	AI_Output(other,self,"DIA_Halvor_MESSAGE_OFFER_15_00");	//Dann lass mal dein Angebot hören.
+	AI_Output(self,other,"DIA_Halvor_MESSAGE_OFFER_06_01");	//Also gut. Ich sag dir was. Ich kann dir mehr verkaufen als nur Fische.
+	AI_Output(self,other,"DIA_Halvor_MESSAGE_OFFER_06_03");	//Wenn du mir diesen lächerlichen Zettel überlässt und die Sache, äh ... vergisst, dann werden wir bestimmt gute Handelspartner.
+	Info_ClearChoices(DIA_Halvor_MESSAGE);
+	Info_AddChoice(DIA_Halvor_MESSAGE,"Okay, einverstanden.",DIA_Halvor_MESSAGE_Okay);
+	Info_AddChoice(DIA_Halvor_MESSAGE,"Dafür wanderst du in den Knast!",DIA_Halvor_MESSAGE_PRISON);
+	Info_AddChoice(DIA_Halvor_MESSAGE,"Ach ja? Was für Waren sollen das sein? ",DIA_Halvor_MESSAGE_DEAL);
+};
+
+func void DIA_Halvor_MESSAGE_PRISON()
+{
+	AI_Output(other,self,"DIA_Halvor_MESSAGE_PRISON_15_00");	//Dafür wanderst du in den Knast!
+	AI_Output(self,other,"DIA_Halvor_MESSAGE_PRISON_06_01");	//Nein warte, das kannst du nicht machen, ich bin doch nur ein ... ein kleiner Fisch.
+	AI_Output(other,self,"DIA_Halvor_MESSAGE_PRISON_15_02");	//Das hättest du dir vorher überlegen sollen. Jetzt werde ich Lord Andre benachrichtigen.
+	AI_Output(self,other,"DIA_Halvor_MESSAGE_PRISON_06_03");	//Das wirst du noch bereuen.
+	Betrayal_Halvor = TRUE;
+	AI_StopProcessInfos(self);
+};
+
+func void DIA_Halvor_MESSAGE_DEAL()
+{
+	AI_Output(other,self,"DIA_Halvor_MESSAGE_DEAL_15_00");	//Ach ja? Was für Ware soll das sein?
+	AI_Output(self,other,"DIA_Halvor_MESSAGE_DEAL_06_01");	//Nun, ich kann dir... ganz besondere Fische anbieten. Nicht nur gewöhnliche zum Essen.
+	AI_Output(other,self,"DIA_Halvor_MESSAGE_DEAL_15_02");	//Du meinst solche wie der, in dem auch deine Nachricht versteckt war?
+	AI_Output(self,other,"DIA_Halvor_MESSAGE_DEAL_06_03");	//Du hast es erfasst. Ich habe einige solcher ... Fische.
+};
+
+func void DIA_Halvor_MESSAGE_Okay()
+{
+	AI_Output(other,self,"DIA_Halvor_MESSAGE_Okay_15_00");	//Okay, einverstanden. Ich denke, wir können diese Sache für uns behalten.
+	AI_Output(self,other,"DIA_Halvor_MESSAGE_Okay_06_01");	//Danke. Wenn du mal wieder in der Gegend bist, schau vorbei. Ich habe bestimmt ein paar interessante Sachen für dich.
+	B_GiveInvItems(other,self,ItWr_HalvorMessage,1);
+	Npc_RemoveInvItems(self,ItWr_HalvorMessage,1);
+	Halvor_Deal = TRUE;
+	Diebesgilde_Okay = Diebesgilde_Okay + 1;
+	CreateInvItems(self,ItSe_ErzFisch,1);
+	CreateInvItems(self,ItSe_GoldFisch,1);
+	CreateInvItems(self,ItSe_Ringfisch,1);
+	CreateInvItems(self,ItSe_LockpickFisch,1);
+	Info_ClearChoices(DIA_Halvor_MESSAGE);
+};
+
+
+instance DIA_Halvor_Zeichen(C_Info)
+{
+	npc = VLK_469_Halvor;
+	nr = 2;
+	condition = DIA_Halvor_Zeichen_Condition;
+	information = DIA_Halvor_Zeichen_Info;
+	permanent = FALSE;
+	description = "(Diebeszeichen zeigen)";
+};
+
+
+func int DIA_Halvor_Zeichen_Condition()
+{
+	if((Knows_SecretSign == TRUE) && (Betrayal_Halvor == FALSE))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Halvor_Zeichen_Info()
+{
+	AI_PlayAni(other,"T_YES");
+	AI_Output(self,other,"DIA_Halvor_Zeichen_06_00");	//Verstehe. Du bist nicht nur hier, um Fische zu kaufen.
+	AI_Output(self,other,"DIA_Halvor_Zeichen_06_01");	//(leise) Ich mache dir ein Angebot. Wenn du silberne Teller oder Kelche hast - ich nehme sie dir für einen guten Preis ab.
+	CreateInvItems(self,ItKE_lockpick,20);
+	Log_CreateTopic(Topic_Diebesgilde,LOG_NOTE);
+	B_LogEntry(Topic_Diebesgilde,"Halvor kauft mir silberne Teller und Kelche zu einem besseren Preis als jeder andere Händler ab.");
+};
+
+
+instance DIA_Halvor_Hehlerei(C_Info)
+{
+	npc = VLK_469_Halvor;
+	nr = 2;
+	condition = DIA_Halvor_Hehlerei_Condition;
+	information = DIA_Halvor_Hehlerei_Info;
+	permanent = TRUE;
+	description = "(Alle Teller und Kelche verkaufen)";
+};
+
+
+func int DIA_Halvor_Hehlerei_Condition()
+{
+	if(Npc_KnowsInfo(other,DIA_Halvor_Zeichen) && (Betrayal_Halvor == FALSE))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Halvor_Hehlerei_Info()
+{
+	Halvor_Score = 0;
+	if(Halvor_Day != Wld_GetDay())
+	{
+		if((Npc_HasItems(other,ItMi_SilverPlate) >= 1) || (Npc_HasItems(other,ItMi_SilverCup) >= 1))
+		{
+			Halvor_Score = (Npc_HasItems(other,ItMi_SilverPlate) * (Value_SilverPlate / 2)) + (Npc_HasItems(other,ItMi_SilverCup) * (Value_SilverCup / 2));
+			if(Halvor_Score <= 1000)
+			{
+				AI_Output(self,other,"DIA_Halvor_Zeichen_06_05");	//Ich gebe dir für deinen gesamten Kram ...
+				B_Say_Gold(self,other,Halvor_Score);
+				Info_ClearChoices(DIA_Halvor_Hehlerei);
+				Info_AddChoice(DIA_Halvor_Hehlerei,"Okay, ich verkaufe",DIA_Halvor_Hehlerei_Annehmen);
+				Info_AddChoice(DIA_Halvor_Hehlerei,"Ich überleg's mir nochmal (ZURÜCK)",DIA_Halvor_Hehlerei_Ablehnen);
+			}
+			else
+			{
+				AI_Output(self,other,"DIA_Halvor_Zeichen_06_06");	//Du hast zu viel Zeug dabei. Soviel Gold kann ich dir nicht auf einmal geben.
+				Info_ClearChoices(DIA_Halvor_Hehlerei);
+			};
+		}
+		else
+		{
+			AI_Output(self,other,"DIA_Halvor_Zeichen_06_02");	//Komm wieder, wenn du silberne Teller oder Kelche hast.
+			Info_ClearChoices(DIA_Halvor_Hehlerei);
+		};
+	}
+	else if(Wld_GetDay() == 0)
+	{
+		AI_Output(self,other,"DIA_Halvor_Zeichen_06_03");	//Ab morgen kannst du dein Silberzeug bei mir loswerden. Heute noch nicht.
+	}
+	else
+	{
+		AI_Output(self,other,"DIA_Halvor_Zeichen_06_04");	//Für heute mache ich keine Geschäfte mehr mit dir. Komm morgen wieder, okay?
+	};
+};
+
+func void DIA_Halvor_Hehlerei_Annehmen()
+{
+	CreateInvItems(other,ItRw_Arrow,Npc_HasItems(other,ItMi_SilverPlate) + Npc_HasItems(other,ItMi_SilverCup));
+	B_GiveInvItems(other,self,ItRw_Arrow,Npc_HasItems(other,ItMi_SilverPlate) + Npc_HasItems(other,ItMi_SilverCup));
+	Npc_RemoveInvItems(other,ItMi_SilverCup,Npc_HasItems(other,ItMi_SilverCup));
+	Npc_RemoveInvItems(other,ItMi_SilverPlate,Npc_HasItems(other,ItMi_SilverPlate));
+	B_GiveInvItems(self,other,ItMi_Gold,Halvor_Score);
+	AI_Output(other,self,"DIA_Halvor_Zeichen_Annehmen_15_00");	//Gut, ich verkaufe.
+	AI_Output(self,other,"DIA_Halvor_Zeichen_Annehmen_06_01");	//Das war ein gutes Geschäft für heute. Komm besser morgen wieder, sonst wird noch jemand misstrauisch, verstehst du?
+	Halvor_Day = Wld_GetDay();
+	Info_ClearChoices(DIA_Halvor_Hehlerei);
+};
+
+func void DIA_Halvor_Hehlerei_Ablehnen()
+{
+	Info_ClearChoices(DIA_Halvor_Hehlerei);
+};
+
+
+instance DIA_Halvor_Crew(C_Info)
+{
+	npc = VLK_469_Halvor;
+	nr = 51;
+	condition = DIA_Halvor_Crew_Condition;
+	information = DIA_Halvor_Crew_Info;
+	permanent = FALSE;
+	description = "Ich suche eine Crew.";
+};
+
+
+func int DIA_Halvor_Crew_Condition()
+{
+	if((MIS_SCKnowsWayToIrdorath == TRUE) && (Halvor_Ausgeliefert == FALSE))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_Halvor_Crew_Info()
+{
+	AI_Output(other,self,"DIA_Halvor_Crew_15_00");	//Ich suche eine Crew.
+	AI_Output(self,other,"DIA_Halvor_Crew_06_01");	//Wie willst du denn von hier wegkommen?
+	Info_ClearChoices(DIA_Halvor_Crew);
+	Info_AddChoice(DIA_Halvor_Crew,"Das ist meine Sache.",DIA_Halvor_Crew_MyThing);
+	Info_AddChoice(DIA_Halvor_Crew,"Ich will ein Schiff klauen.",DIA_Halvor_Crew_StealShip);
+};
+
+func void DIA_Halvor_Crew_MyThing()
+{
+	AI_Output(other,self,"DIA_Halvor_Crew_MyThing_15_00");	//Das ist meine Sache.
+	AI_Output(self,other,"DIA_Halvor_Crew_MyThing_06_01");	//Wie du meinst. Geht mich ja auch nichts an.
+	Info_ClearChoices(DIA_Halvor_Crew);
+	Info_AddChoice(DIA_Halvor_Crew,Dialog_Back,DIA_Halvor_Crew_BACK);
+	Info_AddChoice(DIA_Halvor_Crew,"Willst du mit?",DIA_Halvor_Crew_JoinMe);
+	Info_AddChoice(DIA_Halvor_Crew,"Kannst du mir helfen?",DIA_Halvor_Crew_HelpMe);
+};
+
+func void DIA_Halvor_Crew_StealShip()
+{
+	AI_Output(other,self,"DIA_Halvor_Crew_StealShip_15_00");	//Ich will ein Schiff klauen.
+	AI_Output(self,other,"DIA_Halvor_Crew_StealShip_06_01");	//Verarschen kann ich mich alleine, die Paladine machen kurzen Prozess mit dir, wenn sie dich erwischen.
+	AI_Output(self,other,"DIA_Halvor_Crew_StealShip_06_02");	//Aber bitte, es ist ja nicht mein Leben, das du riskierst.
+	Info_ClearChoices(DIA_Halvor_Crew);
+	Info_AddChoice(DIA_Halvor_Crew,Dialog_Back,DIA_Halvor_Crew_BACK);
+	Info_AddChoice(DIA_Halvor_Crew,"Willst du mit?",DIA_Halvor_Crew_JoinMe);
+	if(Npc_IsDead(Jack) == FALSE)
+	{
+		Info_AddChoice(DIA_Halvor_Crew,"Kannst du mir helfen?",DIA_Halvor_Crew_HelpMe);
+	};
+};
+
+func void DIA_Halvor_Crew_JoinMe()
+{
+	AI_Output(other,self,"DIA_Halvor_Crew_JoinMe_15_00");	//Willst du mit?
+	AI_Output(self,other,"DIA_Halvor_Crew_JoinMe_06_01");	//Nee, lass mal. Ich hab hier genug zu tun und habe, ehrlich gesagt, keine Lust auf eine der orkische Sklavengaleeren zu treffen.
+	AI_Output(self,other,"DIA_Halvor_Crew_JoinMe_06_02");	//Aber ich wünsch dir viel Glück.
+};
+
+func void DIA_Halvor_Crew_HelpMe()
+{
+	AI_Output(other,self,"DIA_Halvor_Crew_HelpMe_15_00");	//Kannst du mir helfen?
+	AI_Output(self,other,"DIA_Halvor_Crew_HelpMe_06_01");	//Ich bin da der Falsche. Aber sprich doch mal mit Jack, er lungert bestimmt hier irgendwo im Hafen rum. Er weiß am besten, was du brauchst, um auf große Fahrt zu gehen.
+};
+
+func void DIA_Halvor_Crew_BACK()
+{
+	Info_ClearChoices(DIA_Halvor_Crew);
+};
+

@@ -1,0 +1,127 @@
+
+instance DIA_OCVLK_1_EXIT(C_Info)
+{
+	nr = 999;
+	condition = DIA_OCVLK_1_EXIT_Condition;
+	information = DIA_OCVLK_1_EXIT_Info;
+	permanent = TRUE;
+	description = Dialog_Ende;
+};
+
+
+func int DIA_OCVLK_1_EXIT_Condition()
+{
+	return TRUE;
+};
+
+func void DIA_OCVLK_1_EXIT_Info()
+{
+	AI_StopProcessInfos(self);
+};
+
+
+instance DIA_OCVLK_1_PEOPLE(C_Info)
+{
+	nr = 3;
+	condition = DIA_OCVLK_1_PEOPLE_Condition;
+	information = DIA_OCVLK_1_PEOPLE_Info;
+	permanent = TRUE;
+	description = "Wer hat hier das Kommando?";
+};
+
+
+func int DIA_OCVLK_1_PEOPLE_Condition()
+{
+	if((Kapitel <= 4) && (MIS_KilledDragons < 4))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_OCVLK_1_PEOPLE_Info()
+{
+	AI_Output(other,self,"DIA_OCVLK_1_PEOPLE_15_00");	//Wer hat hier das Kommando?
+	AI_Output(self,other,"DIA_OCVLK_1_PEOPLE_01_01");	//Kommandant Garond. Aber seit sich die Lage hier zugespitzt hat, hat er sich nicht mehr außerhalb seines Thronsaals blicken lassen. Ich fürchte, das nimmt kein gutes Ende.
+};
+
+
+instance DIA_OCVLK_1_LOCATION(C_Info)
+{
+	nr = 2;
+	condition = DIA_OCVLK_1_LOCATION_Condition;
+	information = DIA_OCVLK_1_LOCATION_Info;
+	permanent = TRUE;
+	description = "Was weißt du über das Minental?";
+};
+
+
+func int DIA_OCVLK_1_LOCATION_Condition()
+{
+	if((Kapitel <= 4) && (MIS_KilledDragons < 4))
+	{
+		return TRUE;
+	};
+};
+
+func void DIA_OCVLK_1_LOCATION_Info()
+{
+	AI_Output(other,self,"DIA_OCVLK_1_LOCATION_15_00");	//Was weißt du über das Minental?
+	AI_Output(self,other,"DIA_OCVLK_1_LOCATION_01_01");	//Ein paar von unseren Jungs sind bei den Minen und schürfen noch, soviel ich weiß.
+	AI_Output(self,other,"DIA_OCVLK_1_LOCATION_01_02");	//Ich möchte nicht mit denen tauschen. Im ganzen Tal wimmelt es nur so von Orks. Ganz zu schweigen von den Drachen.
+};
+
+
+instance DIA_OCVLK_1_STANDARD(C_Info)
+{
+	nr = 1;
+	condition = DIA_OCVLK_1_STANDARD_Condition;
+	information = DIA_OCVLK_1_STANDARD_Info;
+	permanent = TRUE;
+	description = "Wie ist die Lage?";
+};
+
+
+func int DIA_OCVLK_1_STANDARD_Condition()
+{
+	return TRUE;
+};
+
+func void DIA_OCVLK_1_STANDARD_Info()
+{
+	AI_Output(other,self,"DIA_OCVLK_1_STANDARD_15_00");	//Wie ist die Lage?
+	if(Kapitel <= 3)
+	{
+		AI_Output(self,other,"DIA_OCVLK_1_STANDARD_01_01");	//Die Orks haben uns in der Zange! Ohne Unterstützung wird das hier keiner von uns überleben! Mich wundert, dass die Drachen uns nicht direkt den Rest geben!
+	};
+	if(Kapitel == 4)
+	{
+		if(MIS_KilledDragons < 4)
+		{
+			AI_Output(self,other,"DIA_OCVLK_1_STANDARD_01_02");	//Endlich bekommen wir zumindest ein bisschen Verstärkung hier.
+		}
+		else
+		{
+			AI_Output(self,other,"DIA_OCVLK_1_STANDARD_01_03");	//Ich habe gehört, alle Drachen sind getötet worden? Innos sei Dank!
+		};
+	};
+	if(Kapitel >= 5)
+	{
+		if(MIS_OCGateOpen == FALSE)
+		{
+			AI_Output(self,other,"DIA_OCVLK_1_STANDARD_01_04");	//Dieses verfluchte Erz. Wir sollten den ganzen Erzvorrat von den Zinnen werfen. Vielleicht lassen uns die Orks dann in Ruhe.
+		}
+		else
+		{
+			AI_Output(self,other,"DIA_OCVLK_1_STANDARD_01_05");	//Diese lächerlichen Kisten, die sie notdürftig vor den Eingang gestapelt haben, werden die Orks auch nicht aufhalten!
+		};
+	};
+};
+
+func void B_AssignAmbientInfos_OCVLK_1(var C_Npc slf)
+{
+	dia_ocvlk_1_exit.npc = Hlp_GetInstanceID(slf);
+	dia_ocvlk_1_people.npc = Hlp_GetInstanceID(slf);
+	dia_ocvlk_1_location.npc = Hlp_GetInstanceID(slf);
+	dia_ocvlk_1_standard.npc = Hlp_GetInstanceID(slf);
+};
+
