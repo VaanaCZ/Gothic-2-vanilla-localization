@@ -118,7 +118,7 @@ func void DIA_Jack_Job_Info()
 	AI_Output(self,other,"DIA_Jack_Job_14_10");	//Eh. Sollen sie doch. Dann wär'n sie wenigstens raus aus meinem Turm.
 	Log_CreateTopic(TOPIC_KillLighthouseBandits,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_KillLighthouseBandits,LOG_Running);
-	B_LogEntry(TOPIC_KillLighthouseBandits,"Der alte Seemann Jack kann nicht in seinen alten Leuchtturm zurück, solange dort die Bandíten hausen.");
+	B_LogEntry(TOPIC_KillLighthouseBandits,TOPIC_KillLighthouseBandits_1);
 	MIS_Jack_KillLighthouseBandits = LOG_Running;
 };
 
@@ -379,7 +379,7 @@ func void DIA_Jack_BEMYCAPTAIN_seaman()
 	AI_Output(self,other,"DIA_Jack_BEMYCAPTAIN_seaman_14_03");	//(lacht) Das wär ja was. Na schön. Aber meinen Leuchtturm werde ich nicht so einfach aufgeben. Mmh. Was machen wir denn da?
 	Log_CreateTopic(Topic_Captain,LOG_MISSION);
 	Log_SetTopicStatus(Topic_Captain,LOG_Running);
-	B_LogEntry(Topic_Captain,"Jack, der alte Seemann aus dem Hafen wäre ein guter Kapitän. Allerdings müsste ich ihm vorher eine Vertretung für seinen Leuchturm suchen.");
+	B_LogEntry(Topic_Captain,Topic_Captain_8);
 	Info_ClearChoices(DIA_Jack_BEMYCAPTAIN);
 	Info_AddChoice(DIA_Jack_BEMYCAPTAIN,"Schon gut. War nur so eine Idee.",DIA_Jack_BEMYCAPTAIN_no);
 	Info_AddChoice(DIA_Jack_BEMYCAPTAIN,"Was wäre, wenn ich dir jemanden bringe...?",DIA_Jack_BEMYCAPTAIN_seaman_NewOfficer);

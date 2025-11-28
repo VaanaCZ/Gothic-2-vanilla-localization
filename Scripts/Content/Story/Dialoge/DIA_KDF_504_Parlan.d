@@ -293,7 +293,7 @@ func void DIA_Parlan_WELCOME_Info()
 	Snd_Play("LEVELUP");
 	Log_CreateTopic(Topic_Gemeinschaft,LOG_MISSION);
 	Log_SetTopicStatus(Topic_Gemeinschaft,LOG_Running);
-	B_LogEntry(Topic_Gemeinschaft,"Als Novize ist es meine Pflicht, Arbeiten für die Gemeinschaft zu erledigen.");
+	B_LogEntry(Topic_Gemeinschaft,Topic_Gemeinschaft_1);
 	if(Liesel_Giveaway == FALSE)
 	{
 		AI_Output(self,other,"DIA_Parlan_WELCOME_05_07");	//Doch bring zunächst dein Schaf zu Opolos, er wird sich darum kümmern.
@@ -437,7 +437,7 @@ func void DIA_Parlan_WORK_Info()
 		AI_Output(self,other,"DIA_Parlan_WORK_05_04");	//Ich werde dabei über dich wachen, und wenn du deine Pflichten zur Genüge erfüllt hast, bekommst du die Erlaubnis, in der Bibliothek das Wort Innos zu studieren.
 		DIA_Parlan_WORK_perm = TRUE;
 		MIS_KlosterArbeit = LOG_Running;
-		B_LogEntry(Topic_Gemeinschaft,"Wenn ich die Aufgaben für die Magier erledige, bekomme ich die Erlaubnis in der Bibliothek zu studieren.");
+		B_LogEntry(Topic_Gemeinschaft,Topic_Gemeinschaft_2);
 	};
 };
 
@@ -581,7 +581,7 @@ func void DIA_Parlan_Aufgabe_Info()
 	MIS_ParlanFegen = LOG_Running;
 	Log_CreateTopic(Topic_ParlanFegen,LOG_MISSION);
 	Log_SetTopicStatus(Topic_ParlanFegen,LOG_Running);
-	B_LogEntry(Topic_ParlanFegen,"Meister Parlan wünscht, das ich die vier Novizenkammern ausfege. Eine Aufgabe für die ich alleine bestimmt eine Ewigkeit brauche. ");
+	B_LogEntry(Topic_ParlanFegen,Topic_ParlanFegen_6);
 };
 
 
@@ -652,7 +652,7 @@ func void DIA_Parlan_LEARN_Info()
 	AI_Output(other,self,"DIA_Parlan_LEARN_15_00");	//Wie kann ich die Kunst der Magie lernen?
 	AI_Output(self,other,"DIA_Parlan_LEARN_05_01");	//Du bist nicht hier, um die Gabe der Magie zu empfangen, du bist hier, um Innos zu dienen.
 	AI_Output(self,other,"DIA_Parlan_LEARN_05_02");	//Aber ich kann dir zeigen, wie du deine magische Kraft steigern kannst.
-	B_LogEntry(Topic_KlosterTeacher,"Meister Parlan kann mir dabei helfen, meine magische Kraft zu steigern.");
+	B_LogEntry(Topic_KlosterTeacher,Topic_KlosterTeacher_7);
 };
 
 
@@ -681,7 +681,7 @@ func void DIA_Parlan_KNOWSJUDGE_Info()
 	AI_Output(self,other,"DIA_Parlan_KNOWSJUDGE_05_01");	//Was ...? Hm ... (eindringlich) Ist das wirklich dein Ernst?
 	AI_Output(other,self,"DIA_Parlan_KNOWSJUDGE_15_02");	//Ich bestehe darauf.
 	AI_Output(self,other,"DIA_Parlan_KNOWSJUDGE_05_03");	//Du bist ein außergewöhnlicher Novize. Nun gut, wenn es dein Ernst ist, dann sprich mit Meister Pyrokar.
-	B_LogEntry(TOPIC_FireContest,"Wenn ich die Prüfung des Feuers fordern will, sollte ich mit Meister Pyrokar sprechen.");
+	B_LogEntry(TOPIC_FireContest,TOPIC_FireContest_3);
 };
 
 
@@ -869,7 +869,7 @@ func void DIA_Parlan_CIRCLE3_Info()
 			AI_Output(self,other,"DIA_Parlan_TECH_CIRCLE3_05_01");	//Ja, die Zeit ist gekommen. Tritt ein in den dritten Kreis der Magie. Neue Zauber erwarten dich.
 			AI_Output(self,other,"DIA_Parlan_TECH_CIRCLE3_05_02");	//Du wirst sie brauchen, denn das Böse ist nahe gekommen und nur mit der Macht Innos kann es aufgehalten werden.
 			AI_Output(self,other,"DIA_Parlan_TECH_CIRCLE3_05_03");	//Ich habe dich nun alle Kreise gelehrt, die ich weitergeben kann. In die höheren Kreise wird dich Karas geleiten.
-			B_LogEntry(Topic_KlosterTeacher,"Bruder Parlan hat mich die ersten drei Kreise gelehrt. In die nächsten Kreise wird mich Bruder Karras geleiten.");
+			B_LogEntry(Topic_KlosterTeacher,Topic_KlosterTeacher_8);
 		};
 	}
 	else

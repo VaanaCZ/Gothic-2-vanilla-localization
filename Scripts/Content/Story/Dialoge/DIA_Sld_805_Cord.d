@@ -117,9 +117,9 @@ func void DIA_Cord_WannaJoin_Info()
 		AI_Output(self,other,"DIA_Cord_WannaJoin_14_11");	//Was dir noch an Wissen fehlt, kannst du von mir lernen.
 		Cord_Approved = TRUE;
 		B_GivePlayerXP(XP_Cord_Approved);
-		B_LogEntry(TOPIC_SLDRespekt,"Cord's Stimme habe ich im Sack.");
+		B_LogEntry(TOPIC_SLDRespekt,TOPIC_SLDRespekt_6);
 		Log_CreateTopic(Topic_SoldierTeacher,LOG_NOTE);
-		B_LogEntry(Topic_SoldierTeacher,"Cord kann mich im Umgang mit Ein - und Zweihändern unterrichten.");
+		B_LogEntry(Topic_SoldierTeacher,Topic_SoldierTeacher_4);
 	}
 	else
 	{
@@ -128,7 +128,7 @@ func void DIA_Cord_WannaJoin_Info()
 		B_Cord_BeBetter();
 		Log_CreateTopic(TOPIC_CordProve,LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_CordProve,LOG_Running);
-		B_LogEntry(TOPIC_CordProve,"Cord wird mir seine Stimme geben, wenn ich ein besserer Kämpfer bin.");
+		B_LogEntry(TOPIC_CordProve,TOPIC_CordProve_1);
 	};
 };
 

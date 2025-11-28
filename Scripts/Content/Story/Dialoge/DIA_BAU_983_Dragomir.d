@@ -128,7 +128,7 @@ func void DIA_Dragomir_Dangerous_Info()
 	AI_Output(self,other,"DIA_Dragomir_Dangerous_12_07");	//Dabei ist mir meine Armbrust aus der Hand geglitten. Ich wette, sie liegt noch heute da oben bei dem seltsamen Steinkreis im Norden.
 	Log_CreateTopic(TOPIC_DragomirsArmbrust,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_DragomirsArmbrust,LOG_Running);
-	B_LogEntry(TOPIC_DragomirsArmbrust,"Dragomir hat seine Armbrust bei einem seltsamen Steinkreis in den hohen nordlichen Bergen verloren.");
+	B_LogEntry(TOPIC_DragomirsArmbrust,TOPIC_DragomirsArmbrust_1);
 	MIS_DragomirsArmbrust = LOG_Running;
 };
 

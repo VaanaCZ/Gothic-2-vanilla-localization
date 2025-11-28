@@ -52,7 +52,7 @@ func void DIA_Dexter_Hallo_Info()
 	AI_Output(self,other,"DIA_Dexter_Hallo_09_07");	//Er trug eine schwarze Robe mit Kapuze und eine Maske überm Gesicht. Und er sprach mit einer Stimme, die alles andere als menschlich war.
 	AI_Output(self,other,"DIA_Dexter_Hallo_09_08");	//Aber er bot mir seine Hilfe an. Er brachte mich aus dem Tal und bot mir eintausend Goldstücke für deinen Kopf.
 	AI_Output(self,other,"DIA_Dexter_Hallo_09_09");	//Hey, was sollte ich machen? Wenn ich abgelehnt hätte, dann hätte er mich getötet!
-	B_LogEntry(Topic_Bandits,"Dexter hat die Steckbriefe verteilt. Typen mit schwarzen Kapuzen haben ihn damit beauftragt.");
+	B_LogEntry(Topic_Bandits,Topic_Bandits_3);
 	MIS_Steckbriefe = LOG_SUCCESS;
 	B_GivePlayerXP(XP_Ambient);
 };

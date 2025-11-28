@@ -14,7 +14,7 @@ func void evt_archoldead_func()
 	};
 	if(EVT_ARCHOLDEAD_FUNC_OneTime == FALSE)
 	{
-		B_LogEntry(TOPIC_HallenVonIrdorath,"Ich habe so etwas wie einen Tempel gefunden. Er wird von einer Unmenge von untoten Wesen bewohnt. Erinnert mich alles verdammt an diesen elenden Orctempel des Schläfers. Diesmal werde ich nicht versagen. Diesmal nicht!");
+		B_LogEntry(TOPIC_HallenVonIrdorath,TOPIC_HallenVonIrdorath_7);
 		EVT_ARCHOLDEAD_FUNC_OneTime = TRUE;
 	};
 };

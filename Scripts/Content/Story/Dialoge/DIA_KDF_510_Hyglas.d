@@ -136,7 +136,7 @@ func void DIA_Hyglas_CONTEST_Info()
 	AI_Output(other,self,"DIA_Hyglas_CONTEST_15_02");	//Ich weiß nicht, wie ich es sonst schaffen soll.
 	AI_Output(self,other,"DIA_Hyglas_CONTEST_14_03");	//Hm ...
 	AI_Output(self,other,"DIA_Hyglas_CONTEST_14_04");	//Gut, ich bringe dir die Formel bei. Aber erst, wenn du alle Rohstoffe dafür besorgt hast.
-	B_LogEntry(TOPIC_Rune,"Hyglas ist bereit mir die Formel für die Feuerpfeil Rune beizubringen, wenn ich alle Rohstoffe zusammen habe.");
+	B_LogEntry(TOPIC_Rune,TOPIC_Rune_2);
 };
 
 
@@ -247,7 +247,7 @@ func void DIA_Hyglas_GOTRUNE_Info()
 	AI_Output(other,self,"DIA_Hyglas_GOTRUNE_15_00");	//Ich habe die Rune erschaffen.
 	AI_Output(self,other,"DIA_Hyglas_GOTRUNE_14_01");	//Schön, schön. Diese Prüfung hast du wohl bestanden. Das war ja auch nicht besonders schwierig.
 	AI_Output(self,other,"DIA_Hyglas_GOTRUNE_14_02");	//Dann geh jetzt zu Ulthar und zeige ihm dein Werk.
-	B_LogEntry(TOPIC_Rune,"Ich habe eine Feuerpfeil - Rune hergestellt.");
+	B_LogEntry(TOPIC_Rune,TOPIC_Rune_3);
 };
 
 
@@ -452,7 +452,7 @@ func void DIA_Hyglas_BringBook_Yes()
 	Info_ClearChoices(DIA_Hyglas_BringBook);
 	Log_CreateTopic(TOPIC_HyglasBringBook,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_HyglasBringBook,LOG_Running);
-	B_LogEntry(TOPIC_HyglasBringBook,"Ich soll Hyglas das Buch 'Göttliche Kraft der Gestirne' besorgen. Ich soll bei den Händlern in der Stadt suchen.");
+	B_LogEntry(TOPIC_HyglasBringBook,TOPIC_HyglasBringBook_1);
 };
 
 

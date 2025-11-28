@@ -55,7 +55,7 @@ func void DIA_NOV_8_Fegen_Info()
 			B_GivePlayerXP(XP_Feger);
 			AI_StopProcessInfos(self);
 			Npc_ExchangeRoutine(self,"FEGEN");
-			B_LogEntry(Topic_ParlanFegen,"Ich habe einen Novizen gefunden, der mir hilft, die Kamemrn zu fegen.");
+			B_LogEntry(Topic_ParlanFegen,Topic_ParlanFegen_5);
 		}
 		else
 		{

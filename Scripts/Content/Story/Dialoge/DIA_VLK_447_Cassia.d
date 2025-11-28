@@ -239,9 +239,9 @@ func void DIA_Cassia_Lernen_Info()
 	AI_Output(self,other,"DIA_Cassia_Lernen_16_03");	//Und ich kann dich im Taschendiebstahl unterweisen.
 	AI_Output(self,other,"DIA_Cassia_Lernen_16_04");	//Außerdem werde ich dir helfen, geschickter zu werden. Denn die Geschicklichkeit ist der Schlüssel zu deinen Fertigkeiten.
 	Log_CreateTopic(TOPIC_CityTeacher,LOG_NOTE);
-	B_LogEntry(TOPIC_CityTeacher,"Cassia kann mich im Taschendiebstahl unterrichten und sie kann mir dabei helfen, geschickter zu werden.");
-	B_LogEntry(TOPIC_CityTeacher,"Ramirez kann mir das Schlösser knacken beibringen.");
-	B_LogEntry(TOPIC_CityTeacher,"Jesper kann mir das Schleichen beibringen.");
+	B_LogEntry(TOPIC_CityTeacher,TOPIC_CityTeacher_18);
+	B_LogEntry(TOPIC_CityTeacher,TOPIC_CityTeacher_19);
+	B_LogEntry(TOPIC_CityTeacher,TOPIC_CityTeacher_20);
 };
 
 
@@ -336,7 +336,7 @@ func void DIA_Cassia_beweisen_Info()
 		DIA_Cassia_beweisen_permanent = TRUE;
 		Log_CreateTopic(Topic_CassiaRing,LOG_MISSION);
 		Log_SetTopicStatus(Topic_CassiaRing,LOG_Running);
-		B_LogEntry(Topic_CassiaRing,"Cassia will das ich ihr den Ring von Constantino bringe.");
+		B_LogEntry(Topic_CassiaRing,Topic_CassiaRing_1);
 	};
 };
 
@@ -633,8 +633,8 @@ func void DIA_Cassia_Aufnahme_Info()
 	B_GivePlayerXP(XP_CassiaRing);
 	Knows_SecretSign = TRUE;
 	Log_CreateTopic(Topic_Diebesgilde,LOG_NOTE);
-	B_LogEntry(Topic_Diebesgilde,"Ich bin in die Diebesgilde aufgenommen worden.");
-	B_LogEntry(Topic_Diebesgilde,"Ich kenne das Zeichen der Diebe. Wenn ich das den richtigen Leuten zeige, wissen sie das ich dazugehöre. ");
+	B_LogEntry(Topic_Diebesgilde,Topic_Diebesgilde_1);
+	B_LogEntry(Topic_Diebesgilde,Topic_Diebesgilde_2);
 };
 
 
@@ -706,7 +706,7 @@ func void DIA_Cassia_Blutkelche_Info()
 		MIS_CassiaKelche = LOG_Running;
 		Log_CreateTopic(Topic_CassiaKelche,LOG_MISSION);
 		Log_SetTopicStatus(Topic_CassiaKelche,LOG_Running);
-		B_LogEntry(Topic_CassiaKelche,"Cassia will, das ich ihr die sechs Blutkelche bringe. Sie sollen alle hier in der Stadt sein.");
+		B_LogEntry(Topic_CassiaKelche,Topic_CassiaKelche_1);
 	};
 };
 

@@ -150,7 +150,7 @@ func void DIA_Serpentes_TEST_Info()
 	MIS_GOLEM = LOG_Running;
 	Log_CreateTopic(TOPIC_Golem,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Golem,LOG_Running);
-	B_LogEntry(TOPIC_Golem,"Serpentes hat mich seine Prüfung auferlegt. Ich soll den lebenden Fels finden, 'der einst gerufen' und soll ihn bezwingen. ");
+	B_LogEntry(TOPIC_Golem,TOPIC_Golem_1);
 };
 
 
@@ -462,7 +462,7 @@ func void DIA_Serpentes_MinenAnteile_was_ja()
 	SalandrilVerteilteMinenAnteil = SalandrilMinenAnteil_MAINCounter;
 	Log_CreateTopic(TOPIC_MinenAnteile,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_MinenAnteile,LOG_Running);
-	B_LogEntry(TOPIC_MinenAnteile,"Irgendjemand verkauft illegale Erzineneanteile und bereichert sich daran. Ich muß herausfinden, wer sie an die Händler dieser Gegend verkauft hat. Serpentes will diese falschen Papiere alle haben.");
+	B_LogEntry(TOPIC_MinenAnteile,TOPIC_MinenAnteile_3);
 };
 
 func void DIA_Serpentes_MinenAnteile_KillSLD()
@@ -487,7 +487,7 @@ func void DIA_Serpentes_MinenAnteile_was_jaSLD()
 	Info_ClearChoices(DIA_Serpentes_MinenAnteile);
 	Log_CreateTopic(TOPIC_MinenAnteile,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_MinenAnteile,LOG_Running);
-	B_LogEntry(TOPIC_MinenAnteile,"Ich soll Salandril, einen Alchemisten im oberen Viertel von Khorinis, ins Kloster bringen, damit er dort verurteilt werden kann. Was er angestellt hat, kann mir im Grunde auch egal sein. Hauptsache ich werde für diesen Auftrag bezahlt.");
+	B_LogEntry(TOPIC_MinenAnteile,TOPIC_MinenAnteile_4);
 };
 
 

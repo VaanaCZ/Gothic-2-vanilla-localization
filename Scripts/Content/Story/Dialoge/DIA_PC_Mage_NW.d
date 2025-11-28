@@ -487,20 +487,20 @@ func void DIA_MiltenNW_KnowWhereEnemy_Info()
 	if(Npc_IsDead(DiegoNW) == FALSE)
 	{
 		AI_Output(self,other,"DIA_MiltenNW_KnowWhereEnemy_03_02");	//Hast du schon mit Diego darüber gesprochen? Ich denke, er wird dich begleiten wollen.
-		B_LogEntry(Topic_Crew,"Diego könnte eine grosse Hilfe sein. Ihn hat es nie lange an einem Ort gehalten.");
+		B_LogEntry(Topic_Crew,Topic_Crew_6);
 	};
 	if(Npc_IsDead(GornNW_nach_DJG) == FALSE)
 	{
 		AI_Output(self,other,"DIA_MiltenNW_KnowWhereEnemy_03_03");	//Was ist mit Gorn? Rede mal mit ihm. Ich habe gehört, dass er wieder aus dem Minental zurückgekehrt ist.
-		B_LogEntry(Topic_Crew,"Gorn wär sicherlich eine gute Verstärkung. Ein guter Kämpfer kann nicht falsch sein. Vielleicht kann er mich ja unterrichten.");
+		B_LogEntry(Topic_Crew,Topic_Crew_7);
 	};
 	if(Npc_IsDead(Lester) == FALSE)
 	{
 		AI_Output(self,other,"DIA_MiltenNW_KnowWhereEnemy_03_04");	//Und vergiss Lester nicht. Wenn du ihn nicht aus seinem Tal heraus holst, wird er da noch vergammeln.
-		B_LogEntry(Topic_Crew,"Wenn ich Lester nicht mitnehme, wird er wohl nie aus seinem Tal kommen.");
+		B_LogEntry(Topic_Crew,Topic_Crew_8);
 	};
 	AI_Output(self,other,"DIA_MiltenNW_KnowWhereEnemy_03_05");	//Meine Rolle dabei kenne ich auch schon. Ich kann dein Mana steigern und im Runenbau behilflich sein wenn wir gegen den Feind antreten. Wann geht's los?
-	B_LogEntry(Topic_Crew,"Falls Milten mich begleitet, kann er mir beibringen Runen zu erschaffen und mein Mana zu steigern.");
+	B_LogEntry(Topic_Crew,Topic_Crew_9);
 	if(Crewmember_Count >= Max_Crew)
 	{
 		AI_Output(other,self,"DIA_MiltenNW_KnowWhereEnemy_15_06");	//Nicht so schnell, ich hab schon genug Leute beisammen.
@@ -570,7 +570,7 @@ func void DIA_MiltenNW_WhereCaptain_Info()
 	AI_Output(self,other,"DIA_MiltenNW_WhereCaptain_03_03");	//Sprich am besten mal mit Lee oder geh zum Hafen von Khorinis. Was Besseres fällt mir im Moment nicht ein.
 	Log_CreateTopic(Topic_Captain,LOG_MISSION);
 	Log_SetTopicStatus(Topic_Captain,LOG_Running);
-	B_LogEntry(Topic_Captain,"Jorgen könnte vieleicht als Kapitän bei mir anheuern. Er sollte sich eigentlich noch im Kloster aufhalten. Anosnsten sollte es noch Kanidaten auf den Höfen oder in der Stadt geben. Vielleicht sollte ich mit Lee sprechen oder mich mal im Hafen umhören.");
+	B_LogEntry(Topic_Captain,Topic_Captain_1);
 };
 
 

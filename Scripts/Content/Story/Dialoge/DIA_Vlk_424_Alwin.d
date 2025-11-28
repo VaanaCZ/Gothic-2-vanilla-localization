@@ -137,7 +137,7 @@ func void DIA_Alwin_FellanRunning_Info()
 	MIS_AttackFellan = LOG_Running;
 	Log_CreateTopic(TOPIC_Alwin,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Alwin,LOG_Running);
-	B_LogEntry(TOPIC_Alwin,"Alwin will das ich Fellan dazu bringe, das er mit dem Hämemrn aufhört. Es wäre bestimmt nicht angebracht, ihn zu töten.");
+	B_LogEntry(TOPIC_Alwin,TOPIC_Alwin_1);
 	Info_ClearChoices(DIA_Alwin_FellanRunning);
 	Info_AddChoice(DIA_Alwin_FellanRunning,"Ich werd sehen, was ich machen kann...",DIA_Alwin_FellanRunning_Ok);
 	if((hero.guild != GIL_MIL) && (hero.guild != GIL_PAL) && (hero.guild != GIL_KDF))

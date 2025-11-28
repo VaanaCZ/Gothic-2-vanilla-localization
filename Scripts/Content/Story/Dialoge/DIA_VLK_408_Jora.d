@@ -101,7 +101,7 @@ func void DIA_Jora_GREET_Info()
 	AI_Output(other,self,"DIA_Jora_GREET_15_02");	//Moment mal, sehe ich etwa aus wie ein Dieb?
 	AI_Output(self,other,"DIA_Jora_GREET_08_03");	//(verächtlich) Pah! Du wärst nicht der Erste, der sich heute an meinen Sachen bereichert.
 	Log_CreateTopic(TOPIC_CityTrader,LOG_NOTE);
-	B_LogEntry(TOPIC_CityTrader,"Jora handelt mit Waren aller Art am Marktplatz.");
+	B_LogEntry(TOPIC_CityTrader,TOPIC_CityTrader_3);
 };
 
 
@@ -228,9 +228,9 @@ func void DIA_Jora_HolDeinGold_DoIt()
 	Log_SetTopicStatus(TOPIC_JoraDieb,LOG_Running);
 	Log_CreateTopic(TOPIC_Jora,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Jora,LOG_Running);
-	B_LogEntry(TOPIC_Jora,"Ein Kerl namens Rengaru hat den Händler Jora bestohlen. Er treibt sich tagsüber auf dem Marktplatz herum.");
-	B_LogEntry(TOPIC_Jora,"Ich soll Jora sein Gold zurückbringen.");
-	B_LogEntry(TOPIC_JoraDieb,"Rengaru hat den Händler Jora bestohlen. Wenn ich ihn stelle, gibt es vielleicht ein Kopfgeld für ihn.");
+	B_LogEntry(TOPIC_Jora,TOPIC_Jora_1);
+	B_LogEntry(TOPIC_Jora,TOPIC_Jora_2);
+	B_LogEntry(TOPIC_JoraDieb,TOPIC_JoraDieb_1);
 	Info_ClearChoices(DIA_Jora_HolDeinGold);
 };
 

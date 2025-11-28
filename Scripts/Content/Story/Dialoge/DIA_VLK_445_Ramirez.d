@@ -323,7 +323,7 @@ func void DIA_Ramirez_Sextant_Info()
 	AI_Output(self,other,"DIA_Ramirez_Sextant_14_03");	//Einen Sextanten. Bring mir einen Sextanten - dafür zahle ich dir einen guten Preis.
 	Log_CreateTopic(Topic_RamirezSextant,LOG_MISSION);
 	Log_SetTopicStatus(Topic_RamirezSextant,LOG_Running);
-	B_LogEntry(Topic_RamirezSextant,"Ramirez will, das ich ihm ein Sextant bringe.");
+	B_LogEntry(Topic_RamirezSextant,Topic_RamirezSextant_1);
 	MIS_RamirezSextant = LOG_Running;
 };
 

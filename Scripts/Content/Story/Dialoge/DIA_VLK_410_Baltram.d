@@ -80,7 +80,7 @@ func void DIA_Baltram_Hallo_Info()
 		AI_Output(self,other,"DIA_Baltram_Hallo_01_04");	//Ich halte nicht viel von euch Söldnern! Ihr macht mir nur Ärger.
 	};
 	Log_CreateTopic(TOPIC_CityTrader,LOG_NOTE);
-	B_LogEntry(TOPIC_CityTrader,"Baltram handelt mit Nahrungsmitteln am Marktplatz.");
+	B_LogEntry(TOPIC_CityTrader,TOPIC_CityTrader_5);
 };
 
 
@@ -139,10 +139,10 @@ func void DIA_Baltram_Trick_Info()
 	AI_Output(other,self,"DIA_Baltram_Trick_15_05");	//Gut, ich bin dabei.
 	AI_Output(self,other,"DIA_Baltram_Trick_01_06");	//Okay, sag Akil einfach, dass du von mir kommst, er wird dir dann ein Paket geben. Das bringst du zu mir.
 	MIS_Baltram_ScoutAkil = LOG_Running;
-	B_LogEntry(TOPIC_Nagur,"Baltram hat mich als Bote eingestellt. Jetzt muss ich die Lieferung von Akils Hof abholen.");
+	B_LogEntry(TOPIC_Nagur,TOPIC_Nagur_2);
 	Log_CreateTopic(TOPIC_Baltram,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Baltram,LOG_Running);
-	B_LogEntry(TOPIC_Baltram,"Wenn ich Baltram seine Lieferung bringe, zahlt er mir 50 Goldstücke.");
+	B_LogEntry(TOPIC_Baltram,TOPIC_Baltram_2);
 };
 
 

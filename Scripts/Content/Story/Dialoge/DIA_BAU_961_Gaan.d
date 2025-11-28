@@ -272,7 +272,7 @@ func void DIA_Gaan_AskTeacher_Info()
 	AI_Output(self,other,"DIA_Gaan_AskTeacher_03_01");	//Kein Problem. Für 100 Goldmünzen könnte ich dir zeigen, wie du die Tiere, die du erlegst, ausweiden kannst.
 	AI_Output(self,other,"DIA_Gaan_AskTeacher_03_02");	//Felle und andere Tiertrophäen bringen eine Menge Geld auf dem Markt.
 	Log_CreateTopic(TOPIC_Teacher,LOG_NOTE);
-	B_LogEntry(TOPIC_Teacher,"Bei Gaan kann ich lernen wie man Tiere ausnimmt.");
+	B_LogEntry(TOPIC_Teacher,TOPIC_Teacher_1);
 };
 
 
@@ -479,7 +479,7 @@ func void DIA_Gaan_JAGD_Info()
 		AI_Output(self,other,"DIA_Gaan_JAGD_03_03");	//Es tötet nicht nur alles, was sich bewegt, es stört mich auch bei meiner Arbeit.
 		Log_CreateTopic(TOPIC_GaanSchnaubi,LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_GaanSchnaubi,LOG_Running);
-		B_LogEntry(TOPIC_GaanSchnaubi,"Die schnaubende Kreatur macht dem Jäger Gaan zu schaffen. Bevor ich das Vieh nicht beseitige, kann er nicht mehr jagen.");
+		B_LogEntry(TOPIC_GaanSchnaubi,TOPIC_GaanSchnaubi_1);
 		MIS_Gaan_Snapper = LOG_Running;
 	}
 	else if(Kapitel >= 3)

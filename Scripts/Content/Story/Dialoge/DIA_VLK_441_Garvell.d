@@ -182,7 +182,7 @@ func void DIA_Garvell_MISSION_Info()
 	Knows_Ork = TRUE;
 	Log_CreateTopic(TOPIC_Garvell,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Garvell,LOG_Running);
-	B_LogEntry(TOPIC_Garvell,"Garvell will Informationen über die Orks und er will wissen, warum die Paladine in der Stadt sind.");
+	B_LogEntry(TOPIC_Garvell,TOPIC_Garvell_1);
 };
 
 func void B_GarvellWeiter()

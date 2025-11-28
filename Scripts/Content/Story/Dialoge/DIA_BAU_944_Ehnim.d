@@ -275,7 +275,7 @@ func void DIA_Ehnim_MoleRatFett_was()
 	AI_Output(self,other,"DIA_Ehnim_MoleRatFett_was_12_04");	//In der letzten Zeit hat es viel geregnet und da ist ihm das Ding zugerostet. Die Winde klemmt jetzt und man kommt nicht mehr hinein. So ein Schlammassel.
 	Log_CreateTopic(TOPIC_FoundVinosKellerei,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_FoundVinosKellerei,LOG_Running);
-	B_LogEntry(TOPIC_FoundVinosKellerei,"Ehnim verriet mir, dass Vino im nahegelegenen Wald bei Akils Hof eine geheime Schnapsbrennerei hat. Der Tormechanismus, um hinein zu kommen, sei jedoch verklemmt und nur noch mit Moleratfett zu bewegen.");
+	B_LogEntry(TOPIC_FoundVinosKellerei,TOPIC_FoundVinosKellerei_1);
 	Info_AddChoice(DIA_Ehnim_MoleRatFett,"Und? Hast du das Schmiermittel?",DIA_Ehnim_MoleRatFett_was_Fett);
 };
 

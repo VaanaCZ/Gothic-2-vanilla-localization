@@ -216,7 +216,7 @@ func void DIA_Talbin_AskTeacher_Info()
 	AI_Output(self,other,"DIA_Talbin_AskTeacher_07_03");	//Hast du irgendwas anderes zu essen als Lurkerfleisch? Vielleicht ein Stück Käse. Ja, ein Stück Käse. Ich würde sterben für ein Stück ...
 	AI_Output(other,self,"DIA_Talbin_AskTeacher_15_04");	//Mal sehen.
 	Log_CreateTopic(TOPIC_Teacher,LOG_NOTE);
-	B_LogEntry(TOPIC_Teacher,"Bei Talbin kann ich lernen wie man Tiere ausnimmt");
+	B_LogEntry(TOPIC_Teacher,TOPIC_Teacher_4);
 };
 
 
@@ -451,7 +451,7 @@ func void DIA_Talbin_KAP4_WASWOLLTENDJG_Info()
 	AI_Output(self,other,"DIA_Talbin_KAP4_WASWOLLTENDJG_07_02");	//Erzählten was von Drachen töten und so'n Zeug. Wer weiß, wo die Jungs herkommen, aber besonders vertrauenserweckend sahen sie nicht aus!
 	if(Kapitel == 4)
 	{
-		B_LogEntry(TOPIC_Dragonhunter,"Einige Drachenjäger sind bei Talbin dem Jäger vorbei gekommen.");
+		B_LogEntry(TOPIC_Dragonhunter,TOPIC_Dragonhunter_15);
 	};
 };
 
@@ -534,7 +534,7 @@ func void DIA_Talbin_FOUNDENGROM_Info()
 	AI_StopProcessInfos(self);
 	Log_CreateTopic(TOPIC_Talbin_Runs,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Talbin_Runs,LOG_Running);
-	B_LogEntry(TOPIC_Talbin_Runs,"Talbin, der Jäger aus dem Minental, rannte, wie von der Blutfliege gestochen zum Pass. Ich glaube, er will nach Khorinis.");
+	B_LogEntry(TOPIC_Talbin_Runs,TOPIC_Talbin_Runs_1);
 	B_GivePlayerXP(XP_Ambient);
 	Npc_ExchangeRoutine(self,"FleePass");
 	Wld_InsertNpc(Snapper,"START");

@@ -47,7 +47,7 @@ func void DIA_Engor_HALLO_Info()
 	AI_Output(self,other,"DIA_Engor_HALLO_13_03");	//Glaub mal ja nicht, dass du von mir irgendwas umsonst kriegst!
 	AI_Output(self,other,"DIA_Engor_HALLO_13_04");	//Aber wenn du Gold in der Tasche hast - bin ich für einen kleinen Handel immer zu haben.
 	Log_CreateTopic(TOPIC_Trader_OC,LOG_NOTE);
-	B_LogEntry(TOPIC_Trader_OC,"Engor verwaltet die Vorräte der Burg und macht nebenher Geschäfte.");
+	B_LogEntry(TOPIC_Trader_OC,TOPIC_Trader_OC_3);
 };
 
 
@@ -220,8 +220,8 @@ func void DIA_Engor_HELP_YES()
 	AI_Output(self,other,"DIA_Engor_HELP_YES_13_01");	//Mit zwei Dutzend Fleisch könnte ich schon einige hungrige Mäuler stopfen. Komm wieder, wenn du das Fleisch hast. Ich muss nun weiterarbeiten.
 	Log_CreateTopic(TOPIC_BringMeat,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BringMeat,LOG_Running);
-	B_LogEntry(TOPIC_BringMeat,"Engor braucht zwei Dutzend Fleisch für die Versorgung der Männer.");
-	B_LogEntry(TOPIC_BringMeat,"Dabei spielt es keine Rolle, ob Würste, Schinken, gebratenes oder rohes Fleisch. Hauptsache, die Jungs kriegen wieder was Anständiges zwischen die Zähne ");
+	B_LogEntry(TOPIC_BringMeat,TOPIC_BringMeat_1);
+	B_LogEntry(TOPIC_BringMeat,TOPIC_BringMeat_2);
 	MIS_Engor_BringMeat = LOG_Running;
 	AI_StopProcessInfos(self);
 };
@@ -311,7 +311,7 @@ func void DIA_Engor_BRINGMEAT_Info()
 		AI_Output(self,other,"DIA_Engor_BRINGMEAT_13_03");	//Glaub aber ja nicht, dass du von mir jetzt irgendwas umsonst kriegst!
 		MIS_Engor_BringMeat = LOG_SUCCESS;
 		B_GivePlayerXP(XP_BringMeat);
-		Log_AddEntry(TOPIC_BringMeat," Engor hat das Fleisch bekommen. Er wird dafür sorgen, das es unter den Männern verteilt wird.");
+		Log_AddEntry(TOPIC_BringMeat,TOPIC_BringMeat_3);
 	};
 };
 

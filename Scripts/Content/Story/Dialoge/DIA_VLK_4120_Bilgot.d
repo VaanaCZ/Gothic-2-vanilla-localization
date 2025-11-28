@@ -159,10 +159,10 @@ func void DIA_Bilgot_KNOWSLEADSNAPPER_Info()
 	AI_Output(other,self,"DIA_Bilgot_KNOWSLEADSNAPPER_15_08");	//Gut. Ich denke, ich habe verstanden. Danke!
 	AI_Output(self,other,"DIA_Bilgot_KNOWSLEADSNAPPER_05_09");	//Denk dran, du hast mir dein Wort gegeben!
 	Wld_InsertNpc(NewMine_LeadSnapper,"OW_ORC_LOOKOUT_2_01");
-	B_LogEntry(TOPIC_FajethKillSnapper,"Bilgot hat mir von einem Rudelführer der Snapper berichtet. Er hält sich am Aufgang zum alten Wachturm auf.");
+	B_LogEntry(TOPIC_FajethKillSnapper,TOPIC_FajethKillSnapper_2);
 	Log_CreateTopic(TOPIC_BilgotEscort,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BilgotEscort,LOG_Running);
-	B_LogEntry(TOPIC_BilgotEscort,"Bilgot will, das ich ihn aus dem Tal bringe.");
+	B_LogEntry(TOPIC_BilgotEscort,TOPIC_BilgotEscort_1);
 };
 
 

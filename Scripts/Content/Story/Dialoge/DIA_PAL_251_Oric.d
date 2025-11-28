@@ -414,7 +414,7 @@ func void DIA_Oric_WillHelp_Info()
 	AI_Output(self,other,"DIA_Oric_WillHelp_11_03");	//Sie ist nicht weit von dem Weg zu unserer Mine. Direkt im Schatten des großen Berges.
 	Log_CreateTopic(TOPIC_KillHoshPak,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_KillHoshPak,LOG_Running);
-	B_LogEntry(TOPIC_KillHoshPak,"Oric will, dass ich dem hohen Orkshamanen HOSH-PAK das Handwerk lege. Sein Zelt steht auf einer kleinen Klippe nicht weit entfernt von der Rückseite der Burg.");
+	B_LogEntry(TOPIC_KillHoshPak,TOPIC_KillHoshPak_1);
 	MIS_KillHoshPak = LOG_Running;
 };
 
@@ -532,26 +532,26 @@ func void DIA_Oric_DragonPlettBericht_Info()
 		if((Npc_IsDead(SwampDragon) == FALSE) && (Oric_SwampdragonInfo_OneTime == FALSE))
 		{
 			AI_Output(self,other,"DIA_Oric_DragonPlettBericht_11_03");	//Westlich der alten Burg, hat sich in den letzten Tagen ein ziemlich großes Sumpfgebiet gebildet. Ziemlich verdächtig, findest du nicht?
-			B_LogEntry(TOPIC_DRACHENJAGD,"Ich bekam von Oric den Hinweis, dass sich westlich der Burg ein ziemlich großes Sumpfgebiet gebildet hat in den letzten Tagen. Seiner Meinung nach sehr verdächtig.");
+			B_LogEntry(TOPIC_DRACHENJAGD,TOPIC_DRACHENJAGD_7);
 			Oric_SwampdragonInfo_OneTime = TRUE;
 		}
 		else if((Npc_IsDead(RockDragon) == FALSE) && (Oric_RockdragonInfo_OneTime == FALSE))
 		{
 			AI_Output(self,other,"DIA_Oric_DragonPlettBericht_11_04");	//Es gibt da eine Felsenfestung im Süden, noch weit hinter dem Vulkan.
 			AI_Output(self,other,"DIA_Oric_DragonPlettBericht_11_05");	//Unsere Späher haben berichtet, dass die Festung schwer bewacht ist. Vielleicht verbirgt sich dort einer von ihnen.
-			B_LogEntry(TOPIC_DRACHENJAGD,"Die Späher der Paladine haben Oric berichtet, dass die Felsenfestung im Süden hinter dem Vulkan schwer bewacht sei. Oric vermutet dort einen Drachen.");
+			B_LogEntry(TOPIC_DRACHENJAGD,TOPIC_DRACHENJAGD_8);
 			Oric_RockdragonInfo_OneTime = TRUE;
 		}
 		else if((Npc_IsDead(FireDragon) == FALSE) && (Oric_FiredragonInfo_OneTime == FALSE))
 		{
 			AI_Output(self,other,"DIA_Oric_DragonPlettBericht_11_06");	//Nach dem letzten Angriff der Drachen soll einer von ihnen bei dem Vulkan im Süden verschwunden sein. Ich würde dort nach ihm suchen.
-			B_LogEntry(TOPIC_DRACHENJAGD,"Der letzte Drache, der die Burg im Minental angegriffen hat, soll nach dem Angriff in der Nähe des Vulkans gesehen worden sein.");
+			B_LogEntry(TOPIC_DRACHENJAGD,TOPIC_DRACHENJAGD_9);
 			Oric_FiredragonInfo_OneTime = TRUE;
 		}
 		else if((Npc_IsDead(IceDragon) == FALSE) && (Oric_IcedragonInfo_OneTime == FALSE))
 		{
 			AI_Output(self,other,"DIA_Oric_DragonPlettBericht_11_07");	//Es gibt eine sehr weitläufige Eisregion im Westen. Würde mich nicht überraschen, wenn sich einer der Drachen dort versteckt hielte.
-			B_LogEntry(TOPIC_DRACHENJAGD,"Die Eisregion im Westen ist laut Oric ein potentielle Behausung für einen Drachen.");
+			B_LogEntry(TOPIC_DRACHENJAGD,TOPIC_DRACHENJAGD_10);
 			Oric_IcedragonInfo_OneTime = TRUE;
 		};
 		Oric_DragonCounter = MIS_KilledDragons;

@@ -164,7 +164,7 @@ func void DIA_Brutus_Kasse_Info()
 	AI_Output(self,other,"DIA_Brutus_Kasse_06_09");	//Wenn du mir das Gold zurückbringst, kannst du den Schmuck behalten und ich trainiere dich.
 	Log_CreateTopic(TopicBrutusKasse,LOG_MISSION);
 	Log_SetTopicStatus(TopicBrutusKasse,LOG_Running);
-	B_LogEntry(TopicBrutusKasse,"Brutus Partner Den ist mit 200 Gold und einigem Schmuck durchgebrannt. Wenn ich ihm 200 Goldstücke bringe, wird er mir dabei helfen, stärker zu werden.");
+	B_LogEntry(TopicBrutusKasse,TopicBrutusKasse_1);
 };
 
 
@@ -193,7 +193,7 @@ func void DIA_Brutus_Den_Info()
 	AI_Output(self,other,"DIA_Brutus_Den_06_01");	//Möglichst weit weg von hier. Ich denke mal, er wird versucht haben, sich zum Pass durchzuschlagen.
 	AI_Output(other,self,"DIA_Brutus_Den_15_02");	//Danke, das hilft mir sehr.
 	AI_Output(self,other,"DIA_Brutus_Den_06_03");	//Ja, was soll ich dir sagen? Ich weiß nicht, wo er hin ist.
-	B_LogEntry(TopicBrutusKasse,"Den wollte versuchen den Pass zu überqueren.");
+	B_LogEntry(TopicBrutusKasse,TopicBrutusKasse_2);
 };
 
 
@@ -224,7 +224,7 @@ func void DIA_Brutus_Gold_Info()
 		AI_Output(self,other,"DIA_Brutus_Gold_06_01");	//Ausgezeichnet. Wenn du willst, kann ich dich trainieren.
 		Brutus_TeachSTR = TRUE;
 		Log_CreateTopic(TOPIC_Teacher_OC,LOG_NOTE);
-		B_LogEntry(TOPIC_Teacher_OC,"Brutus kann mir dabei helfen, stärker zu werden.");
+		B_LogEntry(TOPIC_Teacher_OC,TOPIC_Teacher_OC_4);
 		B_GivePlayerXP(XP_Ambient);
 	}
 	else
@@ -390,7 +390,7 @@ func void DIA_Brutus_WARUMNICHTARBBEIT_Info()
 	AI_Output(self,other,"DIA_Brutus_WARUMNICHTARBBEIT_06_04");	//Ich hasse die Biester. Und hör auf, so dämlich zu grinsen.
 	Log_CreateTopic(TOPIC_BrutusMeatbugs,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BrutusMeatbugs,LOG_Running);
-	B_LogEntry(TOPIC_BrutusMeatbugs,"Brutus der Folterknecht der Burg ekelt sich vor den harmlosen Fleischwanzen in seiner Folterkammer. Ein wirklich harter Kerl. ");
+	B_LogEntry(TOPIC_BrutusMeatbugs,TOPIC_BrutusMeatbugs_1);
 };
 
 

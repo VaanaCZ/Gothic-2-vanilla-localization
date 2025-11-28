@@ -92,7 +92,7 @@ func void DIA_Vino_SeekWork_Info()
 				MIS_Vino_Wein = LOG_Running;
 				Log_CreateTopic(TOPIC_Vino,LOG_MISSION);
 				Log_SetTopicStatus(TOPIC_Vino,LOG_Running);
-				B_LogEntry(TOPIC_Vino,"Wenn ich Vino eine Flasche Wein bringe, wird er Lobart erzählen, das ich ihm geholfen habe.");
+				B_LogEntry(TOPIC_Vino,TOPIC_Vino_1);
 			}
 			else
 			{
@@ -352,7 +352,7 @@ func void DIA_Vino_Heilung_Info()
 		AI_Output(self,other,"DIA_Vino_Heilung_05_03");	//Meinst du? In Ordnung. Ich werde es versuchen.
 		B_NpcClearObsessionByDMT(self);
 		B_StartOtherRoutine(Vino,"Kloster");
-		B_LogEntry(TOPIC_DEMENTOREN,"Vino ist besessen. Ich habe ihn zur Heilung ins Kloster geschickt. Hoffentlich kommt er dort auch heil an.");
+		B_LogEntry(TOPIC_DEMENTOREN,TOPIC_DEMENTOREN_1);
 		B_GivePlayerXP(XP_VinoFreeFromDMT);
 		DIA_Vino_Heilung_oneTime = TRUE;
 	};

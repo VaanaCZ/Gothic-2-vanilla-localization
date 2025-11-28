@@ -138,7 +138,7 @@ func void DIA_DJG_715_Ferros_OldCamp_Info()
 	MIS_FErrosSword = LOG_Running;
 	Log_CreateTopic(TOPIC_FerrosSword,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_FerrosSword,LOG_Running);
-	B_LogEntry(TOPIC_FerrosSword,"Feros hat sein Schwert bei den Orks liegen lassen. Sehr leichtsinnig. ");
+	B_LogEntry(TOPIC_FerrosSword,TOPIC_FerrosSword_1);
 };
 
 func void DIA_DJG_715_Ferros_OldCamp_No()
@@ -160,7 +160,7 @@ func void DIA_DJG_715_Ferros_OldCamp_Yes()
 	AI_Output(other,self,"DIA_DJG_715_Ferros_OldCamp_Yes_15_00");	//Ich werde dein Schwert finden.
 	AI_Output(self,other,"DIA_DJG_715_Ferros_OldCamp_Yes_01_01");	//Das wär' Klasse. Am besten suchst du auf der hohen Klippe im Süden danach.
 	AI_Output(self,other,"DIA_DJG_715_Ferros_OldCamp_Yes_01_02");	//Dort, wo die Orkzelte stehen, habe ich es vermutlich verloren.
-	B_LogEntry(TOPIC_FerrosSword,"Auf der hohen Klippe im Süden, wo die Orkzelte stehen, hat Feros sein Schwert angeblich verloren. ");
+	B_LogEntry(TOPIC_FerrosSword,TOPIC_FerrosSword_2);
 	Info_ClearChoices(DIA_DJG_715_Ferros_OldCamp);
 };
 
@@ -236,7 +236,7 @@ func void B_Ferros_FerrosAnySword_Yes2()
 	AI_Output(self,other,"DIA_DJG_715_Ferros_FerrosAnySword_Blade_Yes2_01_00");	//Danke, ich stehe in deiner Schuld.
 	AI_Output(self,other,"DIA_DJG_715_Ferros_FerrosAnySword_Blade_Yes2_01_01");	//Als Dank werde ich dir zeigen, wie du mit ein paar Tricks deine Kraft und dein Geschick im Kampf besser nutzen kannst.
 	Log_CreateTopic(TOPIC_Teacher,LOG_NOTE);
-	B_LogEntry(TOPIC_Teacher,"Ferros kann mir beibringen wie ich meine Stärke und Geschicklichkeit steigern kann.");
+	B_LogEntry(TOPIC_Teacher,TOPIC_Teacher_3);
 };
 
 func void B_Ferros_FerrosAnySword_No()

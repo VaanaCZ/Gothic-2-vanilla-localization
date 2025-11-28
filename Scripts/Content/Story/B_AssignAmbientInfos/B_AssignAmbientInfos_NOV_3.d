@@ -49,7 +49,7 @@ func void DIA_NOV_3_Fegen_Info()
 		if((NOV_Helfer < 1) && (Feger1_Permanent == FALSE))
 		{
 			AI_Output(self,other,"DIA_NOV_3_Fegen_03_01");	//Bisher hilft dir niemand, was? Ich helfe dir nur, wenn du mindestens einen weiteren gefunden hast, der mitmacht.
-			B_LogEntry(Topic_ParlanFegen,"Der Novize, der im Keller fegt, hilft mir, wenn ich einen weiteren Novizen gefunden habe, der bereit ist, die Kammern zu fegen.");
+			B_LogEntry(Topic_ParlanFegen,Topic_ParlanFegen_1);
 		}
 		else if((NOV_Helfer >= 1) && (Feger1_Permanent == FALSE))
 		{
@@ -61,7 +61,7 @@ func void DIA_NOV_3_Fegen_Info()
 			B_GivePlayerXP(XP_Feger);
 			AI_StopProcessInfos(self);
 			Npc_ExchangeRoutine(self,"FEGEN");
-			B_LogEntry(Topic_ParlanFegen,"Der Novize aus dem Keller hilft mir jetzt, die Kammern zu fegen.");
+			B_LogEntry(Topic_ParlanFegen,Topic_ParlanFegen_2);
 		}
 		else if(Feger1_Permanent == TRUE)
 		{
@@ -74,7 +74,7 @@ func void DIA_NOV_3_Fegen_Info()
 		{
 			AI_Output(self,other,"DIA_NOV_3_Fegen_03_08");	//Klar helfe ich dir. Wir Novizen müssen doch zusammenhalten. Eine Hand wäscht die andere.
 			AI_Output(self,other,"DIA_NOV_3_Fegen_03_09");	//Ich brauche nur 50 Goldstücke, weil ich noch Parlan bezahlen muss.
-			B_LogEntry(Topic_ParlanFegen,"Der Novize vor der Kirche hilft mir, wenn ich ihm 50 Goldstücke gebe.");
+			B_LogEntry(Topic_ParlanFegen,Topic_ParlanFegen_3);
 			Info_ClearChoices(DIA_NOV_3_Fegen);
 			Info_AddChoice(DIA_NOV_3_Fegen,"Vielleicht später...",DIA_NOV_3_Fegen_Nein);
 			if(Npc_HasItems(other,ItMi_Gold) >= 50)
@@ -110,7 +110,7 @@ func void DIA_NOV_3_Fegen_Ja()
 	Info_ClearChoices(DIA_NOV_3_Fegen);
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"FEGEN");
-	B_LogEntry(Topic_ParlanFegen,"Der Novize vor der Kirche hilft mir jetzt, die Kammern zu fegen.");
+	B_LogEntry(Topic_ParlanFegen,Topic_ParlanFegen_4);
 };
 
 

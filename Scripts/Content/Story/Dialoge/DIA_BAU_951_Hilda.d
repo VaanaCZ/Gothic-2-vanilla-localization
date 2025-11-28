@@ -99,7 +99,7 @@ func void DIA_Hilda_WasZuEssen_Info()
 					Hilda_Stew_Day = Wld_GetDay();
 					Rueben_TagNull = TRUE;
 					Log_CreateTopic(Topic_Bonus,LOG_NOTE);
-					B_LogEntry(Topic_Bonus,"Bei Hilda kann ich mir jeden Tag einen Rübeneintopf abholen.");
+					B_LogEntry(Topic_Bonus,Topic_Bonus_3);
 				}
 				else
 				{
@@ -202,7 +202,7 @@ func void DIA_Hilda_Einkaufen_Info()
 	MIS_Hilda_PfanneKaufen_Day = B_GetDayPlus();
 	Log_CreateTopic(TOPIC_Hilda,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Hilda,LOG_Running);
-	B_LogEntry(TOPIC_Hilda,"Hilda, die Frau von Bauer Lobart, will, das ich ihr eine Pfanne vom fahrenden Händler besorge.");
+	B_LogEntry(TOPIC_Hilda,TOPIC_Hilda_1);
 };
 
 
@@ -370,7 +370,7 @@ func void DIA_Hilda_KRANK_helfen()
 	AI_Output(self,other,"DIA_Hilda_KRANK_helfen_17_02");	//Er weiß dann schon, was zu tun ist! Ich kann es nicht mehr.
 	Log_CreateTopic(TOPIC_HealHilda,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_HealHilda,LOG_Running);
-	B_LogEntry(TOPIC_HealHilda,"Lobarts Frau Hilda ist krank, aber Vatras hat ein Heilmittel.");
+	B_LogEntry(TOPIC_HealHilda,TOPIC_HealHilda_1);
 	AI_StopProcessInfos(self);
 };
 

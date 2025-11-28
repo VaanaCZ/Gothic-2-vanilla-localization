@@ -249,7 +249,7 @@ func void DIA_1013_BANDIT_NAME_Info()
 	AI_Output(self,other,"DIA_1013_BANDIT_NAME_01_03");	//Hey, Mann - das kann ich dir nicht sagen. Du weißt doch, wie so was läuft ...
 	Log_CreateTopic(Topic_Bandits,LOG_MISSION);
 	Log_SetTopicStatus(Topic_Bandits,LOG_Running);
-	B_LogEntry(Topic_Bandits,"Ein paar Banditen suchen mich. Sie haben einen Steckbrief von mir. Was wohl dahinter stecken mag?");
+	B_LogEntry(Topic_Bandits,Topic_Bandits_1);
 	MIS_Steckbriefe = LOG_Running;
 };
 
@@ -280,7 +280,7 @@ func void DIA_1013_BANDIT_DEXTER_Info()
 	AI_Output(other,self,"DIA_1013_BANDIT_DEXTER_15_02");	//Nun spuck's schon aus!
 	AI_Output(self,other,"DIA_1013_BANDIT_DEXTER_01_03");	//(holt tief Luft) Oh Mann! Na gut. Dexter ist sein Name. In der Nähe des Großbauern gibt es einen steilen Felsen.
 	AI_Output(self,other,"DIA_1013_BANDIT_DEXTER_01_04");	//Da oben gibt's 'nen Wachturm und ein paar Minen. Irgendwo da hat er sein Versteck.
-	B_LogEntry(Topic_Bandits,"Der Anführer der Banditen ist Dexter. Er versteckt sich bei einer Mine, beim Großbauer.");
+	B_LogEntry(Topic_Bandits,Topic_Bandits_2);
 	if(B_GiveInvItems(other,self,ItMi_Gold,10))
 	{
 		AI_Output(other,self,"DIA_1013_BANDIT_DEXTER_15_05");	//Na bitte! Hier hast du dein Gold.

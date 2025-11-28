@@ -122,7 +122,7 @@ func void dia_diegoow_silvestro_info()
 	AI_Output(other,self,"DIA_DiegoOw_Silvestro_15_04");	//Es gibt einen Weg durch die verlassene Mine, der nicht von Orks besetzt ist.
 	AI_Output(self,other,"DIA_DiegoOw_Silvestro_11_05");	//Gut zu wissen. Dann werde ich mich wohl bald nach Khorinis aufmachen - hab da noch ein paar alte Rechnungen zu begleichen.
 	Silvestro_Ore = TRUE;
-	B_LogEntry(TOPIC_ScoutMine,"Diego hat VIER Kisten Erz von Silvestro's Schürfern in Sicherheit gebracht.");
+	B_LogEntry(TOPIC_ScoutMine,TOPIC_ScoutMine_11);
 };
 
 
@@ -234,7 +234,7 @@ func void DIA_DiegoOw_Gorn_Info()
 	AI_Output(other,self,"DIA_DiegoOw_Gorn_15_00");	//Ich will Gorn freikaufen, aber Garond verlangt 1000 Goldstücke.
 	AI_Output(self,other,"DIA_DiegoOw_Gorn_11_01");	//Ein schöner Batzen Gold. Ich habe 300 Goldstücke dabei, die kannst du mitnehmen. Der Rest liegt an dir.
 	B_GiveInvItems(self,other,ItMi_Gold,300);
-	B_LogEntry(TOPIC_RescueGorn,"Diego hat 300 Goldstücke zur Befreiung von Gorn beigetragen.");
+	B_LogEntry(TOPIC_RescueGorn,TOPIC_RescueGorn_11);
 };
 
 

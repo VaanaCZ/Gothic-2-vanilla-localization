@@ -168,7 +168,7 @@ func void DIA_Fernando_Minental_Info()
 	Npc_ExchangeRoutine(self,"START");
 	Log_CreateTopic(TOPIC_Fernando,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Fernando,LOG_Running);
-	B_LogEntry(TOPIC_Fernando,"Der Händler Fernando will wissen, wie es um das Erz im Minental steht.");
+	B_LogEntry(TOPIC_Fernando,TOPIC_Fernando_1);
 };
 
 

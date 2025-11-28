@@ -76,7 +76,7 @@ func void DIA_Wolf_WannaJoin_Info()
 	AI_Output(self,other,"DIA_Wolf_WannaJoin_08_04");	//Hätte dich auch fast nicht erkannt, siehst ziemlich abgemagert aus.
 	AI_Output(other,self,"DIA_Wolf_WannaJoin_15_05");	//Als die Barriere eingestürzt ist, hätte es mich fast erwischt.
 	AI_Output(self,other,"DIA_Wolf_WannaJoin_08_06");	//Da hast du ja noch mal Glück gehabt.
-	B_LogEntry(TOPIC_SLDRespekt,"Wolf hat nichts dagegen einzuwenden, das ich mich den Söldnern anschließe.");
+	B_LogEntry(TOPIC_SLDRespekt,TOPIC_SLDRespekt_8);
 };
 
 
@@ -135,7 +135,7 @@ func void DIA_Wolf_WannaLearn_Info()
 	AI_Output(self,other,"DIA_Wolf_WannaLearn_08_01");	//Ich kann dir ein paar Tricks im Umgang mit dem Bogen zeigen, wenn du willst. Hab sowieso zurzeit nichts Besseres vor.
 	Wolf_TeachBow = TRUE;
 	Log_CreateTopic(Topic_SoldierTeacher,LOG_NOTE);
-	B_LogEntry(Topic_SoldierTeacher,"Wolf kann mir den Umgang mit dem Bogen zeigen.");
+	B_LogEntry(Topic_SoldierTeacher,Topic_SoldierTeacher_6);
 };
 
 
@@ -288,7 +288,7 @@ func void DIA_Wolf_AboutCrawler_Info()
 	MIS_Wolf_BringCrawlerPlates = LOG_Running;
 	Log_CreateTopic(TOPIC_Wolf_BringCrawlerPlates,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Wolf_BringCrawlerPlates,LOG_Running);
-	B_LogEntry(TOPIC_Wolf_BringCrawlerPlates,"Aus 10 Crawlerplatten kann Wolf mir eine Rüstung herstellen.");
+	B_LogEntry(TOPIC_Wolf_BringCrawlerPlates,TOPIC_Wolf_BringCrawlerPlates_1);
 };
 
 
@@ -638,7 +638,7 @@ func void DIA_Wolf_SHIP_Info()
 		MIS_BengarsHelpingSLD = LOG_OBSOLETE;
 		Log_CreateTopic(Topic_Crew,LOG_MISSION);
 		Log_SetTopicStatus(Topic_Crew,LOG_Running);
-		B_LogEntry(Topic_Crew,"Wolf hat die Nase voll von dieser Insel und ist bereit alles zu tun um von hier zu verschwinden. Er ist ein guter Kämpfer.");
+		B_LogEntry(Topic_Crew,Topic_Crew_14);
 	};
 };
 

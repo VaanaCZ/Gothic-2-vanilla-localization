@@ -228,7 +228,7 @@ func void DIA_Fester_TogetherNOW_NOW()
 	MIS_Fester_KillBugs = LOG_Running;
 	Log_CreateTopic(TOPIC_FesterRauber,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_FesterRauber,LOG_Running);
-	B_LogEntry(TOPIC_FesterRauber,"Ich werde zusammen mit Fester das Nest der Feldräuber angreifen.");
+	B_LogEntry(TOPIC_FesterRauber,TOPIC_FesterRauber_1);
 	Info_ClearChoices(DIA_Fester_TogetherNOW);
 	AI_StopProcessInfos(self);
 };

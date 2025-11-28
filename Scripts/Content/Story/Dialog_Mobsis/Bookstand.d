@@ -11,7 +11,7 @@ func void Use_Bookstand_01_S1()
 			KNOWS_FIRE_CONTEST = TRUE;
 			Log_CreateTopic(TOPIC_FireContest,LOG_MISSION);
 			Log_SetTopicStatus(TOPIC_FireContest,LOG_Running);
-			B_LogEntry(TOPIC_FireContest,"Als Novize habe ich das Recht die Prüfung des Feuers zu fordern. Dabei wird mir jeder der drei Magier aus dem hohen Rat eine Prüfung stellen. Wenn ich sie bestehe, werde ich in den Kreis des Feuers aufgenommen.");
+			B_LogEntry(TOPIC_FireContest,TOPIC_FireContest_1);
 		};
 		nDocID = Doc_Create();
 		Doc_SetPages(nDocID,2);
@@ -61,7 +61,7 @@ func void Use_FINALDRAGONEQUIPMENT_S1()
 		{
 			PlayerGetsAmulettOfDeath = TRUE;
 			PLAYER_TALENT_RUNES[SPL_MasterOfDisaster] = TRUE;
-			B_LogEntry(TOPIC_TalentRunes,"Zutaten für die Rune ´Heiliges Geschoss´: 1 geweihtes Wasser, aber keine Spruchrolle");
+			B_LogEntry(TOPIC_TalentRunes,TOPIC_TalentRunes_1);
 			Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 			Doc_PrintLine(nDocID,1,"");
 			Doc_PrintLines(nDocID,1,"...ich habe, genau nach Anleitung einfach Innos geweihtes Wasser auf einen Runenrohling geträufelt und am Runentisch zusammengeführt. Der Runenstein ist zerstört, ich glaube, dieser Spruch ist wirklich nur dem Einen zugänglich.");
@@ -75,8 +75,8 @@ func void Use_FINALDRAGONEQUIPMENT_S1()
 			PLAYER_TALENT_RUNES[SPL_PalTeleportSecret] = TRUE;
 			PrintScreen(PRINT_LearnPalTeleportSecret,-1,-1,FONT_Screen,2);
 			Log_CreateTopic(TOPIC_TalentRunes,LOG_NOTE);
-			B_LogEntry(TOPIC_TalentRunes,"Um eine Rune zu erschaffen, benötige ich für jede Rune unterschiedliche Zutaten. Mit diesen Zutaten und einem Runenrohling kann ich dann die gewünschte Rune am Runentisch erschaffen.");
-			B_LogEntry(TOPIC_TalentRunes,"Zutaten für die Rune ´Geheimer Teleport´: 1 Geweihtes Wasser");
+			B_LogEntry(TOPIC_TalentRunes,TOPIC_TalentRunes_2);
+			B_LogEntry(TOPIC_TalentRunes,TOPIC_TalentRunes_3);
 			Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 			Doc_PrintLine(nDocID,1,"");
 			Doc_PrintLines(nDocID,1,"Um in den geheimen Ort zu gelangen muss man eine Teleportrune bauen. Dazu benötigst du einen Runenrohling und eine kleines Fläschchen geweihtes Wasser. Mit der erstellten Runen kannst du dich in den Raum teleporteiren.");
@@ -92,9 +92,9 @@ func void Use_FINALDRAGONEQUIPMENT_S1()
 			PrintScreen(PRINT_LearnSmith,-1,-1,FONT_Screen,2);
 			Npc_SetTalentSkill(self,NPC_TALENT_SMITH,1);
 			Log_CreateTopic(TOPIC_TalentSmith,LOG_NOTE);
-			B_LogEntry(TOPIC_TalentSmith,"Um eine Waffe zu schmiede, brauche ich zunächst ein Stück Rohstahl. An einem Schmiedefeuer muss ich den Stahl erhitzen und anschließend an einem Amboss in die gewünschte Form bringen. Für hochwertigere Waffe benötigt man häufig noch Substanzen, welche der Waffe besondere Eigenschaften verleihen.");
-			B_LogEntry(TOPIC_TalentSmith,"Wenn ich 4 Erz und 5 Drachenblut hinzugebe, kann ich mir einen ´ERZ-DRACHENTÖTER´ schmieden.");
-			B_LogEntry(TOPIC_TalentSmith,"Wenn ich 5 Erz und 5 Drachenblut hinzugebe, kann ich mir einen ´GROßEN ERZ-DRACHENTÖTER´ schmieden.");
+			B_LogEntry(TOPIC_TalentSmith,TOPIC_TalentSmith_1);
+			B_LogEntry(TOPIC_TalentSmith,TOPIC_TalentSmith_2);
+			B_LogEntry(TOPIC_TalentSmith,TOPIC_TalentSmith_3);
 			PlayergetsFinalDJGArmor = TRUE;
 			Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 			Doc_PrintLine(nDocID,1,"");

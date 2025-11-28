@@ -260,7 +260,7 @@ func void DIA_Alrik_WannaFight_Info()
 			Alrik_VomSchwertErzaehlt = TRUE;
 			Log_CreateTopic(TOPIC_AlrikSchwert,LOG_MISSION);
 			Log_SetTopicStatus(TOPIC_AlrikSchwert,LOG_Running);
-			B_LogEntry(TOPIC_AlrikSchwert,"Alrik hat sein Schwert an den Händler Jora verkauft. Er kämpft nur gegen mich, wenn ich es ihm zurückbringe.");
+			B_LogEntry(TOPIC_AlrikSchwert,TOPIC_AlrikSchwert_1);
 		};
 	}
 	else if((Kapitel <= 2) && (Alrik_ArenaKampfVerloren > 3))
@@ -625,7 +625,7 @@ func void DIA_Alrik_Ausbilden_Info()
 		};
 		Alrik_Teach1H = TRUE;
 		Log_CreateTopic(TOPIC_CityTeacher,LOG_NOTE);
-		B_LogEntry(TOPIC_CityTeacher,"Alrik kann mich im Kampf mit einhändigen Waffen trainieren. Er hält sich hinter dem Lagerhaus im Hafenviertel auf.");
+		B_LogEntry(TOPIC_CityTeacher,TOPIC_CityTeacher_14);
 	};
 };
 

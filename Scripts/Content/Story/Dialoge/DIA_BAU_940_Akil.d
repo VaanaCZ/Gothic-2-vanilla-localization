@@ -60,7 +60,7 @@ func void DIA_Akil_Hallo_Info()
 	AI_Output(self,other,"DIA_Akil_Hallo_13_03");	//äh ... ja, ja ... es ist alles in Ordnung. Du ... äh ... ich ... Ich kann jetzt nicht mit dir reden.
 	Log_CreateTopic(TOPIC_AkilsSLDStillthere,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_AkilsSLDStillthere,LOG_Running);
-	B_LogEntry(TOPIC_AkilsSLDStillthere,"Akils Hof wird von Söldnern bedroht.");
+	B_LogEntry(TOPIC_AkilsSLDStillthere,TOPIC_AkilsSLDStillthere_1);
 	Akils_SLDStillthere = TRUE;
 	AI_StopProcessInfos(self);
 };
@@ -226,8 +226,8 @@ func void DIA_Akil_Lieferung_Info()
 	CreateInvItems(self,ItMi_BaltramPaket,1);
 	B_GiveInvItems(self,other,ItMi_BaltramPaket,1);
 	Lieferung_Geholt = TRUE;
-	B_LogEntry(TOPIC_Baltram,"Die Lieferung habe ich. Ich könnte sie jetzt zu Baltram bringen...");
-	B_LogEntry(TOPIC_Nagur,"Die Lieferung habe ich. Ich könnte sie jetzt zu Nagur bringen...");
+	B_LogEntry(TOPIC_Baltram,TOPIC_Baltram_1);
+	B_LogEntry(TOPIC_Nagur,TOPIC_Nagur_1);
 };
 
 
@@ -448,7 +448,7 @@ func void DIA_Akil_SCHAFDIEB_Info()
 	MIS_Akil_SchafDiebe = LOG_Running;
 	Log_CreateTopic(TOPIC_AkilSchafDiebe,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_AkilSchafDiebe,LOG_Running);
-	B_LogEntry(TOPIC_AkilSchafDiebe,"Akil werde ständig Schafe gestohlen. Er hat die Banditen in der nahegelgenen Waldhöhle in verdacht.");
+	B_LogEntry(TOPIC_AkilSchafDiebe,TOPIC_AkilSchafDiebe_1);
 };
 
 func void DIA_Akil_SCHAFDIEB_wer()

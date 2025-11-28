@@ -262,7 +262,7 @@ func void DIA_Till_BRONKOZURARBEIT_ok()
 	MIS_Sekob_Bronko_eingeschuechtert = LOG_Running;
 	Log_CreateTopic(TOPIC_Bronkoeingeschuechtert,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Bronkoeingeschuechtert,LOG_Running);
-	B_LogEntry(TOPIC_Bronkoeingeschuechtert,"Till kann Bronko nicht zur Arbeit bewegen. Till will, dass ich es versuche.");
+	B_LogEntry(TOPIC_Bronkoeingeschuechtert,TOPIC_Bronkoeingeschuechtert_1);
 	AI_StopProcessInfos(self);
 };
 

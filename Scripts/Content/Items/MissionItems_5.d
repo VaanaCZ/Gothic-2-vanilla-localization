@@ -41,7 +41,7 @@ func void Use_XardasLetterToOpenBook()
 	Doc_Show(nDocID);
 	if(MIS_Xardas_SCCanOpenIrdorathBook == FALSE)
 	{
-		B_LogEntry(TOPIC_BuchHallenVonIrdorath,"Xardas erklärte mir in seinem Brief, wie die Worte heißen, mit der sich das Buch DIE HALLEN VON IRDORATH öffnen läßt.");
+		B_LogEntry(TOPIC_BuchHallenVonIrdorath,TOPIC_BuchHallenVonIrdorath_1);
 	};
 	MIS_Xardas_SCCanOpenIrdorathBook = TRUE;
 };
@@ -90,7 +90,7 @@ func void Use_HallsofIrdorath()
 		Print(PRINT_IrdorathBookHiddenKey);
 		B_GivePlayerXP(XP_HallsofIrdorathIsOpen);
 		ItWr_HallsofIrdorathIsOpen = TRUE;
-		B_LogEntry(TOPIC_BuchHallenVonIrdorath,"Ich konnte Xardas Buch öffnen. Es befanden sich eine geheime Nachricht und ein seltsamer Schlüssel darin. Wer weiß, was ich da unten im Keller des Klosters noch so alles finden werde.");
+		B_LogEntry(TOPIC_BuchHallenVonIrdorath,TOPIC_BuchHallenVonIrdorath_2);
 	}
 	else
 	{
@@ -123,7 +123,7 @@ func void Use_HallsofIrdorath_Open()
 	var int nDocID;
 	if(ItWr_SCReadsHallsofIrdorath == FALSE)
 	{
-		B_LogEntry(TOPIC_BuchHallenVonIrdorath,"Ich habe Xardas Buch gelesen. Es ist da von einer geheimen Bibliothek die Rede. Sie muß hier irgendwo im Keller des Klosters sein.");
+		B_LogEntry(TOPIC_BuchHallenVonIrdorath,TOPIC_BuchHallenVonIrdorath_3);
 	};
 	ItWr_SCReadsHallsofIrdorath = TRUE;
 	nDocID = Doc_Create();
@@ -293,7 +293,7 @@ func void Use_Seamap_Irdorath()
 	{
 		Log_CreateTopic(Topic_Ship,LOG_MISSION);
 		Log_SetTopicStatus(Topic_Ship,LOG_Running);
-		B_LogEntry(Topic_Ship,"Wie es aussieht, muss ich diese seltsame Insel des Feindes erreichen. Doch dafür benötige ich erst einmal ein Schiff, eine Mannschaft und einen Kapitän.");
+		B_LogEntry(Topic_Ship,Topic_Ship_1);
 		B_GivePlayerXP(XP_SCKnowsWayToIrdorath);
 	};
 	MIS_SCKnowsWayToIrdorath = TRUE;

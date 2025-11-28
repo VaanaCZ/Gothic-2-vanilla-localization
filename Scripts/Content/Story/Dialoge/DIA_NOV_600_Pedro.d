@@ -163,7 +163,7 @@ func void DIA_Pedro_TEMPEL_Info()
 		AI_Output(self,other,"DIA_Pedro_TEMPEL_09_06");	//Und bedenke - die Entscheidung, ein Diener Innos' zu sein, kannst du nicht mehr rückgängig machen.
 		Log_CreateTopic(Topic_Kloster,LOG_MISSION);
 		Log_SetTopicStatus(Topic_Kloster,LOG_Running);
-		B_LogEntry(Topic_Kloster,"Um im Innos - Kloster als Novize aufgenommen zu werden, brauche ich ein Schaf und eine gewaltige Summe Gold.");
+		B_LogEntry(Topic_Kloster,Topic_Kloster_2);
 	};
 };
 

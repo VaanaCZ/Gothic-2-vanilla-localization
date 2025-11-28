@@ -190,7 +190,7 @@ func void DIA_Dar_WoPaket_Info()
 		AI_Output(self,other,"DIA_Dar_WoPaket_03_04");	//Ehrlich, Mann, ich war total dicht. Hab keine Ahnung mehr, wie der Kerl aussah.
 		AI_Output(self,other,"DIA_Dar_WoPaket_03_05");	//Es war am Hafen in der Nähe des Bootsbauers. An mehr kann ich mich nicht erinnern.
 		Dar_Dieb = TRUE;
-		B_LogEntry(Topic_CipherPaket,"Dar hat zugegeben, das er das Krautpaket gestohlen hat. Er hat es im Hafenviertel von Khorinis verkauft, in der Nähe des Bootsbauers.");
+		B_LogEntry(Topic_CipherPaket,Topic_CipherPaket_3);
 	}
 	else
 	{
@@ -438,7 +438,7 @@ func void DIA_Dar_ORCRING_wie()
 	AI_Output(self,other,"DIA_Dar_ORCRING_wie_03_03");	//Mit sehr viel weniger kann ich hier keinen Eindruck schinden. So viel ist schon mal klar.
 	Log_CreateTopic(TOPIC_Dar_BringOrcEliteRing,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Dar_BringOrcEliteRing,LOG_Running);
-	B_LogEntry(TOPIC_Dar_BringOrcEliteRing,"Dar will eine große Nummer bei den Söldnern werden. Er will eine Orktrophäe. Eine Standarte, ein Armreif oder Ring oder ähnliches.");
+	B_LogEntry(TOPIC_Dar_BringOrcEliteRing,TOPIC_Dar_BringOrcEliteRing_1);
 	MIS_Dar_BringOrcEliteRing = LOG_Running;
 	Info_ClearChoices(DIA_Dar_ORCRING);
 };

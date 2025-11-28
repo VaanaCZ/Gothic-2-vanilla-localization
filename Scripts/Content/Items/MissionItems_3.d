@@ -182,7 +182,7 @@ func void UseCorneliusTagebuch()
 {
 	var int nDocID;
 	Cornelius_IsLiar = TRUE;
-	B_LogEntry(TOPIC_RescueBennet,"Das Tagebuch ist der Beweis, den ich brauche um Bennet zu entlasten.");
+	B_LogEntry(TOPIC_RescueBennet,TOPIC_RescueBennet_1);
 	nDocID = Doc_Create();
 	Doc_SetPages(nDocID,2);
 	Doc_SetPage(nDocID,0,"Book_Brown_L.tga",0);
@@ -779,10 +779,10 @@ func void Use_MinenAnteil_Mis()
 	SC_KnowsProspektorSalandril = TRUE;
 	if(ItWr_MinenAnteil_Mis_OneTime == FALSE)
 	{
-		B_LogEntry(TOPIC_MinenAnteile,"Der Kerl, der die Minenanteile den Händlern verkauft hat, heißt Salandril. Ich werde ihn sicherlich im oberen Viertel von Khorinis finden, wenn er nicht schon auf der Flucht vor dem Gesetz ist.");
+		B_LogEntry(TOPIC_MinenAnteile,TOPIC_MinenAnteile_1);
 		if(Npc_IsDead(Salandril))
 		{
-			B_LogEntry(TOPIC_MinenAnteile,"Salandril ist tot. Ich werde Serpentes davon unterrichten müssen.");
+			B_LogEntry(TOPIC_MinenAnteile,TOPIC_MinenAnteile_2);
 		};
 		ItWr_MinenAnteil_Mis_OneTime = TRUE;
 	};

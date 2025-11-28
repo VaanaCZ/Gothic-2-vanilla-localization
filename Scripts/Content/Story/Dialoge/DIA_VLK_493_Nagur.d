@@ -234,7 +234,7 @@ func void DIA_Nagur_Auftrag_Okay()
 	MIS_Nagur_Bote = LOG_Running;
 	Log_CreateTopic(TOPIC_Nagur,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Nagur,LOG_Running);
-	B_LogEntry(TOPIC_Nagur,"Ich soll mich von Baltram als neuen Boten einstellen lassen. Dann soll ich die Lieferung von Bauer Akil abholen und zu Nagur bringen.");
+	B_LogEntry(TOPIC_Nagur,TOPIC_Nagur_3);
 	AI_StopProcessInfos(self);
 };
 
@@ -262,7 +262,7 @@ func void DIA_Nagur_Success_Info()
 {
 	AI_Output(other,self,"DIA_Nagur_Success_15_00");	//Ich habe die Lieferung dabei.
 	AI_Output(self,other,"DIA_Nagur_Success_08_01");	//Gut gemacht. Ich werde sehen, dass ich sie loswerde. Komm morgen wieder.
-	B_LogEntry(TOPIC_Nagur,"Nagur hat die Lieferung bekommen. Morgen will er mir mein Gold für den Job zahlen.");
+	B_LogEntry(TOPIC_Nagur,TOPIC_Nagur_4);
 	AI_StopProcessInfos(self);
 	if(B_GiveInvItems(other,self,ItMi_BaltramPaket,1))
 	{

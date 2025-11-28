@@ -193,7 +193,7 @@ func void DIA_Gorax_Aufgabe_Info()
 	MIS_GoraxEssen = LOG_Running;
 	Log_CreateTopic(Topic_GoraxEssen,LOG_MISSION);
 	Log_SetTopicStatus(Topic_GoraxEssen,LOG_Running);
-	B_LogEntry(Topic_GoraxEssen,"Meister Gorax wünscht, das ich die Schafswürste aus der Vorratskammer gerecht unter allen Novizen aufteile. Außer mir sind noch dreizehn weitere Novizen im Kloster.");
+	B_LogEntry(Topic_GoraxEssen,Topic_GoraxEssen_1);
 };
 
 
@@ -265,7 +265,7 @@ func void DIA_Gorax_Aufgabe2_Info()
 	MIS_GoraxWein = LOG_Running;
 	Log_CreateTopic(Topic_GoraxWein,LOG_MISSION);
 	Log_SetTopicStatus(Topic_GoraxWein,LOG_Running);
-	B_LogEntry(Topic_GoraxWein,"Meister Gorax wünscht, das ich Orlan, dem Wirt der Herberge, eine Lieferung von zwölf Flaschen Wein bringe. Der Preis dafür beträgt 240 Goldstücke.");
+	B_LogEntry(Topic_GoraxWein,Topic_GoraxWein_1);
 };
 
 
@@ -360,7 +360,7 @@ func void DIA_Gorax_JOB_Info()
 	AI_Output(self,other,"DIA_Gorax_JOB_14_02");	//Zudem organisiere ich die Weinkellerei und überwache die Vorräte des Klosters.
 	AI_Output(self,other,"DIA_Gorax_JOB_14_03");	//Also, wenn du etwas benötigst, bei mir kannst du dich mit allem versorgen - natürlich nur gegen eine angemessene Spende.
 	Log_CreateTopic(Topic_KlosterTrader,LOG_NOTE);
-	B_LogEntry(Topic_KlosterTrader,"Meister Gorax kann mich im Kloster mit allem versorgen, was ich benötige.");
+	B_LogEntry(Topic_KlosterTrader,Topic_KlosterTrader_2);
 };
 
 
@@ -514,7 +514,7 @@ func void DIA_Gorax_KILLPEDRO_ja()
 	AI_Output(self,other,"DIA_Gorax_KILLPEDRO_ja_14_02");	//Serpentes will, dass du Pedro für seinen Verrat tötest, wenn er dir in die Hände fällt.
 	AI_Output(self,other,"DIA_Gorax_KILLPEDRO_ja_14_03");	//Bezahlung erhältst du, sobald der Auftrag erledigt ist.
 	AI_Output(self,other,"DIA_Gorax_KILLPEDRO_ja_14_04");	//Das habe ich nicht gesagt. Und du hast auch nichts gehört, verstanden?
-	B_LogEntry(TOPIC_TraitorPedro,"Gorax verriet mir, dass Serpentes will, dass ich Pedro für seinen Verrat töte, wenn Pedro mir in die Hände fällt.");
+	B_LogEntry(TOPIC_TraitorPedro,TOPIC_TraitorPedro_3);
 	B_GivePlayerXP(XP_Gorax_KILLPEDRO_GotMission);
 	MIS_Gorax_KillPedro = LOG_Running;
 	AI_StopProcessInfos(self);

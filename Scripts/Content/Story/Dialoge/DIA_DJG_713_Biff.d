@@ -205,7 +205,7 @@ func int DIA_Biff_ARBEITEN_Condition()
 func void DIA_Biff_ARBEITEN_Info()
 {
 	AI_Output(other,self,"DIA_Biff_ARBEITEN_15_00");	//Wie wär's, wenn du ab jetzt für mich arbeitest?
-	B_LogEntry(TOPIC_Dragonhunter,"Der Drachenjäger Biff ist ein Söldner wie er im Buche steht. Wenn ich ihn bezahle, wird er auch für mich kämpfen.");
+	B_LogEntry(TOPIC_Dragonhunter,TOPIC_Dragonhunter_10);
 	if(DJG_BiffParty_nomore >= 6)
 	{
 		AI_Output(self,other,"DIA_Biff_ARBEITEN_07_01");	//Das hatten wir doch schon mal. Hat nicht besonders gut funktioniert. Danke, kein Interesse.
@@ -713,7 +713,7 @@ func void DIA_Biff_KnowWhereEnemy_Yes()
 	AI_Output(self,other,"DIA_Biff_KnowWhereEnemy_Yes_07_05");	//Kein Problem. Ich bin schon unterwegs. Treff mich am Pass.
 	Log_CreateTopic(Topic_Crew,LOG_MISSION);
 	Log_SetTopicStatus(Topic_Crew,LOG_Running);
-	B_LogEntry(Topic_Crew,"Die Aussicht auf reiche Beute hat Biff überzeugen können mich auf meiner Reise zu begleiten. So lange er genug Gold bekommt, kann ich auf ihn zählen.");
+	B_LogEntry(Topic_Crew,Topic_Crew_2);
 	B_GivePlayerXP(XP_Crewmember_Success);
 	self.flags = NPC_FLAG_IMMORTAL;
 	Biff_IsOnBoard = LOG_SUCCESS;

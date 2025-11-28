@@ -24,7 +24,7 @@ func void enter_di_firsttime_trigger()
 			{
 				Wld_InsertItem(ItSe_XardasNotfallBeutel_MIS,"FP_ITEM_SHIP_12");
 				SC_InnosEyeVergessen_DI = TRUE;
-				B_LogEntry(TOPIC_HallenVonIrdorath,"Letzte Nacht hatte ich einen Traum. Xardas sprach zu mir und bat mich, den Alchemietisch auf dem Schiff aufzusuchen um dort etwas abzuholen. Sehr befremdlich und dabei ich hatte eigentlich gar nichts getrunken letzte Nacht.");
+				B_LogEntry(TOPIC_HallenVonIrdorath,TOPIC_HallenVonIrdorath_6);
 			};
 			Wld_InsertItem(ItMi_Flask,"FP_ITEM_SHIP_06");
 			if(((Npc_HasItems(hero,ItAt_IcedragonHeart) >= 1) || (Npc_HasItems(hero,ItAt_RockdragonHeart) >= 1) || (Npc_HasItems(hero,ItAt_FiredragonHeart) >= 1) || (Npc_HasItems(hero,ItAt_SwampdragonHeart) >= 1)) == FALSE)
@@ -36,76 +36,76 @@ func void enter_di_firsttime_trigger()
 		Log_SetTopicStatus(TOPIC_MyCrew,LOG_Running);
 		if(JorgenIsCaptain == TRUE)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Jorgen, mein Kapitän, wird hier auf dem Schiff warten, bis ich zurück bin.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_1);
 		};
 		if(TorlofIsCaptain == TRUE)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Torlof, mein Kapitän, wird hier auf dem Schiff bleiben und es verteidigen, so lange ich auf der Insel bin. Bei ihm kann ich meine Geschicklichkeit und Stärke verbessern.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_2);
 		};
 		if(JackIsCaptain == TRUE)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Jack, mein Kapitän, wird hier auf dem Schiff warten, bis ich zurück bin. Er wirkt ein bisschen ängstlich. Hoffentlich legt sich das wieder. Ich brauche ihn.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_3);
 		};
 		if(Lee_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Lee wird in meiner Abwesenheit, das Kommando auf dem Schiff übernehmen. Bei ihm kann meine Fertigkeiten mit Ein- und Zweihandwaffen verbessern.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_4);
 		};
 		if(MiltenNW_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Bei Milten kann ich mein Mana steigern.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_5);
 			if(hero.guild == GIL_KDF)
 			{
-				Log_AddEntry(TOPIC_MyCrew,"Milten kann mir desweiteren das Runenbauen lehren.");
+				Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_6);
 			};
 		};
 		if(Lester_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Ich habe den Eindruck, dass sich Lesters Zustand hier auf der seltsamen Insel noch verschlechtert hat.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_7);
 		};
 		if(Mario_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Mario ist ein wenig seltsam. Er hockte die gesamte Überfahrt am Heck des Schiffes und hat seitdem noch kein Wort gesagt. ");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_8);
 		};
 		if(Wolf_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Wolf kann mir Armbrust und Bogenschießen beibringen.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_9);
 		};
 		if(Vatras_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Vatras hat sich in die Magierkajüte zurück gezogen. Bei ihm kann ich mich heilen lassen und eine Menge über das Tränkebrauen lernen. ");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_10);
 			if(hero.guild == GIL_KDF)
 			{
-				Log_AddEntry(TOPIC_MyCrew,"Vatras kann auch meinen magischen Kreis erhöhen. ");
+				Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_11);
 			};
 		};
 		if(Bennet_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Bennet bringt mir das Schmieden bei, wenn ich es will.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_12);
 		};
 		if(Diego_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Diego will mir helfen, wenn ich nicht mehr weiter weiß, und hat Munition für mich. Bei ihm kann ich das Schlösser knacken und Bogen- oder Armbrustschießen lernen.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_13);
 		};
 		if(Gorn_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Gorn hat auf unserer Reise kein bisschen geschlafen. Er wird auf das Schiff acht geben. Ich denke, es ist bei ihm in guten Händen.");
-			Log_AddEntry(TOPIC_MyCrew,"Bei Gorn kann ich meine Fähigkeiten mit der Zweihandwaffen verbessern.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_14);
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_15);
 		};
 		if(Lares_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Lares hat versprochen, mir das Schleichen und den Einhandkampf beizubringen. Ausserdem kann er meine Geschicklichkeit verbessern.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_16);
 		};
 		if(Biff_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Biff ist so auf Geld versessen, dass es schon bald weh tut. Es wird schwierig sein, ihn in Zaum zu halten.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_17);
 		};
 		if(Angar_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Angar wirkt sehr beunruhigt. Ich habe den Eindruck, dass es nciht mehr lange dauert, dann zieht er auf eigene Faust in den Kampf.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_18);
 		};
 		if(Girion_IsOnBoard == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MyCrew,"Girion hält sehr zurück. Bewundernswert seine Geduld. Immerhin ist er Kampflehrer. Vielleicht kommt mir das hier noch zu Gute.");
+			Log_AddEntry(TOPIC_MyCrew,TOPIC_MyCrew_19);
 		};
 		IntroduceChapter(KapWechsel_6,KapWechsel_6_Text,"chapter6.tga","chapter_01.wav",6000);
 		EnterDI_Kapitel6 = TRUE;

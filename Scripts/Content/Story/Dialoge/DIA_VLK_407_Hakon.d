@@ -71,7 +71,7 @@ func void DIA_Hakon_Hallo_Info()
 	AI_Output(self,other,"DIA_Hakon_Add_12_00");	//Ich bin Hakon, der Waffenhändler. Kann ich etwa für dich tun?
 	AI_Output(self,other,"DIA_Hakon_Add_12_01");	//In diesen Tagen sollte jeder Mann eine Waffe tragen. Vor allem wenn er außerhalb der Stadtmauern unterwegs ist.
 	Log_CreateTopic(TOPIC_CityTrader,LOG_NOTE);
-	B_LogEntry(TOPIC_CityTrader,"Hakon verkauft Waffen am Marktplatz.");
+	B_LogEntry(TOPIC_CityTrader,TOPIC_CityTrader_2);
 };
 
 
@@ -247,7 +247,7 @@ func void DIA_Hakon_Banditen_Info()
 	MIS_HakonBandits = LOG_Running;
 	Log_CreateTopic(TOPIC_HakonBanditen,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_HakonBanditen,LOG_Running);
-	B_LogEntry(TOPIC_HakonBanditen,"Hakon, der Waffenhändler wurde vor der Stadt von Banditen ausgeraubt.");
+	B_LogEntry(TOPIC_HakonBanditen,TOPIC_HakonBanditen_3);
 };
 
 
@@ -315,7 +315,7 @@ func void DIA_Hakon_Miliz_Info()
 	AI_Output(self,other,"DIA_Hakon_Miliz_12_01");	//Der Kerl heißt Pablo. Er war mit ein paar anderen auf der Suche nach den Banditen. Aber gefunden haben sie nichts.
 	AI_Output(other,self,"DIA_Hakon_Miliz_15_02");	//Weißt du, wo ich Pablo finden kann?
 	AI_Output(self,other,"DIA_Hakon_Miliz_12_03");	//Er patrouilliert durch die Stadt. Du findest ihn entweder am Tempelplatz oder in der Unterstadt.
-	B_LogEntry(TOPIC_HakonBanditen,"Pablo von der Stadtwache, war an der erfolglosen Suche nach den Banditen beteiligt.");
+	B_LogEntry(TOPIC_HakonBanditen,TOPIC_HakonBanditen_4);
 };
 
 

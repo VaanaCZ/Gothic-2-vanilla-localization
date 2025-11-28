@@ -213,7 +213,7 @@ func void DIA_Raoul_Stimme_Info()
 	AI_Output(self,other,"DIA_Raoul_Stimme_01_01");	//Ach, mach doch, was du willst ...
 	Log_CreateTopic(TOPIC_SLDRespekt,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_SLDRespekt,LOG_Running);
-	B_LogEntry(TOPIC_SLDRespekt,"Raoul hat nichts dagegen, dass ich mich den Söldnern anschließe.");
+	B_LogEntry(TOPIC_SLDRespekt,TOPIC_SLDRespekt_10);
 };
 
 
@@ -366,7 +366,7 @@ func void B_Raoul_Blame()
 	AI_Output(self,other,"DIA_Raoul_TROLL_rechnung_B_Raoul_Blame_01_07");	//Worauf wartest du dann noch?
 	Log_CreateTopic(TOPIC_KillTrollBlack,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_KillTrollBlack,LOG_Running);
-	B_LogEntry(TOPIC_KillTrollBlack,"Raoul will, dass ich ihm das Fell eines schwarzen Trolls bringe.");
+	B_LogEntry(TOPIC_KillTrollBlack,TOPIC_KillTrollBlack_1);
 	MIS_Raoul_KillTrollBlack = LOG_Running;
 	Info_ClearChoices(DIA_Raoul_TROLL);
 };

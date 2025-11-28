@@ -46,7 +46,7 @@ func void DIA_Bosper_HALLO_Info()
 	AI_Output(self,other,"DIA_Bosper_HALLO_11_01");	//Ich bin Bosper. Ich baue Bögen und handele mit Fellen.
 	AI_Output(self,other,"DIA_Bosper_HALLO_11_02");	//Was treibt dich nach Khorinis?
 	Log_CreateTopic(TOPIC_CityTrader,LOG_NOTE);
-	B_LogEntry(TOPIC_CityTrader,"Bosper baut Bögen und handelt mit Fellen. Er hat seinen Laden am östlichen Tor, in der Unterstadt.");
+	B_LogEntry(TOPIC_CityTrader,TOPIC_CityTrader_7);
 };
 
 
@@ -81,7 +81,7 @@ func void DIA_Bosper_IntoOV_Info()
 	};
 	Log_CreateTopic(TOPIC_OV,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_OV,LOG_Running);
-	B_LogEntry(TOPIC_OV,"Um Zugang zum oberen Viertel zu bekommen, muss ich ein angesehener Bürger sein, oder eine Arbeit haben.");
+	B_LogEntry(TOPIC_OV,TOPIC_OV_1);
 };
 
 
@@ -118,7 +118,7 @@ func void DIA_Bosper_SeekWork_Info()
 		AI_Output(other,self,"DIA_Bosper_SeekWork_15_07");	//Ich kann dir Felle besorgen, wenn du DAS meinst.
 		AI_Output(self,other,"DIA_Bosper_SeekWork_11_08");	//Ausgezeichnet! Bring mir so viele Tierfelle, wie du kriegen kannst - ich werde sie dir für einen guten Preis abkaufen!.
 	};
-	B_LogEntry(TOPIC_Lehrling,"Bosper sucht einen neuen Lehrling. Bei ihm könnte ich anfangen.");
+	B_LogEntry(TOPIC_Lehrling,TOPIC_Lehrling_6);
 };
 
 
@@ -264,7 +264,7 @@ func void DIA_Bosper_LEHRLING_OK()
 	Wld_AssignRoomToGuild("gritta",GIL_NONE);
 	MIS_Apprentice = LOG_SUCCESS;
 	B_GivePlayerXP(XP_Lehrling);
-	B_LogEntry(Topic_Bonus,"Bosper hat mich als Lehrling eingestellt. Ich habe nun Zugang zum oberen Viertel.");
+	B_LogEntry(Topic_Bonus,Topic_Bonus_6);
 	Info_ClearChoices(DIA_Bosper_LEHRLING);
 };
 
@@ -380,7 +380,7 @@ func void DIA_Bosper_ZUSTIMMUNG_Info()
 			B_GivePlayerXP(XP_Zustimmung);
 			Bosper_Zustimmung_Once = TRUE;
 		};
-		B_LogEntry(TOPIC_Lehrling,"Bosper gibt mir seine Zustimmung, wenn ich irgendwo als Lehrling anfangen will.");
+		B_LogEntry(TOPIC_Lehrling,TOPIC_Lehrling_7);
 	}
 	else
 	{
@@ -420,7 +420,7 @@ func void DIA_Bosper_Job_Info()
 	{
 		AI_Output(self,other,"DIA_Bosper_Job_11_01");	//Ich werd dir beibringen, wie man Tieren das Fell abzieht und du besorgst mir - sagen wir - ein halbes Dutzend Wolfsfelle.
 		Log_CreateTopic(TOPIC_CityTeacher,LOG_NOTE);
-		B_LogEntry(TOPIC_CityTeacher,"Bosper kann mir beibringen, wie ich Tieren das Fell abziehe.");
+		B_LogEntry(TOPIC_CityTeacher,TOPIC_CityTeacher_10);
 	}
 	else
 	{
@@ -435,10 +435,10 @@ func void DIA_Bosper_Job_Info()
 	MIS_Bosper_WolfFurs = LOG_Running;
 	Log_CreateTopic(TOPIC_BosperWolf,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BosperWolf,LOG_Running);
-	B_LogEntry(TOPIC_BosperWolf,"Ich soll Bosper sechs Wolfsfelle besorgen. Dann kann ich bei ihm anfangen, oder er gibt mir seine Zustimmung, wenn ich bei anderem Meister anfangen will.");
+	B_LogEntry(TOPIC_BosperWolf,TOPIC_BosperWolf_1);
 	if(PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Fur] == FALSE)
 	{
-		B_LogEntry(TOPIC_BosperWolf,"Dazu sollte ich bei ihm lernen, wie ich Tieren das Fell abziehe.");
+		B_LogEntry(TOPIC_BosperWolf,TOPIC_BosperWolf_2);
 	};
 };
 
@@ -479,7 +479,7 @@ func void DIA_Bosper_BringFur_Info()
 		B_GiveInvItems(self,other,ItMi_Gold,Value_WolfFur * 6);
 		AI_Output(self,other,"DIA_Bosper_BringFur_11_05");	//Und? Was denkst du? Ist die Arbeit nicht besser, als den ganzen Tag auf Schwertern rumzuhämmern oder im staubigen Kämmerlein Fläschchen abzufüllen?
 		MIS_Bosper_WolfFurs = LOG_SUCCESS;
-		B_LogEntry(TOPIC_Lehrling,"Bosper wird mich als Lehrling aufnehmen, wenn ich die Zustimmung der anderen Meister bekomme.");
+		B_LogEntry(TOPIC_Lehrling,TOPIC_Lehrling_8);
 	}
 	else
 	{
@@ -517,7 +517,7 @@ func void DIA_Bosper_TeachFUR_Info()
 		if(MIS_Bosper_WolfFurs == LOG_Running)
 		{
 			AI_Output(self,other,"DIA_Bosper_TeachFUR_11_03");	//Bring mir die Wolfsfelle und wir sehen weiter ...
-			B_LogEntry(TOPIC_BosperWolf,"Bosper hat mir beigebracht, wie ich Tieren das Fell abziehe.");
+			B_LogEntry(TOPIC_BosperWolf,TOPIC_BosperWolf_3);
 		};
 	};
 };
@@ -598,7 +598,7 @@ func void DIA_Bosper_BogenRunning_Info()
 	AI_Output(self,other,"DIA_Bosper_BogenRunning_11_08");	//Wenn ich den Mistkerl erwische ...
 	Log_CreateTopic(TOPIC_BosperBogen,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BosperBogen,LOG_Running);
-	B_LogEntry(TOPIC_BosperBogen,"Bosper wurde ein Bogen gestohlen. Der Dieb ist zum Hafen gerannt, aber dort ist er entwischt. Die Miliz hat das Hafenviertel durchsucht, aber nichts gefunden, obwohl der Bogen noch irgendwo in der Stadt ist.");
+	B_LogEntry(TOPIC_BosperBogen,TOPIC_BosperBogen_1);
 };
 
 
@@ -762,7 +762,7 @@ func void DIA_Bosper_Aufgaben_Info()
 		AI_Output(self,other,"DIA_Bosper_Aufgaben_11_05");	//Ich hab hier keinen Platz für dich. Im Hotel am Marktplatz findest du bestimmt noch ein Bett.
 	};
 	Log_CreateTopic(Topic_Bonus,LOG_NOTE);
-	B_LogEntry(Topic_Bonus,"Bosper zahlt mir für Felle einen besonders guten Preis.");
+	B_LogEntry(Topic_Bonus,Topic_Bonus_7);
 };
 
 

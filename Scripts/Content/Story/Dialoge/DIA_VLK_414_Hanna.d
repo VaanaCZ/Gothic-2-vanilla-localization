@@ -273,7 +273,7 @@ func void DIA_Hanna_AnyNews_Yes()
 	MIS_HannaRetrieveLetter = LOG_Running;
 	Log_CreateTopic(TOPIC_HannaRetrieveLetter,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_HannaRetrieveLetter,LOG_Running);
-	B_LogEntry(TOPIC_HannaRetrieveLetter,"Hanna vermisst ein Schriftstück. Es soll am Hafen beim Kartenzeichner Brahim abhanden gekommen sein.");
+	B_LogEntry(TOPIC_HannaRetrieveLetter,TOPIC_HannaRetrieveLetter_1);
 	Info_ClearChoices(DIA_Hanna_AnyNews);
 	Info_AddChoice(DIA_Hanna_AnyNews,"Ich bin doch kein Laufbursche.",DIA_Hanna_AnyNews_Yes_Footboy);
 	Info_AddChoice(DIA_Hanna_AnyNews,"Was kriege ich dafür?",DIA_Hanna_AnyNews_Yes_Reward);

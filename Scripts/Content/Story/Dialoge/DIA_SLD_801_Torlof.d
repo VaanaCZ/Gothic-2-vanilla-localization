@@ -110,7 +110,7 @@ func void DIA_Torlof_Probe_Info()
 		Npc_ExchangeRoutine(self,"Start");
 		Log_CreateTopic(TOPIC_BecomeSLD,LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_BecomeSLD,LOG_Running);
-		B_LogEntry(TOPIC_BecomeSLD,"Um bei den Söldnern aufgenommen zu werden, wird Torlof mich auf die Probe stellen und ich muss mir den Respekt der anderen Söldner verdienen.");
+		B_LogEntry(TOPIC_BecomeSLD,TOPIC_BecomeSLD_3);
 	}
 	else
 	{
@@ -150,7 +150,7 @@ func void DIA_Torlof_Respekt_Info()
 	AI_Output(self,other,"DIA_Torlof_Respekt_01_05");	//Wenn du gewinnst, wird das den meisten Respekt beibringen. Aber achte darauf, dass du nicht versehentlich einen dabei umbringst. Denn dann hast du ein fettes Problem.
 	Log_CreateTopic(TOPIC_SLDRespekt,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_SLDRespekt,LOG_Running);
-	B_LogEntry(TOPIC_SLDRespekt,"Damit die Söldner mich respektieren, sollte ich die Aufgabe erledigen, die Torlof mir stellt. Zudem werden die Söldner von mir überzeugt sein, wenn ich ihnen helfe oder sie im Duell besiege.");
+	B_LogEntry(TOPIC_SLDRespekt,TOPIC_SLDRespekt_1);
 };
 
 
@@ -180,7 +180,7 @@ func void DIA_Torlof_Duellregeln_Info()
 	AI_Output(self,other,"DIA_Torlof_Duellregeln_01_02");	//Du kannst nicht einfach hingehen und einem der Männer ohne Warnung eins überbraten.
 	AI_Output(self,other,"DIA_Torlof_Duellregeln_01_03");	//Es muss eine Art Herausforderung ausgesprochen werden. Eine Beleidigung oder ein anderer Grund zu kämpfen.
 	AI_Output(self,other,"DIA_Torlof_Duellregeln_01_04");	//Keiner der anderen Männer wird sich in so einen Kampf einmischen. Es sei denn, einer der beiden wird bei dem Duell getötet.
-	B_LogEntry(TOPIC_SLDRespekt,"Die Duellregeln: Ein Duell muss durch eine Herausforderung begonnen werden, dann wird sich auch kein anderer einmischen. Beim Duell darf nicht getötet werden.");
+	B_LogEntry(TOPIC_SLDRespekt,TOPIC_SLDRespekt_2);
 };
 
 
@@ -401,7 +401,7 @@ func void DIA_Torlof_RUF_Info()
 		AI_Output(self,other,"DIA_Torlof_RUF_01_30");	//Die meisten Söldner sind für dich - von unserer Seite aus kannst du jederzeit bei uns anfangen.
 		AI_Output(self,other,"DIA_Torlof_RUF_01_31");	//Geh zu Lee. Er wird dir alles weitere erzählen.
 		Torlof_GenugStimmen = TRUE;
-		B_LogEntry(TOPIC_BecomeSLD,"Ich habe genug Respekt bei den Söldnern. Jetzt sollte ich mal mit Lee sprechen.");
+		B_LogEntry(TOPIC_BecomeSLD,TOPIC_BecomeSLD_5);
 	}
 	else if(Points_Sld >= 7)
 	{
@@ -457,7 +457,7 @@ func void B_Torlof_HolPachtVonSekob()
 	CreateInvItems(Sekob,ItMi_Gold,50);
 	Log_CreateTopic(TOPIC_TorlofPacht,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_TorlofPacht,LOG_Running);
-	B_LogEntry(TOPIC_TorlofPacht,"Torlof hat mich beauftragt, die Pacht vom Bauer Sekob einzutreiben. Es sind 50 Goldstücke die er zahlen soll.");
+	B_LogEntry(TOPIC_TorlofPacht,TOPIC_TorlofPacht_1);
 };
 
 func void B_Torlof_BengarMilizKlatschen()
@@ -475,7 +475,7 @@ func void B_Torlof_BengarMilizKlatschen()
 	B_InitNpcGlobals();
 	Log_CreateTopic(TOPIC_TorlofMiliz,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_TorlofMiliz,LOG_Running);
-	B_LogEntry(TOPIC_TorlofMiliz,"Torlaof hat mich beauftragt, die Miliz von Bauer Bengars Hof zu vertreiben. Der Hof liegt auf der Hochebene.");
+	B_LogEntry(TOPIC_TorlofMiliz,TOPIC_TorlofMiliz_1);
 };
 
 func void DIA_Torlof_Aufgaben_Pacht()
@@ -561,7 +561,7 @@ func void DIA_Torlof_SekobSuccess_Info()
 		};
 		MIS_Torlof_HolPachtVonSekob = LOG_SUCCESS;
 		B_GivePlayerXP(XP_Torlof_SekobsKohlebekommen);
-		B_LogEntry(TOPIC_BecomeSLD,"Die Aufgabe, die Torlof mir gestellt hat, habe ich erfüllt.");
+		B_LogEntry(TOPIC_BecomeSLD,TOPIC_BecomeSLD_6);
 	}
 	else
 	{
@@ -605,7 +605,7 @@ func void DIA_Torlof_BengarSuccess_Info()
 	};
 	MIS_Torlof_BengarMilizKlatschen = LOG_SUCCESS;
 	B_GivePlayerXP(XP_Bengar_MILIZKLATSCHEN);
-	B_LogEntry(TOPIC_BecomeSLD,"Die Aufgabe, die Torlof mir gestellt hat, habe ich erfüllt.");
+	B_LogEntry(TOPIC_BecomeSLD,TOPIC_BecomeSLD_6);
 };
 
 
@@ -736,7 +736,7 @@ func void DIA_Torlof_WhatCanYouTeach_Info()
 	AI_Output(self,other,"DIA_Torlof_WhatCanYouTeach_01_02");	//Viele Kämpfer sind sehr schwach, weil sie die Technik nicht beherrschen, ihre Stärke richtig einzusetzen.
 	AI_Output(self,other,"DIA_Torlof_WhatCanYouTeach_01_03");	//Dasselbe gilt für Geschicklichkeit und Fernwaffen.
 	Log_CreateTopic(Topic_SoldierTeacher,LOG_NOTE);
-	B_LogEntry(Topic_SoldierTeacher,"Torlof kann mir dabei helfen, mein Geschick und meine Stärke zu verbessern.");
+	B_LogEntry(Topic_SoldierTeacher,Topic_SoldierTeacher_2);
 };
 
 
@@ -890,7 +890,7 @@ func void DIA_Torlof_DEMENTOREN_Info()
 	Wld_InsertNpc(CastlemineDMT,"FP_STAND_DEMENTOR_KDF_12");
 	Log_CreateTopic(TOPIC_Torlof_Dmt,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Torlof_Dmt,LOG_Running);
-	B_LogEntry(TOPIC_Torlof_Dmt,"Beim Banditenlager in den Bergen im Süden des Tals sollen sich einige dieser schwarzen Kapuzentypen aufhalten. Torlof bekommt bei ihrer Anwesendheit Sodbrennen. Ich soll die Sache für ihn erledigen.");
+	B_LogEntry(TOPIC_Torlof_Dmt,TOPIC_Torlof_Dmt_1);
 	MIS_Torlof_Dmt = LOG_Running;
 };
 
@@ -1031,7 +1031,7 @@ func void DIA_Torlof_BEMYCAPTAIN_Info()
 	AI_Output(self,other,"DIA_Torlof_BEMYCAPTAIN_01_07");	//Geh in die Burg im Minental. Klaue der Torwache den Schlüssel für das Haupttor und öffne es. Den Rest werden die Orks besorgen!
 	Log_CreateTopic(Topic_Captain,LOG_MISSION);
 	Log_SetTopicStatus(Topic_Captain,LOG_Running);
-	B_LogEntry(Topic_Captain,"Bevor Torlof den Kapitänsposten annehmen wird, muss ich dafür sorgen, dass die Paladine aus der Stadt abziehen. Er meint ich sollte einen kleinen Zwischfall in der Burg des Minentals arrangieren. Er will, dass ich der Torwache den Schlüssel zum Hauptor stehle und die Orks in die Burg lasse. Er hofft, dass die Paladine dann die Stadt verlassen um ihren Kameraden zu helfen.");
+	B_LogEntry(Topic_Captain,Topic_Captain_3);
 };
 
 
@@ -1101,7 +1101,7 @@ func void DIA_Torlof_BEMYCAPTAIN3_zuViel()
 	AI_Output(self,other,"DIA_Torlof_BEMYCAPTAIN3_zuViel_01_01");	//Tja. Guter Dienst ist eben teuer. Du hast gar keine andere Wahl. Du wirst in dieser Gegend keinen anderen finden, der ein Schiff führen kann.
 	AI_Output(self,other,"DIA_Torlof_BEMYCAPTAIN3_zuViel_01_02");	//Also zahl das Gold und mach hier keine Zicken.
 	Info_ClearChoices(DIA_Torlof_BEMYCAPTAIN3);
-	B_LogEntry(Topic_Captain,"Torlof ist jetzt bereit das Schif zu steuern. Leider möchte er noch eine Entlohnung von 2500 Goldstücken haben.");
+	B_LogEntry(Topic_Captain,Topic_Captain_4);
 };
 
 func void DIA_Torlof_BEMYCAPTAIN3_ok()
@@ -1111,7 +1111,7 @@ func void DIA_Torlof_BEMYCAPTAIN3_ok()
 	{
 		AI_Output(self,other,"DIA_Torlof_BEMYCAPTAIN3_ok_01_01");	//Wunderbar. Jetzt musst du mir nur noch genau sagen, was ich machen soll.
 		Torlof_PaidToBeCaptain = TRUE;
-		B_LogEntry(Topic_Captain,"Nachdem ich Torlof 2500 Goldstücke in den Rache gestopft habe, ist er jetzt endlich bereit mir zu folgen.");
+		B_LogEntry(Topic_Captain,Topic_Captain_5);
 	}
 	else
 	{

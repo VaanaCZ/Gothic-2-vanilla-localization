@@ -315,11 +315,11 @@ func void DIA_Garond_NeedProof_Info()
 	AI_Output(other,self,"DIA_Garond_NeedProof_15_09");	//Na schön - schätze, mir bleibt keine Wahl.
 	MIS_ScoutMine = LOG_Running;
 	B_StartOtherRoutine(Jergan,"FAJETH");
-	B_LogEntry(Topic_MISOLDWORLD,"Bevor Komandant Garond mich zurückschickt, will er das ich die drei Schürftruppen aufsuche und ihm davon berichte, wieviel Erz sie dort gelagert haben.");
+	B_LogEntry(Topic_MISOLDWORLD,Topic_MISOLDWORLD_2);
 	Log_CreateTopic(TOPIC_ScoutMine,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_ScoutMine,LOG_Running);
-	B_LogEntry(TOPIC_ScoutMine,"Kommandant Garond hat mir eine Aufgabe zugewiesen. Er hat drei Schürftrupps auf die Suche nach dem magischen Erz geschickt. Bisher haben sie nichts geliefert. ");
-	B_LogEntry(TOPIC_ScoutMine,"Ich soll die drei Schürftrupps aufsuchen und herausfinden, wieviel Erz sie gelagert haben.");
+	B_LogEntry(TOPIC_ScoutMine,TOPIC_ScoutMine_2);
+	B_LogEntry(TOPIC_ScoutMine,TOPIC_ScoutMine_3);
 };
 
 
@@ -380,7 +380,7 @@ func void DIA_Garond_Equipment_Info()
 	{
 		AI_Output(self,other,"DIA_Garond_Equipment_10_02");	//Kläre das mit Tandor. Er wird dich mit allem versorgen, was du brauchst.
 		Log_CreateTopic(TOPIC_Trader_OC,LOG_NOTE);
-		B_LogEntry(TOPIC_Trader_OC,"Tandor handelt mit Waffen in der Burg.");
+		B_LogEntry(TOPIC_Trader_OC,TOPIC_Trader_OC_1);
 	};
 };
 
@@ -438,7 +438,7 @@ func void DIA_Garond_Wo_Info()
 	CreateInvItems(self,ItWr_Map_OldWorld_Oremines_MIS,1);
 	B_GiveInvItems(self,other,ItWr_Map_OldWorld_Oremines_MIS,1);
 	AI_Output(self,other,"DIA_Garond_Wo_10_02");	//Falls du noch weitere Fragen hast, wende dich an Parcival. Er wird dich mit allen Informationen über die Schürfer versorgen.
-	B_LogEntry(TOPIC_ScoutMine,"Der Paladin Parcival kann mich mit Informationen über die Schürfer versorgen.");
+	B_LogEntry(TOPIC_ScoutMine,TOPIC_ScoutMine_4);
 };
 
 func void B_Garond_OreCounter3()
@@ -591,7 +591,7 @@ func void DIA_Garond_Success_Info()
 	CreateInvItems(self,ItWr_PaladinLetter_MIS,1);
 	B_GiveInvItems(self,other,ItWr_PaladinLetter_MIS,1);
 	KnowsPaladins_Ore = TRUE;
-	B_LogEntry(Topic_MISOLDWORLD,"Kommandant Garond hat mir einen Brief ausgehändigt. Das wird als Beweis reichen. Damit kann ich zu Lord Hagen zurückkehren.");
+	B_LogEntry(Topic_MISOLDWORLD,Topic_MISOLDWORLD_3);
 	MIS_ScoutMine = LOG_SUCCESS;
 	B_GivePlayerXP(XP_ScoutMine);
 	MIS_ReadyForChapter3 = TRUE;
@@ -691,7 +691,7 @@ func void DIA_Garond_Gorn_Info()
 	AI_Output(other,self,"DIA_Garond_Gorn_15_04");	//Das ist ein Haufen Gold.
 	AI_Output(self,other,"DIA_Garond_Gorn_10_05");	//Gorn hat auch einiges auf dem Kerbholz. Bring mir das Gold, dann lasse ich Gorn frei.
 	MIS_RescueGorn = LOG_Running;
-	B_LogEntry(TOPIC_RescueGorn,"Garond verlangt eintausend Goldstücke für die Freilassung von Gorn.");
+	B_LogEntry(TOPIC_RescueGorn,TOPIC_RescueGorn_1);
 };
 
 
@@ -721,7 +721,7 @@ func void DIA_Garond_Pay_Info()
 	{
 		AI_Output(self,other,"DIA_Garond_Pay_10_01");	//Einverstanden. Du kannst zu Gerold gehen und ihm sagen, das Gorn auf meinen Befehl freigelassen wird.
 		Garond_Kerkerauf = TRUE;
-		B_LogEntry(TOPIC_RescueGorn,"Ich habe Garond bezahlt. Jetzt kann ich Gorn aus dem Knast holen. Der Wächter Gerold wird ihn freilassen. ");
+		B_LogEntry(TOPIC_RescueGorn,TOPIC_RescueGorn_2);
 	}
 	else
 	{
@@ -920,7 +920,7 @@ func void DIA_Garond_DragonPlettBericht_Info()
 	var int CurrentDragonCount;
 	var int Drachengeld;
 	var int XP_LocalGarond;
-	B_LogEntry(TOPIC_DRACHENJAGD,"Garond ist sicherlich daran interessiert, wie es um die Drachen steht, obwohl er auf mich eher den EIndruck macht, als wäre es ihm völlig egal.");
+	B_LogEntry(TOPIC_DRACHENJAGD,TOPIC_DRACHENJAGD_5);
 	if(Garond_DragonCounter < MIS_KilledDragons)
 	{
 		AI_Output(other,self,"DIA_Garond_DragonPlettBericht_15_00");	//Ich habe Neuigkeiten über die Drachen.
@@ -966,7 +966,7 @@ func void DIA_Garond_DragonPlettBericht_Info()
 	{
 		AI_Output(other,self,"DIA_Garond_DragonPlettBericht_15_07");	//Kannst du mir noch mehr Informationen über die Drachen geben?
 		AI_Output(self,other,"DIA_Garond_DragonPlettBericht_10_08");	//Ich habe mich noch um andere Dinge zu kümmern. Mein strategischer Offizier Oric kann dir mehr dazu sagen.
-		B_LogEntry(TOPIC_DRACHENJAGD,"Garonds statigischer Offizier Oric hat veilleicht einige nützliche Informationen für mich.");
+		B_LogEntry(TOPIC_DRACHENJAGD,TOPIC_DRACHENJAGD_6);
 		Garond_OricExperte_OneTime = TRUE;
 	}
 	else if(MIS_AllDragonsDead == FALSE)

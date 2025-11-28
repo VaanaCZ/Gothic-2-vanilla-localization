@@ -91,7 +91,7 @@ func void DIA_Mil_310_Stadtwache_FirstWarn_Info()
 			AI_Output(self,other,"DIA_Mil_310_Stadtwache_FirstWarn_07_11");	//Wir haben schon genug Gesindel in der Stadt. Leute ohne Geld können wir nicht gebrauchen.
 			Log_CreateTopic(TOPIC_City,LOG_MISSION);
 			Log_SetTopicStatus(TOPIC_City,LOG_Running);
-			B_LogEntry(TOPIC_City,"Damit die Torwachen mich in die Stadt lassen, muss ich so aussehen, als wenn ich Geld hätte, oder ich finde einen anderen Weg.");
+			B_LogEntry(TOPIC_City,TOPIC_City_3);
 		}
 		else if((Hlp_IsItem(itm,ITAR_Bau_L) == TRUE) || (Hlp_IsItem(itm,ITAR_Bau_M) == TRUE))
 		{

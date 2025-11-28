@@ -49,7 +49,7 @@ func void DIA_Urshak_HALLO_Info()
 	B_GivePlayerXP(XP_UrshakFound);
 	Log_CreateTopic(TOPIC_Urshak,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Urshak,LOG_Running);
-	B_LogEntry(TOPIC_Urshak,"Ich habe meinen alten orkischen Freund Ur-Shak gefunden.");
+	B_LogEntry(TOPIC_Urshak,TOPIC_Urshak_1);
 	Info_ClearChoices(DIA_Urshak_HALLO);
 	Info_AddChoice(DIA_Urshak_HALLO,"Was machst du hier?",DIA_Urshak_HALLO_freund);
 	Info_AddChoice(DIA_Urshak_HALLO,"Ein sprechender Ork?",DIA_Urshak_HALLO_wer);
@@ -95,7 +95,7 @@ func void DIA_Urshak_WASMACHENORKS_Info()
 	AI_Output(self,other,"DIA_Urshak_WASMACHENORKS_18_01");	//Ur-Shak immer sagen zu Volk der Orks, dass Menschen nicht böse und geben viele gute Freunde dort.
 	AI_Output(self,other,"DIA_Urshak_WASMACHENORKS_18_02");	//Aber Schamane nicht hören auf Ur-Shak. Ur-Shak immer noch in Ungnade bei meinem Volk.
 	AI_Output(self,other,"DIA_Urshak_WASMACHENORKS_18_03");	//So Ur-Shak auch nicht genau wissen, was ist großer Plan von Krieg gegen Menschen.
-	B_LogEntry(TOPIC_Urshak,"Er hat es immer noch nicht geschafft, sich bei seinem Volk Gehör zu verschaffen. Er ist immer noch ein Ausgestossener.");
+	B_LogEntry(TOPIC_Urshak,TOPIC_Urshak_2);
 };
 
 
@@ -174,7 +174,7 @@ func void DIA_Urshak_WASHASTDUVOR_Info()
 	AI_Output(self,other,"DIA_Urshak_WASHASTDUVOR_18_01");	//Ur-Shak warten auf Orkspähtrupp, zu bringen Ur-Shak zu Hosh-Pak.
 	AI_Output(other,self,"DIA_Urshak_WASHASTDUVOR_15_02");	//Wer ist Hosh-Pak?
 	AI_Output(self,other,"DIA_Urshak_WASHASTDUVOR_18_03");	//Seien sehr große Schamane. Haben großen Einfuss auf Krieger und machen große Pläne für Orks.
-	B_LogEntry(TOPIC_Urshak,"Ur-Shaks Plan sieht vor, sich mit dem Orkshamanen Hosh-Pak zu treffen, damit er Ur-Shak wieder seinen alten Platz im Rat der Shamane zurück gibt.");
+	B_LogEntry(TOPIC_Urshak,TOPIC_Urshak_3);
 	Info_ClearChoices(DIA_Urshak_WASHASTDUVOR);
 	Info_AddChoice(DIA_Urshak_WASHASTDUVOR,Dialog_Back,DIA_Urshak_WASHASTDUVOR_weiter);
 	Info_AddChoice(DIA_Urshak_WASHASTDUVOR,"Wo finde ich diesen Hosh-Pak?",DIA_Urshak_WASHASTDUVOR_);
@@ -228,7 +228,7 @@ func void DIA_Urshak_HOSHPAKDEAD_Info()
 	AI_Output(self,other,"DIA_Urshak_HOSHPAKDEAD_18_04");	//Ur-Shak muss nun tragen Bürde der Trauer und bringen Hosh-Pak letzte Ehre. Ur-Shak müssen gehen.
 	AI_Output(self,other,"DIA_Urshak_HOSHPAKDEAD_18_05");	//Freund besser gehen über Pass. Hier zu gefährlich.
 	AI_Output(self,other,"DIA_Urshak_HOSHPAKDEAD_18_06");	//Ur-Shak traurig, wenn Freundmensch auch sterben.
-	B_LogEntry(TOPIC_Urshak,"Hosh-Pak ist tot. Mein Orkfreund hat sich auf den Weg zu Hosh-Paks Zelten gemacht. Er trauert um seinen Mentor. Ich sollte ihn ziehen lassen.");
+	B_LogEntry(TOPIC_Urshak,TOPIC_Urshak_4);
 	AI_StopProcessInfos(self);
 	Npc_SetRefuseTalk(self,20);
 	Npc_ExchangeRoutine(self,"Start");
@@ -291,7 +291,7 @@ func void DIA_Urshak_HOSHPAKRACHE_Info()
 	AI_Output(self,other,"DIA_Urshak_HOSHPAKRACHE_18_06");	//Bei nächster Begegnung wir Feinde sein werden. Du besser jetzt gehen.
 	AI_StopProcessInfos(self);
 	URSHAK_SUCKED = TRUE;
-	B_LogEntry(TOPIC_Urshak,"Urshak gehört wieder dem Rat der Orkshamane an. Er steht jetzt auf der feindlichen Seite und ist ein wenig gereizt. Ich sollte ihm besser aus dem Weg gehen, bis ich die Geschichte mit den Orks geregelt habe. Bis dahin wird er sich wieder beruhigt haben.");
+	B_LogEntry(TOPIC_Urshak,TOPIC_Urshak_5);
 	B_GivePlayerXP(XP_UrshakBecomesShaman);
 };
 

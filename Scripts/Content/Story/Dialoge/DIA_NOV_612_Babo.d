@@ -85,7 +85,7 @@ func void DIA_Babo_Anliegen_Info()
 	AI_Output(other,self,"DIA_Babo_Anliegen_15_03");	//Ich werde mal sehen, was sich machen lässt.
 	Log_CreateTopic(Topic_BaboTrain,LOG_MISSION);
 	Log_SetTopicStatus(Topic_BaboTrain,LOG_Running);
-	B_LogEntry(Topic_BaboTrain,"Wenn ich den Paladin Sergio überrede, mit Babo ein paar Kampfübungen durchzuführen, trainiert er mich im zweihändigen Kampf.");
+	B_LogEntry(Topic_BaboTrain,Topic_BaboTrain_1);
 };
 
 
@@ -117,7 +117,7 @@ func void DIA_Babo_Sergio_Info()
 	Babo_Training = TRUE;
 	B_GivePlayerXP(XP_Ambient * 2);
 	Log_CreateTopic(Topic_KlosterTeacher,LOG_NOTE);
-	B_LogEntry(Topic_KlosterTeacher,"Babo kann mich im zweihändigen Kampf trainieren.");
+	B_LogEntry(Topic_KlosterTeacher,Topic_KlosterTeacher_10);
 };
 
 
@@ -372,7 +372,7 @@ func void DIA_Babo_PlantLore_Info()
 	MIS_HelpBabo = LOG_Running;
 	Log_CreateTopic(Topic_BaboGaertner,LOG_MISSION);
 	Log_SetTopicStatus(Topic_BaboGaertner,LOG_Running);
-	B_LogEntry(Topic_BaboGaertner,"Babo würde lieber im Kräutergarten arbeiten, als den Hof zu fegen.");
+	B_LogEntry(Topic_BaboGaertner,Topic_BaboGaertner_1);
 };
 
 
@@ -401,7 +401,7 @@ func void DIA_Babo_Fegen_Info()
 	AI_Output(self,other,"DIA_Babo_Fegen_03_01");	//Da hast du dir ja viel Arbeit aufgehalst. Weißt du was - ich helfe dir. Alleine schaffst du das nie.
 	AI_Output(self,other,"DIA_Babo_Fegen_03_02");	//Aber ich brauche unbedingt eine 'Windfaust'-Spruchrolle - weißt du, ich hatte das Glück und durfte ein Buch darüber lesen.
 	AI_Output(self,other,"DIA_Babo_Fegen_03_03");	//Und jetzt will ich den Zauber natürlich auch mal anwenden. Also besorge mir die Spruchrolle, dann helfe ich dir.
-	B_LogEntry(Topic_ParlanFegen,"Babo hilft mir, die Novizenkammern zu fegen, wenn ich ihm eine Spruchrolle Windfaust bringe.");
+	B_LogEntry(Topic_ParlanFegen,Topic_ParlanFegen_7);
 };
 
 
@@ -439,7 +439,7 @@ func void DIA_Babo_Windfaust_Info()
 		B_GivePlayerXP(XP_Feger);
 		AI_StopProcessInfos(self);
 		Npc_ExchangeRoutine(self,"FEGEN");
-		B_LogEntry(Topic_ParlanFegen,"Babo hilft mir jetzt, die Novizenkammern zu fegen.");
+		B_LogEntry(Topic_ParlanFegen,Topic_ParlanFegen_8);
 	}
 	else
 	{
@@ -689,7 +689,7 @@ func void DIA_Babo_Kap3_Unhappy_TellMe()
 	MIS_BabosDocs = LOG_Running;
 	Log_CreateTopic(Topic_BabosDocs,LOG_MISSION);
 	Log_SetTopicStatus(Topic_BabosDocs,LOG_Running);
-	B_LogEntry(Topic_BabosDocs,"Der Novize Babo wird von Igaraz aufgrund einiger Dokumente erpresst.");
+	B_LogEntry(Topic_BabosDocs,Topic_BabosDocs_1);
 	Info_ClearChoices(DIA_Babo_Kap3_Unhappy);
 	Info_AddChoice(DIA_Babo_Kap3_Unhappy,"Das ist mir doch ein bisschen zu privat.",DIA_Babo_Kap3_Unhappy_Privat);
 	Info_AddChoice(DIA_Babo_Kap3_Unhappy,"Was sollst du für ihn tun?",DIA_Babo_Kap3_Unhappy_ShouldDo);

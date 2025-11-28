@@ -363,7 +363,7 @@ func void DIA_Jorgen_BEMYCAPTAIN_Info()
 	AI_Output(self,other,"DIA_Jorgen_BEMYCAPTAIN_07_04");	//Ich muss erst meine Zeche bei Pyrokar abarbeiten. Tut mir Leid.
 	Log_CreateTopic(Topic_Captain,LOG_MISSION);
 	Log_SetTopicStatus(Topic_Captain,LOG_Running);
-	B_LogEntry(Topic_Captain,"Jorgen wäre bereit als Kapitän für die Überfahrst zu fungieren, allerdings muss ich ihn erst freikaufen. Er hat Schulden beim Kloster.");
+	B_LogEntry(Topic_Captain,Topic_Captain_6);
 };
 
 

@@ -97,7 +97,7 @@ func void DIA_Jergan_Burg_Info()
 	AI_Output(self,other,"DIA_Jergan_Burg_13_02");	//Wenn du es bis in die Burg schaffst, dann sprich mit dem Paladin Oric. Sag ihm, dass es seinen Bruder oben am Pass erwischt hat.
 	Log_CreateTopic(Topic_OricBruder,LOG_MISSION);
 	Log_SetTopicStatus(Topic_OricBruder,LOG_Running);
-	B_LogEntry(Topic_OricBruder,"Wenn ich in der Burg bin, soll ich Oric davon berichten, das sein Bruder oben am Pass gefallen ist.");
+	B_LogEntry(Topic_OricBruder,Topic_OricBruder_1);
 };
 
 

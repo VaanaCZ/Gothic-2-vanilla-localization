@@ -196,7 +196,7 @@ func void DIA_Rod_WannaJoin_Info()
 			AI_Output(self,other,"DIA_Rod_WannaJoin_06_05");	//Na ja, du kannst ein ordentliches Schwert führen. Den Rest wirst du noch lernen.
 		};
 		AI_Output(self,other,"DIA_Rod_WannaJoin_06_06");	//Meinetwegen kannst du mitmachen.
-		B_LogEntry(TOPIC_SLDRespekt,"Rod' Stimme habe ich, wenn ich mich den Söldnern anschließen will.");
+		B_LogEntry(TOPIC_SLDRespekt,TOPIC_SLDRespekt_5);
 	}
 	else
 	{
@@ -273,7 +273,7 @@ func void DIA_Rod_StarkGenug_Info()
 	AI_Output(self,other,"DIA_Rod_StarkGenug_06_01");	//Unsinn! Du könntest ein ordentliches Schwert wie meins nicht mal HOCHHALTEN!
 	Log_CreateTopic(Topic_RodWette,LOG_MISSION);
 	Log_SetTopicStatus(Topic_RodWette,LOG_Running);
-	B_LogEntry(Topic_RodWette,"Der Söldner Rod glaubt, das ich es nicht schaffe, sein Schwert hochzuhalten. ");
+	B_LogEntry(Topic_RodWette,Topic_RodWette_1);
 };
 
 
@@ -333,7 +333,7 @@ func void DIA_Rod_Wette_Info()
 	Info_ClearChoices(DIA_Rod_Wette);
 	Info_AddChoice(DIA_Rod_Wette,"Nein.",DIA_Rod_Wette_No);
 	Info_AddChoice(DIA_Rod_Wette,"Klar.",DIA_Rod_Wette_Yes);
-	B_LogEntry(Topic_RodWette,"Rod wettet um 30 Goldstücke, das ich nicht sein Schwert hochhalten kann.");
+	B_LogEntry(Topic_RodWette,Topic_RodWette_2);
 };
 
 func void DIA_Rod_Wette_No()

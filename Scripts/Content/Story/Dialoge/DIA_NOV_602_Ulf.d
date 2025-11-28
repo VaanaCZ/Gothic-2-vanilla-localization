@@ -167,7 +167,7 @@ func void DIA_Ulf_Aufnahme_Info()
 	B_Say_Gold(self,other,Summe_Kloster);
 	Log_CreateTopic(Topic_Kloster,LOG_MISSION);
 	Log_SetTopicStatus(Topic_Kloster,LOG_Running);
-	B_LogEntry(Topic_Kloster,"Um im Innos - Kloster als Novize aufgenommen zu werden, brauche ich ein Schaf und 1000 Goldstücke.");
+	B_LogEntry(Topic_Kloster,Topic_Kloster_1);
 };
 
 
@@ -220,7 +220,7 @@ func void DIA_Ulf_Schaf_Info()
 {
 	AI_Output(other,self,"DIA_Ulf_Schaf_15_00");	//Woher kriege ich ein Schaf?
 	AI_Output(self,other,"DIA_Ulf_Schaf_03_01");	//Von den Bauern natürlich. Aber umsonst wirst du das nicht bekommen.
-	B_LogEntry(Topic_Kloster,"Ein Schaf bekomme ich bei den Bauern.");
+	B_LogEntry(Topic_Kloster,Topic_Kloster_3);
 };
 
 

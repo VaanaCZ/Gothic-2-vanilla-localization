@@ -448,7 +448,7 @@ func void DIA_Lee_ClearWhat_Info()
 	AI_Output(self,other,"DIA_Lee_ClearWhat_04_03");	//Aber geh nicht zu Onar, bevor nicht alles klar ist. Er ist ein sehr ungeduldiger Zeitgenosse ...
 	Log_CreateTopic(TOPIC_BecomeSLD,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BecomeSLD,LOG_Running);
-	B_LogEntry(TOPIC_BecomeSLD,"Um bei den Söldnern aufgenommen zu werden, brauche ich das Einverständnis von Onar, wenn ich die Söldner überzeugt habe.");
+	B_LogEntry(TOPIC_BecomeSLD,TOPIC_BecomeSLD_2);
 };
 
 
@@ -478,7 +478,7 @@ func void DIA_Lee_OtherSld_Info()
 	AI_Output(self,other,"DIA_Lee_OtherSld_04_02");	//Rede mit Torlof. Er ist meistens draußen vorm Haus. Er wird dich auf die Probe stellen.
 	AI_Output(self,other,"DIA_Lee_OtherSld_04_03");	//Wenn du dabei nicht versagst, hast du dir schon einen großen Teil des nötigen Repekts verdient.
 	AI_Output(self,other,"DIA_Lee_OtherSld_04_04");	//Er wird dir auch alles andere erzählen, was du wissen musst.
-	B_LogEntry(TOPIC_BecomeSLD,"Um bei den Söldnern aufgenommen zu werden, wird Torlof mich auf die Probe stellen und ich muss mir den Respekt der anderen Söldner verdienen.");
+	B_LogEntry(TOPIC_BecomeSLD,TOPIC_BecomeSLD_3);
 };
 
 
@@ -543,7 +543,7 @@ func void DIA_Lee_JoinNOW_Info()
 			AI_Output(self,other,"DIA_Lee_JoinNOW_04_09");	//Gut, dann geh jetzt zu Onar. Ich hab schon mit ihm geredet.
 			AI_Output(self,other,"DIA_Lee_JoinNOW_04_10");	//Über deinen Sold musst du selbst verhandeln.
 			Lee_SendToOnar = TRUE;
-			B_LogEntry(TOPIC_BecomeSLD,"Jetzt muss ich nur noch das Einverständnis von Onar einholen.");
+			B_LogEntry(TOPIC_BecomeSLD,TOPIC_BecomeSLD_4);
 		}
 		else
 		{
@@ -637,7 +637,7 @@ func void DIA_Lee_ToHagen_Info()
 	MIS_Lee_Friedensangebot = LOG_Running;
 	Log_CreateTopic(TOPIC_Frieden,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Frieden,LOG_Running);
-	B_LogEntry(TOPIC_Frieden,"Lee schickt mich mit einem Friedensangebot zu Lord Hagen. Damit werde ich bei den Paladinen vorgelassen.");
+	B_LogEntry(TOPIC_Frieden,TOPIC_Frieden_2);
 };
 
 
@@ -1101,7 +1101,7 @@ func void DIA_Lee_Richter_Info()
 	AI_Output(self,other,"DIA_Lee_Richter_04_11");	//Meinst du, du kriegst das hin?
 	Log_CreateTopic(TOPIC_RichterLakai,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_RichterLakai,LOG_Running);
-	B_LogEntry(TOPIC_RichterLakai,"Lee will, dass ich etwas Belastendes gegen den Richter von Khorinis finde. Ich soll dem Richter meine Dienste anbieten und dabei die Augen offen halten.");
+	B_LogEntry(TOPIC_RichterLakai,TOPIC_RichterLakai_3);
 	MIS_Lee_JudgeRichter = LOG_Running;
 	Info_ClearChoices(DIA_Lee_Richter);
 	Info_AddChoice(DIA_Lee_Richter,"Das mach´ ich nicht.",DIA_Lee_Richter_nein);
@@ -1231,7 +1231,7 @@ func void DIA_Lee_DoAboutBennet_Info()
 	AI_Output(self,other,"DIA_Lee_DoAboutBennet_04_02");	//Zum Glück sind wir nicht genug Leute für so eine Aktion, außerdem ist es nicht mein Stil.
 	AI_Output(other,self,"DIA_Lee_DoAboutBennet_15_03");	//Willst du hier bleiben und abwarten, was passiert?
 	AI_Output(self,other,"DIA_Lee_DoAboutBennet_04_04");	//Bestimmt nicht.
-	B_LogEntry(TOPIC_RescueBennet,"Wenn es mir nicht schnell gelingt Bennets Unschuld zu beweisen, kann Lee für Nichts garantieren. Seine Leute würden lieber heute als morgen die Stadt angreifen um Bennet selbst rauszuholen.");
+	B_LogEntry(TOPIC_RescueBennet,TOPIC_RescueBennet_5);
 	if(!Npc_IsDead(Lares))
 	{
 		AI_Output(self,other,"DIA_Lee_DoAboutBennet_04_05");	//Lares ist noch in der Stadt und versucht herauszufinden, wie wir Bennet da rausholen können.
@@ -1426,7 +1426,7 @@ func void DIA_Lee_CanTeach_Yes()
 	Lee_TeachPlayer = TRUE;
 	Info_ClearChoices(DIA_Lee_CanTeach);
 	Log_CreateTopic(Topic_SoldierTeacher,LOG_NOTE);
-	B_LogEntry(Topic_SoldierTeacher,"Lee wird mich im Kampf mit zweihändigen Waffen unterrichten.");
+	B_LogEntry(Topic_SoldierTeacher,Topic_SoldierTeacher_1);
 };
 
 
@@ -1521,7 +1521,7 @@ func void DIA_Lee_DRACHENEI_Info()
 		AI_Output(self,other,"DIA_Lee_DRACHENEI_04_03");	//Zerschlagen. Was sonst?
 		AI_Output(self,other,"DIA_Lee_DRACHENEI_04_04");	//Vielleicht kann man die Schale für den Rüstungsbau oder ähnliches verwenden.
 		AI_Output(self,other,"DIA_Lee_DRACHENEI_04_05");	//Sie sieht ziemlich stabil aus. Sprich mal mit Bennet darüber.
-		B_LogEntry(TOPIC_DRACHENEIER,"Lee konnte mit dem Drachenei so recht nichts anfangen. Er schickte mich zu Bennet dem Schmied. ");
+		B_LogEntry(TOPIC_DRACHENEIER,TOPIC_DRACHENEIER_2);
 	};
 };
 
@@ -1610,12 +1610,12 @@ func void DIA_Lee_GetShip_Info()
 	{
 		AI_Output(self,other,"DIA_Lee_GetShip_04_04");	//Immerhin haben wir jetzt den Richter in unserer Gewalt. Du gehst am besten zu ihm und quetscht ein Ermächtigungsschreiben für das Schiff aus ihm heraus.
 		MIS_RichtersPermissionForShip = LOG_Running;
-		B_LogEntry(Topic_Ship,"Lee meint, die beste Möglichkeit an das Schiff der Paladine zu kommen ist ein Ermächtigungsschreiben des Richters. Das wird er mir aber wohl nicht freiwillig geben.");
+		B_LogEntry(Topic_Ship,Topic_Ship_2);
 	}
 	else if((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 	{
 		AI_Output(self,other,"DIA_Lee_GetShip_04_05");	//Ich habe hier ein gefälschtes Ermächtigungsschreiben. Damit werden dich die Schiffswachen passieren lassen.
-		B_LogEntry(Topic_Ship,"Der gute alte Lee. Er hat einen gefälschten Brief, der mich ermächtigt auf das Schiff der Paladine zu kommen.");
+		B_LogEntry(Topic_Ship,Topic_Ship_3);
 	};
 	AI_Output(self,other,"DIA_Lee_GetShip_04_06");	//Aber das ist noch nicht alles. Um das Schiff zu lenken, brauchst du einen Kapitän, 'ne Mannschaft und so weiter.
 	AI_Output(self,other,"DIA_Lee_GetShip_04_07");	//Da hängt ein riesiger Rattenschwanz dran.
@@ -1636,7 +1636,7 @@ func void DIA_Lee_GetShip_torlof()
 {
 	AI_Output(other,self,"DIA_Lee_GetShip_torlof_15_00");	//Kennst du jemanden, der ein Schiff lenken kann?
 	AI_Output(self,other,"DIA_Lee_GetShip_torlof_04_01");	//Soviel ich weiß, ist Torlof früher zur See gefahren. Er kennt sich aus.
-	B_LogEntry(Topic_Captain,"Torlof ist ein alter Seemann, vielleicht will er bei mir als Kapitän anheuern.");
+	B_LogEntry(Topic_Captain,Topic_Captain_2);
 };
 
 func void DIA_Lee_GetShip_crew()
@@ -1644,7 +1644,7 @@ func void DIA_Lee_GetShip_crew()
 	AI_Output(other,self,"DIA_Lee_GetShip_crew_15_00");	//Wen soll ich als Mannschaft anheuern?
 	AI_Output(self,other,"DIA_Lee_GetShip_crew_04_01");	//Das musst du selbst entscheiden. Aber ich würde nur Leute mitnehmen, denen ich vertraue. Hast du genug Leute, denen du vertraust?
 	AI_Output(self,other,"DIA_Lee_GetShip_crew_04_02");	//Wenn du einen Schmied in deiner Mannschaft brauchst, solltest du Bennet fragen. Er ist sicherlich der Beste, denn du je finden wirst.
-	B_LogEntry(Topic_Crew,"Was meine Mannschaft angeht, konnte Lee mir auch nicht viel weiterhelfen. Er mient aber, dass ich nur Leute mitnehmen soll, denen ich auch vertraue. Außerdem soll ich mal Bennet fragen, er könnte interesse haben.");
+	B_LogEntry(Topic_Crew,Topic_Crew_11);
 };
 
 func void DIA_Lee_GetShip_back()
@@ -1735,7 +1735,7 @@ func void DIA_Lee_KnowWhereEnemy_Info()
 	AI_Output(self,other,"DIA_Lee_KnowWhereEnemy_04_02");	//Außerdem könnte ich dich im Kampf mit der Ein- und der Zweihandwaffe unterweisen. Ich könnte also von großem Nutzen für dich sein.
 	Log_CreateTopic(Topic_Crew,LOG_MISSION);
 	Log_SetTopicStatus(Topic_Crew,LOG_Running);
-	B_LogEntry(Topic_Crew,"Lee brennt darauf das Festland wieder zu sehen. Er hat mir angeboten mich zu unterstützen. Einen besseren Kampflehrer werde ich wohl kaum finden.");
+	B_LogEntry(Topic_Crew,Topic_Crew_12);
 	if(Crewmember_Count >= Max_Crew)
 	{
 		AI_Output(other,self,"DIA_Lee_KnowWhereEnemy_15_03");	//Das Schiff ist voll, aber wenn sich was ergibt, komme ich wieder.

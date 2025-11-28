@@ -114,7 +114,7 @@ func void DIA_Opolos_HowLong_Info()
 	MIS_HelpOpolos = LOG_Running;
 	Log_CreateTopic(Topic_OpolosStudy,LOG_MISSION);
 	Log_SetTopicStatus(Topic_OpolosStudy,LOG_Running);
-	B_LogEntry(Topic_OpolosStudy,"Opolos hütet die Schafe. Er würde gerne die Shcriften in der Bibliothek studieren. ");
+	B_LogEntry(Topic_OpolosStudy,Topic_OpolosStudy_1);
 };
 
 
@@ -175,7 +175,7 @@ func void DIA_Opolos_beibringen_Info()
 	AI_Output(self,other,"DIA_Opolos_beibringen_12_05");	//Wenn du es mir bringst, so dass ich einen Blick drauf werfen kann, werde ich dich trainieren.
 	Log_CreateTopic(Topic_OpolosRezept,LOG_MISSION);
 	Log_SetTopicStatus(Topic_OpolosRezept,LOG_Running);
-	B_LogEntry(Topic_OpolosRezept,"Opolos will einen kurzen Blick auf ein Rezept zur Herstellung von Manatränken werfen. Wenn ich für Neoars arbeite, kann ich mir das vielleicht ausleihen.");
+	B_LogEntry(Topic_OpolosRezept,Topic_OpolosRezept_1);
 };
 
 
@@ -215,7 +215,7 @@ func void DIA_Opolos_rezept_Info()
 		Opolos_Rezept = LOG_SUCCESS;
 		B_GivePlayerXP(XP_Ambient);
 		Log_CreateTopic(Topic_KlosterTeacher,LOG_NOTE);
-		B_LogEntry(Topic_KlosterTeacher,"Opolos kann mir dabei helfen, stärker zu werden.");
+		B_LogEntry(Topic_KlosterTeacher,Topic_KlosterTeacher_9);
 	}
 	else if(MIS_NeorasRezept == LOG_SUCCESS)
 	{
@@ -225,7 +225,7 @@ func void DIA_Opolos_rezept_Info()
 		DIA_Opolos_rezept_permanent = TRUE;
 		Opolos_TeachSTR = TRUE;
 		Log_CreateTopic(Topic_KlosterTeacher,LOG_NOTE);
-		B_LogEntry(Topic_KlosterTeacher,"Opolos kann mir dabei helfen, stärker zu werden.");
+		B_LogEntry(Topic_KlosterTeacher,Topic_KlosterTeacher_9);
 	}
 	else
 	{

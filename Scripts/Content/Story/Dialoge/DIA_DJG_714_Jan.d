@@ -92,7 +92,7 @@ func void DIA_JAN_Dragons_HelpYou()
 	AI_Output(self,other,"DIA_JAN_Dragons_HelpYou_10_04");	//Ich kann mir nicht vorstellen, dass er auf dich hört.
 	Log_CreateTopic(TOPIC_JanBecomesSmith,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_JanBecomesSmith,LOG_Running);
-	B_LogEntry(TOPIC_JanBecomesSmith,"Jan der Drachenjäger in der Burg im Minental will an der Schmiede arbeiten. Parcival hat es ihm allerdings verboten.");
+	B_LogEntry(TOPIC_JanBecomesSmith,TOPIC_JanBecomesSmith_1);
 	MIS_JanBecomesSmith = LOG_Running;
 	Info_ClearChoices(DIA_JAN_Dragons);
 };

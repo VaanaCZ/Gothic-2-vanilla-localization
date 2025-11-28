@@ -70,7 +70,7 @@ func void DIA_Sagitta_HALLO_Heil()
 	AI_Output(other,self,"DIA_Sagitta_HALLO_Heil_15_00");	//Kannst du mich heilen?
 	AI_Output(self,other,"DIA_Sagitta_HALLO_Heil_17_01");	//Deswegen bist du doch gekommen, oder? Du musst es mir nur sagen, wenn dir etwas fehlt.
 	Log_CreateTopic(Topic_SoldierTrader,LOG_NOTE);
-	B_LogEntry(Topic_SoldierTrader,"Sagitta verkauft Waren, hinter Sekobs Hof.");
+	B_LogEntry(Topic_SoldierTrader,Topic_SoldierTrader_2);
 };
 
 func void DIA_Sagitta_HALLO_ende()
@@ -145,7 +145,7 @@ func void DIA_Sagitta_TeachAlchemyRequest_wo_ja()
 	MIS_Sagitta_Herb = LOG_Running;
 	Log_CreateTopic(TOPIC_SagittaHerb,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_SagittaHerb,LOG_Running);
-	B_LogEntry(TOPIC_SagittaHerb,"Sagitta braucht ein seltenes Kraut. Ein Sonnenaloe, die nur auf den Exkrementen eines schwarzen Trolls wächst.");
+	B_LogEntry(TOPIC_SagittaHerb,TOPIC_SagittaHerb_1);
 };
 
 func void DIA_Sagitta_TeachAlchemyRequest_nein()
@@ -545,7 +545,7 @@ func void DIA_Sagitta_HEALRANDOLPH_geld()
 		CreateInvItems(self,ItPo_HealRandolph_MIS,1);
 		B_GiveInvItems(self,other,ItPo_HealRandolph_MIS,1);
 		DIA_Sagitta_HEALRANDOLPH_GotOne = TRUE;
-		B_LogEntry(TOPIC_HealRandolph,"Sagitta gab mir das Mittel für Randolph.");
+		B_LogEntry(TOPIC_HealRandolph,TOPIC_HealRandolph_2);
 	}
 	else
 	{

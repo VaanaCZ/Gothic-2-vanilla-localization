@@ -191,11 +191,11 @@ func void DIA_Lobart_KLEIDUNG_Info()
 	AI_Output(self,other,"DIA_Lobart_KLEIDUNG_05_02");	//Kannst du sie denn bezahlen?
 	Log_CreateTopic(TOPIC_Kleidung,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Kleidung,LOG_Running);
-	B_LogEntry(TOPIC_Kleidung,"Der Bauer Lobart ist bereit, mir Arbeiterkleidung zu verkaufen.");
+	B_LogEntry(TOPIC_Kleidung,TOPIC_Kleidung_1);
 	if(!Npc_KnowsInfo(other,DIA_Lobart_WorkNOW))
 	{
 		AI_Output(self,other,"DIA_Lobart_KLEIDUNG_05_03");	//Du könntest einen Teil des Preises abarbeiten ... falls du jemand bist, der Arbeit SUCHT.
-		B_LogEntry(TOPIC_Kleidung,"Ich kann einen Teil des Preises auf seinem Hof abarbeiten. Je mehr ich arbeite, desto billiger wird die Kleidung.");
+		B_LogEntry(TOPIC_Kleidung,TOPIC_Kleidung_2);
 	};
 };
 
@@ -252,7 +252,7 @@ func void DIA_Lobart_BuyClothes_Info()
 	if(Wert_LobartsRuestung == 30)
 	{
 		AI_Output(self,other,"DIA_Lobart_GOLD_05_06");	//Billiger wird sie nicht.
-		B_LogEntry(TOPIC_Kleidung,"Für weniger als 30 Goldstücke, wird er sie mir allerdings nicht verkaufen.");
+		B_LogEntry(TOPIC_Kleidung,TOPIC_Kleidung_3);
 	};
 	Info_ClearChoices(DIA_Lobart_BuyClothes);
 	Info_AddChoice(DIA_Lobart_BuyClothes,"Ist mir noch zu teuer.",DIA_Lobart_BuyClothes_NotYet);
@@ -454,7 +454,7 @@ func void DIA_Lobart_WorkNOW_Info()
 		AI_Output(self,other,"DIA_Lobart_WorkNOW_05_04");	//Die Sachen sind 'ne Menge wert. Ich kann sie dir nicht umsonst geben, aber ich kann sie dir billiger verkaufen, wenn du für mich arbeitest.
 		Log_CreateTopic(TOPIC_Kleidung,LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_Kleidung,LOG_Running);
-		B_LogEntry(TOPIC_Kleidung,"Der Bauer Lobart ist bereit, mir Arbeiterkleidung zu verkaufen. Einen Teil des Preises kann ich auf seinem Hof abarbeiten. Je mehr ich arbeite, desto billiger wird die Kleidung.");
+		B_LogEntry(TOPIC_Kleidung,TOPIC_Kleidung_4);
 		if((Npc_HasEquippedArmor(other) == FALSE) || (Lobart_Kleidung_Verkauft == TRUE))
 		{
 			AI_Output(self,other,"DIA_Lobart_WorkNOW_05_05");	//So, wie du rumläufst, solltest du die Klamotten nehmen.
@@ -479,7 +479,7 @@ func void DIA_Lobart_WorkNOW_Ok()
 	};
 	Log_CreateTopic(TOPIC_Rueben,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Rueben,LOG_Running);
-	B_LogEntry(TOPIC_Rueben,"Ich soll für Bauer Lobart das Rübenfeld ernten. Dafür bezahlt er mir Gold oder geht mit dem Preis für die Kleidung runter.");
+	B_LogEntry(TOPIC_Rueben,TOPIC_Rueben_1);
 	MIS_Lobart_Rueben = LOG_Running;
 	Info_ClearChoices(DIA_Lobart_WorkNOW);
 };
@@ -498,7 +498,7 @@ func void DIA_Lobart_WorkNOW_WannaFoolMe()
 	};
 	Log_CreateTopic(TOPIC_Rueben,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Rueben,LOG_Running);
-	B_LogEntry(TOPIC_Rueben,"Ich soll für Bauer Lobart das Rübenfeld ernten. Dafür bezahlt er mir Gold oder geht mit dem Preis für die Kleidung runter.");
+	B_LogEntry(TOPIC_Rueben,TOPIC_Rueben_1);
 	MIS_Lobart_Rueben = LOG_Running;
 	Info_ClearChoices(DIA_Lobart_WorkNOW);
 };
@@ -538,7 +538,7 @@ func void DIA_Lobart_RuebenRunning_Info()
 			MIS_Lobart_RuebenToHilda = LOG_Running;
 			Log_CreateTopic(TOPIC_Ruebenbringen,LOG_MISSION);
 			Log_SetTopicStatus(TOPIC_Ruebenbringen,LOG_Running);
-			B_LogEntry(TOPIC_Ruebenbringen,"Ich soll die geernteten Rüben zu Lobart's Frau im Haus bringen. Sie soll sie kochen. ");
+			B_LogEntry(TOPIC_Ruebenbringen,TOPIC_Ruebenbringen_1);
 		};
 		MIS_Lobart_Rueben = LOG_SUCCESS;
 		B_GivePlayerXP(XP_LobartHolRueben);
@@ -642,7 +642,7 @@ func void DIA_Lobart_ANDREHELPLOBART_Info()
 	AI_Output(other,self,"DIA_Lobart_ANDREHELPLOBART_15_00");	//Andre schickt mich zu dir. Kann ich irgendwas für dich tun?
 	AI_Output(self,other,"DIA_Lobart_ANDREHELPLOBART_05_01");	//Ja, klar. Diese verdammten Feldräuber machen mich noch ganz krank.
 	AI_Output(self,other,"DIA_Lobart_ANDREHELPLOBART_05_02");	//Mach sie alle kalt. Wie du das anstellst, ist mir egal!
-	Log_AddEntry(TOPIC_BecomeMIL,"Lobarts Felder werden von Feldräubern heimgesucht. Er will, daß ich sie alle vertreibe.");
+	Log_AddEntry(TOPIC_BecomeMIL,TOPIC_BecomeMIL_1);
 	MIS_LobartKillBugs = LOG_Running;
 	AI_StopProcessInfos(self);
 };
@@ -681,7 +681,7 @@ func void DIA_Lobart_BUGDEAD_Info()
 		B_GiveInvItems(self,other,ItMi_Gold,20);
 		MIS_LobartKillBugs = LOG_SUCCESS;
 		MIS_AndreHelpLobart = LOG_SUCCESS;
-		Log_AddEntry(TOPIC_BecomeMIL,"Lobart ist seine Feldräuber los geworden. Ich habe sie beseitigt");
+		Log_AddEntry(TOPIC_BecomeMIL,TOPIC_BecomeMIL_2);
 		DIA_Lobart_BUGDEAD_noPerm = TRUE;
 	}
 	else
@@ -771,7 +771,7 @@ func void DIA_Lobart_DMT_FrauHeilen()
 	AI_Output(self,other,"DIA_Lobart_DMT_FrauHeilen_05_01");	//Dazu müssten wir zu Vatras in die Stadt gehen, aber ich geh hier keinen Meter von meinem Hof, solange hier so ein Chaos herrscht.
 	Log_CreateTopic(TOPIC_HealHilda,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_HealHilda,LOG_Running);
-	B_LogEntry(TOPIC_HealHilda,"Lobarts Frau Hilda ist krank, aber Vatras hat ein Heilmittel.");
+	B_LogEntry(TOPIC_HealHilda,TOPIC_HealHilda_1);
 	MIS_HealHilda = LOG_Running;
 };
 
@@ -918,7 +918,7 @@ func void DIA_Lobart_ORKPROBLEM_Info()
 	AI_Output(self,other,"DIA_Lobart_ORKPROBLEM_05_02");	//Wenn das so weiter geht, ist mein Hof keine 3 Goldmünzen mehr wert.
 	Log_CreateTopic(TOPIC_LobartsOrKProblem,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_LobartsOrKProblem,LOG_Running);
-	B_LogEntry(TOPIC_LobartsOrKProblem,"Auf Lobarts Hof haben sich die Orks breit gemacht. Er will, dass ich sie beseitige.");
+	B_LogEntry(TOPIC_LobartsOrKProblem,TOPIC_LobartsOrKProblem_1);
 	AI_StopProcessInfos(self);
 };
 

@@ -51,7 +51,7 @@ func void DIA_Lutero_Hallo_Info()
 	AI_Output(other,self,"DIA_Lutero_Hallo_15_01");	//Welche Ware bietest du an?
 	AI_Output(self,other,"DIA_Lutero_Hallo_13_02");	//Nun, vor allem seltene und ausgefallene Dinge. Bisher ist es mir immer gelungen, die Wünsche meiner Kunden zu erfüllen.
 	Log_CreateTopic(TOPIC_CityTrader,LOG_NOTE);
-	B_LogEntry(TOPIC_CityTrader,"Lutero handelt mit ausgefallenen und seltenen Gegenständen im oberen Viertel.");
+	B_LogEntry(TOPIC_CityTrader,TOPIC_CityTrader_1);
 };
 
 
@@ -126,7 +126,7 @@ func void DIA_Lutero_Snapper_Info()
 	AI_Output(other,self,"DIA_Lutero_Hello_15_08");	//Ich werde mal sehen, was sich machen lässt.
 	Log_CreateTopic(TOPIC_Lutero,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Lutero,LOG_Running);
-	B_LogEntry(TOPIC_Lutero,"Der Händler Lutero sucht nach Krallen eines besonders mächtigen Snappers.");
+	B_LogEntry(TOPIC_Lutero,TOPIC_Lutero_1);
 	Lutero_Krallen = LOG_Running;
 };
 

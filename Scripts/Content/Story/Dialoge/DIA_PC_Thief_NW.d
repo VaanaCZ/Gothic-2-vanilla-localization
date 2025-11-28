@@ -150,7 +150,7 @@ func void DIA_DiegoNW_NeedHelp_Problem_WillHelpYou()
 	MIS_HelpDiegoNW = LOG_Running;
 	Log_CreateTopic(TOPIC_HelpDiegoNW,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_HelpDiegoNW,LOG_Running);
-	B_LogEntry(TOPIC_HelpDiegoNW,"Diego's Gold liegt im Minental. Er braucht es, um ins obere Viertel zu kommen und er schickt mich, es zu holen.");
+	B_LogEntry(TOPIC_HelpDiegoNW,TOPIC_HelpDiegoNW_1);
 	Info_ClearChoices(DIA_DiegoNW_NeedHelp);
 	Info_AddChoice(DIA_DiegoNW_NeedHelp,"Was hast du mit dem Gold vor?",DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_YourPlan);
 	Info_AddChoice(DIA_DiegoNW_NeedHelp,"Wo hast du das ganze Gold her?",DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_HowGold);
@@ -179,7 +179,7 @@ func void DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold()
 	AI_Output(other,self,"DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold_15_03");	//Woran kann ich ihn erkennen?
 	AI_Output(self,other,"DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold_11_04");	//Er ist voll Gold. Eine ganze Menge Gold!
 	Info_AddChoice(DIA_DiegoNW_NeedHelp,"Ich werde versuchen dein Gold zu finden.",DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold_End_TryIt);
-	B_LogEntry(TOPIC_HelpDiegoNW,"Diegos Gold liegt irgendwo am alten Austauschplatz, wo früher die Waren per Seilbahn in die Kolonie gebracht wurden, oberhalb der verlassenen Mine.");
+	B_LogEntry(TOPIC_HelpDiegoNW,TOPIC_HelpDiegoNW_2);
 };
 
 func void DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_WhereGold_End_TryIt()
@@ -288,7 +288,7 @@ func void DIA_DiegoNW_HaveYourGold_Info()
 		B_GivePlayerXP(XP_HelpDiegoNW);
 		Log_CreateTopic(TOPIC_DiegosResidence,LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_DiegosResidence,LOG_Running);
-		B_LogEntry(TOPIC_DiegosResidence,"Diego hat mir einen Brief für den Händler Gerbrandt gegeben.");
+		B_LogEntry(TOPIC_DiegosResidence,TOPIC_DiegosResidence_1);
 		AI_StopProcessInfos(self);
 	};
 };
@@ -498,7 +498,7 @@ func void DIA_DiegoNW_KnowWhereEnemy_Info()
 	AI_Output(self,other,"DIA_DiegoNW_KnowWhereEnemy_11_03");	//Außerdem kannst du sicher 'nen guten Dieb gebrauchen.
 	Log_CreateTopic(Topic_Crew,LOG_MISSION);
 	Log_SetTopicStatus(Topic_Crew,LOG_Running);
-	B_LogEntry(Topic_Crew,"Diego will natürlich auch mit. Er will Khorinis lieber gestern als heute verlassen. Er Könnte mir zeigen wie ich geschickter werde und mich zu einem guten Bogenschützen ausbilden. Schlösser knacken kann er mir ebenfalls beibringen.");
+	B_LogEntry(Topic_Crew,Topic_Crew_10);
 	if(Crewmember_Count >= Max_Crew)
 	{
 		AI_Output(other,self,"DIA_DiegoNW_KnowWhereEnemy_15_04");	//Ich denke darüber nach. Im Moment habe ich nämlich schon eine komplette Mannschaft.

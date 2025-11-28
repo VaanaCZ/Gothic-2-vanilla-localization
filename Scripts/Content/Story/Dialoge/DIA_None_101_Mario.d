@@ -74,7 +74,7 @@ func void DIA_None_101_Mario_YouNeedMe_Info()
 	AI_Output(self,other,"DIA_None_101_Mario_YouNeedMe_07_02");	//Ich bin dabei!
 	Log_CreateTopic(Topic_Crew,LOG_MISSION);
 	Log_SetTopicStatus(Topic_Crew,LOG_Running);
-	B_LogEntry(Topic_Crew,"Mario, ein ehemaliger Seesoldat hat mich in der Hafenkneipe angesprochen und will mit auf das Schiff.");
+	B_LogEntry(Topic_Crew,Topic_Crew_3);
 };
 
 
@@ -159,7 +159,7 @@ func void DIA_None_101_Mario_Abilities_Info()
 	AI_Output(other,self,"DIA_None_101_Mario_Abilities_15_00");	//Was kannst du?
 	AI_Output(self,other,"DIA_None_101_Mario_Abilities_07_01");	//Ich bin ausgebildet für den Enterkrieg und im Nahkampf, ferner bin ich ein ganz brauchbarer Schütze mit der Schiffskanone.
 	AI_Output(self,other,"DIA_None_101_Mario_Abilities_07_02");	//Ich wette, es gibt die eine oder andere Sache, die ich dir auf der Reise beibringen kann.
-	B_LogEntry(Topic_Crew,"Mario scheint ein fähiger Mann im Schiffskampf zu sein. Vielleicht kann ich bei ihm noch was lernen.");
+	B_LogEntry(Topic_Crew,Topic_Crew_4);
 };
 
 

@@ -136,7 +136,7 @@ func void DIA_Thorben_Arbeit_Info()
 	AI_Output(self,other,"DIA_Thorben_Arbeit_06_06");	//Und für einen Lehrling habe ich kein Geld.
 	Log_CreateTopic(TOPIC_Lehrling,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Lehrling,LOG_Running);
-	B_LogEntry(TOPIC_Lehrling,"Thorben wird mich nicht als Lehrling aufnehmen.");
+	B_LogEntry(TOPIC_Lehrling,TOPIC_Lehrling_16);
 };
 
 
@@ -184,7 +184,7 @@ func void B_Thorben_GetBlessings()
 	MIS_Thorben_GetBlessings = LOG_Running;
 	Log_CreateTopic(TOPIC_Thorben,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Thorben,LOG_Running);
-	B_LogEntry(TOPIC_Thorben,"Thorben gibt mir seine Zustimmung, wenn ich mich von einem Priester Adanos und einem Priester Innos segnen lasse.");
+	B_LogEntry(TOPIC_Thorben,TOPIC_Thorben_4);
 };
 
 func void DIA_Thorben_OtherMasters_Devoutly()
@@ -240,7 +240,7 @@ func void DIA_Thorben_ZUSTIMMUNG_Info()
 			B_GivePlayerXP(XP_Zustimmung);
 			Log_CreateTopic(TOPIC_Lehrling,LOG_MISSION);
 			Log_SetTopicStatus(TOPIC_Lehrling,LOG_Running);
-			B_LogEntry(TOPIC_Lehrling,"Thorben gibt mir seine Zustimmung, wenn ich irgendwo als Lehrling anfangen will.");
+			B_LogEntry(TOPIC_Lehrling,TOPIC_Lehrling_17);
 		}
 		else
 		{
@@ -477,7 +477,7 @@ func void DIA_Thorben_TRADE_Info()
 		Dietrichgeben = Dietrichgeben + 1;
 	};
 	Log_CreateTopic(TOPIC_CityTrader,LOG_NOTE);
-	B_LogEntry(TOPIC_CityTrader,"Der Tischler Thorben verkauft Dietriche.");
+	B_LogEntry(TOPIC_CityTrader,TOPIC_CityTrader_16);
 };
 
 

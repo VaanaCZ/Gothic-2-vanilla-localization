@@ -132,7 +132,7 @@ func void DIA_Fajeth_Hallo_Tun()
 	MIS_Fajeth_Kill_Snapper = LOG_Running;
 	Log_CreateTopic(TOPIC_FajethKillSnapper,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_FajethKillSnapper,LOG_Running);
-	B_LogEntry(TOPIC_FajethKillSnapper,"Fajeth hat mich beauftragt die Snapper zu jagen, die seit Tagen um das Lager streifen.");
+	B_LogEntry(TOPIC_FajethKillSnapper,TOPIC_FajethKillSnapper_1);
 	Info_ClearChoices(DIA_Fajeth_Hallo);
 	PrintScreen("",-1,-1,FONT_Screen,0);
 };
@@ -297,7 +297,7 @@ func void DIA_Fajeth_BELOHNUNG_Info()
 	AI_Output(other,self,"DIA_Fajeth_BELOHNUNG_15_04");	//Verstehe. Ich sag ihm Bescheid.
 	AI_Output(self,other,"DIA_Fajeth_BELOHNUNG_12_05");	//Gut. Dann liegt jetzt alles weitere bei dir. Wir werden hier die Stellung halten, so lange wir können.
 	Fajeth_Ore = TRUE;
-	B_LogEntry(TOPIC_ScoutMine,"Die Schürfer von Fajeth haben bisher ZWEI Kisten Erz gefördert.");
+	B_LogEntry(TOPIC_ScoutMine,TOPIC_ScoutMine_10);
 	AI_StopProcessInfos(self);
 };
 

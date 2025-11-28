@@ -221,7 +221,7 @@ func void DIA_Jarvis_MissionKO_Info()
 	self.aivar[AIV_IGNORE_Murder] = TRUE;
 	Log_CreateTopic(TOPIC_JarvisSLDKo,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_JarvisSLDKo,LOG_Running);
-	B_LogEntry(TOPIC_JarvisSLDKo,"Jarvis will das ich ein paar von Sylvios Jungs umhaue, damit ich seine Stimme kriege.");
+	B_LogEntry(TOPIC_JarvisSLDKo,TOPIC_JarvisSLDKo_1);
 };
 
 
@@ -249,7 +249,7 @@ func void DIA_Jarvis_DuellRegeln_Info()
 	AI_Output(other,self,"DIA_Jarvis_DuellRegeln_15_00");	//Was sind die Duellregeln?
 	AI_Output(self,other,"DIA_Jarvis_DuellRegeln_04_01");	//Geh zu Torlof und lass dir das von ihm erklären, wenn es dich interessiert.
 	AI_Output(self,other,"DIA_Jarvis_DuellRegeln_04_02");	//Damit wir uns richtig verstehen: Mir ist egal, ob du dich an die Regeln hältst oder nicht. Hauptsache, die Knaben landen bewusstlos im Dreck!
-	B_LogEntry(TOPIC_JarvisSLDKo,"Dazu muss ich mich nicht mal an die Duellregeln halten...");
+	B_LogEntry(TOPIC_JarvisSLDKo,TOPIC_JarvisSLDKo_2);
 };
 
 
@@ -278,7 +278,7 @@ func void DIA_Jarvis_SylviosMen_Info()
 	AI_Output(self,other,"DIA_Jarvis_SylviosMen_04_01");	//Es sind sechs Männer. Zum einen Sylvio selbst und seine rechte Hand, Bullco.
 	AI_Output(self,other,"DIA_Jarvis_SylviosMen_04_02");	//Dann sind da Rod, Sentenza, Fester und Raoul.
 	AI_Output(self,other,"DIA_Jarvis_SylviosMen_04_03");	//Der Rest der Leute ist entweder neutral oder auf Lees Seite.
-	B_LogEntry(TOPIC_JarvisSLDKo,"Zu Sylvios Männern zählen: Sylvio, seine rechte Hand Bullco, Rod, Sentenza, Fester und Raoul.");
+	B_LogEntry(TOPIC_JarvisSLDKo,TOPIC_JarvisSLDKo_3);
 };
 
 
@@ -307,7 +307,7 @@ func void DIA_Jarvis_HowMany_Info()
 	AI_Output(self,other,"DIA_Jarvis_HowMany_04_01");	//Wenn du drei von ihnen zu Boden schickst, hast du unter Beweis gestellt, auf welcher Seite du stehst.
 	AI_Output(self,other,"DIA_Jarvis_HowMany_04_02");	//Wen du dir aussuchst, ist deine Sache.
 	AI_Output(self,other,"DIA_Jarvis_HowMany_04_03");	//Nur ein kleiner Tipp: Es geht nicht darum, deinen Mut zu beweisen. Leg dich nicht mit Sylvio selbst an - der macht Hundefutter aus dir.
-	B_LogEntry(TOPIC_JarvisSLDKo,"Es reicht, wenn ich drei von Sylvios Männern zu Boden schicke. mit Sylvio selbst, sollte ich mich besser nicht anlegen.");
+	B_LogEntry(TOPIC_JarvisSLDKo,TOPIC_JarvisSLDKo_4);
 };
 
 
@@ -407,7 +407,7 @@ func void DIA_Jarvis_HowManyLeft_Info()
 		MIS_Jarvis_SldKO = LOG_SUCCESS;
 		self.aivar[AIV_IGNORE_Murder] = FALSE;
 		B_GivePlayerXP(XP_Ambient * victories);
-		B_LogEntry(TOPIC_SLDRespekt,"Jarvis stimmt für mich, wenn ich mich den Söldnern anschließen will.");
+		B_LogEntry(TOPIC_SLDRespekt,TOPIC_SLDRespekt_7);
 	};
 };
 
