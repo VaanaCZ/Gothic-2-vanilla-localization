@@ -7,6 +7,9 @@ Localization of Gothic 2 scripts. Scripts are reconstructed using Daedalus decom
 
 The goal is to provide consistent compiled scripts and output units (spoken dialogue) for Gothic, that share the same code base.
 
+# Translation files
+These translation files are only a "diff" against the [Gothic 2 Night of the Raven translation files](https://github.com/auronen/Gothic-2-localization) since they share majority of the strings. 
+
 # Contributing
 New translations and corrections of existing translations happen on my instance of [weblate](https://weblate.cokoliv.eu/projects/gothic-2/). If you wish to help with corrections, translations or you want to translate Gothic 2 into new language let me know by opening an issue, sending me a message on GitHub or, preferably, on our [GMC discord server](https://discord.gg/7zjNpVN8H6).
 
