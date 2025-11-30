@@ -157,16 +157,17 @@ const string TOPIC_TalentAnimalTrophy_1 = "Ich kann jetzt:";
 const string TOPIC_TalentAnimalTrophy_2 = "...Tieren die Zähne entfernen.";
 const string TOPIC_TalentAnimalTrophy_3 = "...Tieren die Krallen abnehmen.";
 const string TOPIC_TalentAnimalTrophy_4 = "...Tieren das Fell abziehen.";
-const string TOPIC_TalentAnimalTrophy_5 = "...Golems und Dämonen ihr Herz entnehmen.";
-const string TOPIC_TalentAnimalTrophy_6 = "...Schattenläufern das Horn entfernen.";
-const string TOPIC_TalentAnimalTrophy_7 = "...Feuerwaranen die Zunge enfernen.";
-const string TOPIC_TalentAnimalTrophy_8 = "...die Flügel von Blutfliegen vom Körper lösen.";
-const string TOPIC_TalentAnimalTrophy_9 = "...Blutfliegen den Stachen entfernen.";
-const string TOPIC_TalentAnimalTrophy_10 = "...Tieren ihre Greifzangen entfernen.";
-const string TOPIC_TalentAnimalTrophy_11 = "...Minecrawlern die Panzerplatten vom Körper lösen";
-const string TOPIC_TalentAnimalTrophy_12 = "...Drachensnappern ihre Hörner entfernen.";
-const string TOPIC_TalentAnimalTrophy_13 = "...Drachenschuppen vom Körper eines toten Drachen lösen.";
-const string TOPIC_TalentAnimalTrophy_14 = "...toten Drachen ihr Blut abzapfen.";
+
+const string TOPIC_TalentAnimalTrophy_6 = "...Golems und Dämonen ihr Herz entnehmen.";
+const string TOPIC_TalentAnimalTrophy_7 = "...Schattenläufern das Horn entfernen.";
+const string TOPIC_TalentAnimalTrophy_8 = "...Feuerwaranen die Zunge enfernen.";
+const string TOPIC_TalentAnimalTrophy_9 = "...die Flügel von Blutfliegen vom Körper lösen.";
+const string TOPIC_TalentAnimalTrophy_10 = "...Blutfliegen den Stachen entfernen.";
+const string TOPIC_TalentAnimalTrophy_11 = "...Tieren ihre Greifzangen entfernen.";
+const string TOPIC_TalentAnimalTrophy_12 = "...Minecrawlern die Panzerplatten vom Körper lösen";
+const string TOPIC_TalentAnimalTrophy_13 = "...Drachensnappern ihre Hörner entfernen.";
+const string TOPIC_TalentAnimalTrophy_14 = "...Drachenschuppen vom Körper eines toten Drachen lösen.";
+const string TOPIC_TalentAnimalTrophy_15 = "...toten Drachen ihr Blut abzapfen.";
 
 
 const string TOPIC_TalentMagicCircle = "Die Kreise der Magie";

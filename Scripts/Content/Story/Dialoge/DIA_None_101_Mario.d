@@ -44,7 +44,7 @@ func void DIA_None_101_Mario_Job_Info()
 {
 	AI_Output(other,self,"DIA_None_101_Mario_Job_15_00");	//Was machst du hier?
 	AI_Output(self,other,"DIA_None_101_Mario_Job_07_01");	//Ich hoffe, dass hier in absehbarer Zeit ein Schiff reinkommt, auf dem ich anheuern kann.
-	AI_Output(self,other,"DIA_None_101_Mario_Job_07_02");	//Das Rumgehï¿½nge geht mir ganz schï¿½n auf die Nerven.
+	AI_Output(self,other,"DIA_None_101_Mario_Job_07_02");	//Das Rumgehänge geht mir ganz schön auf die Nerven.
 };
 
 

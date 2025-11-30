@@ -40,7 +40,7 @@ func int DIA_Cipher_HALLO_Condition()
 func void DIA_Cipher_HALLO_Info()
 {
 	AI_Output(other,self,"DIA_Cipher_HALLO_15_00");	//Nettes Lager.
-	AI_Output(self,other,"DIA_Cipher_HALLO_07_01");	//Du sagst es. Hier stinkt's wie im Schlachthof. ï¿½berall tote Viecher und vermoderte Bï¿½ume!
+	AI_Output(self,other,"DIA_Cipher_HALLO_07_01");	//Du sagst es. Hier stinkt's wie im Schlachthof. Überall tote Viecher und vermoderte Bäume!
 };
 
 

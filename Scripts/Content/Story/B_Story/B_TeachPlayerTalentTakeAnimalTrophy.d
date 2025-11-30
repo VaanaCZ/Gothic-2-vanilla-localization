@@ -30,42 +30,42 @@ func int B_TeachPlayerTalentTakeAnimalTrophy(var C_Npc slf,var C_Npc oth,var int
 	if(trophy == TROPHY_Heart)
 	{
 		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Heart] = TRUE;
-		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_5);
+		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_6);
 	};
 	if(trophy == TROPHY_ShadowHorn)
 	{
 		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ShadowHorn] = TRUE;
-		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_6);
+		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_7);
 	};
 	if(trophy == TROPHY_FireTongue)
 	{
 		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_FireTongue] = TRUE;
-		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_7);
+		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_8);
 	};
 	if(trophy == TROPHY_BFWing)
 	{
 		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFWing] = TRUE;
-		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_8);
+		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_9);
 	};
 	if(trophy == TROPHY_BFSting)
 	{
 		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFSting] = TRUE;
-		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_9);
+		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_10);
 	};
 	if(trophy == TROPHY_Mandibles)
 	{
 		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Mandibles] = TRUE;
-		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_10);
+		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_11);
 	};
 	if(trophy == TROPHY_CrawlerPlate)
 	{
 		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_CrawlerPlate] = TRUE;
-		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_11);
+		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_12);
 	};
 	if(trophy == TROPHY_DrgSnapperHorn)
 	{
 		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DrgSnapperHorn] = TRUE;
-		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_12);
+		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_13);
 	};
 	if(trophy == TROPHY_DragonScale)
 	{
@@ -74,7 +74,7 @@ func int B_TeachPlayerTalentTakeAnimalTrophy(var C_Npc slf,var C_Npc oth,var int
 		CreateInvItems(RockDragon,ItAt_DragonScale,12);
 		CreateInvItems(FireDragon,ItAt_DragonScale,12);
 		CreateInvItems(IceDragon,ItAt_DragonScale,12);
-		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_13);
+		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_14);
 	};
 	if(trophy == TROPHY_DragonBlood)
 	{
@@ -83,7 +83,7 @@ func int B_TeachPlayerTalentTakeAnimalTrophy(var C_Npc slf,var C_Npc oth,var int
 		CreateInvItems(RockDragon,ItAt_DragonBlood,2);
 		CreateInvItems(FireDragon,ItAt_DragonBlood,2);
 		CreateInvItems(IceDragon,ItAt_DragonBlood,2);
-		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_14);
+		B_LogEntry(TOPIC_TalentAnimalTrophy,TOPIC_TalentAnimalTrophy_15);
 	};
 	PrintScreen(PRINT_LearnTakeAnimalTrophy,-1,-1,FONT_Screen,2);
 	Npc_SetTalentSkill(oth,NPC_TALENT_TAKEANIMALTROPHY,1);

@@ -81,9 +81,9 @@ const string TOPIC_Matteo_1 = "Gritta, die Nichte des Tischlers Thorben, hat sch
 
 const string TOPIC_Thorben = "Der Segen der Götter.";
 const string TOPIC_Thorben_1 = "Vatras, der Wassermagier, hat mich gesegnet.";
-const string TOPIC_Thorben_2 = "Daron, der Feuermagier hat mich nicht gesegnet. Jetzt muss ich wohl Gold auftreiben und bei ihm spenden, damit er mich doch noch segnet.";
+const string TOPIC_Thorben_2 = "Daron, der Feuermagier, hat mir seinen Segen gegeben.";
 const string TOPIC_Thorben_3 = "Thorben gibt mir seine Zustimmung, wenn ich mich von einem Priester Adanos und einem Priester Innos segnen lasse.";
-const string TOPIC_Thorben_4 = "Daron, der Feuermagier, hat mir seinen Segen gegeben.";
+const string TOPIC_Thorben_4 = "Daron, der Feuermagier hat mich nicht gesegnet. Jetzt muss ich wohl Gold auftreiben und bei ihm spenden, damit er mich doch noch segnet.";
 
 
 const string TOPIC_HaradOrk = "Eine große Herausforderung.";
