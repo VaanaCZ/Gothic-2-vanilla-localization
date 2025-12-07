@@ -13,6 +13,9 @@ instance StandardBrief(C_Item)
 };
 
 
+const string StandardBrief_1 = "StandardBrief";
+const string StandardBrief_2 = "Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla";
+
 func void UseStandardBrief()
 {
 	var int nDocID;
@@ -21,10 +24,10 @@ func void UseStandardBrief()
 	Doc_SetPage(nDocID,0,"letters.TGA",0);
 	Doc_SetFont(nDocID,0,FONT_BookHeadline);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
-	Doc_PrintLine(nDocID,0,"StandardBrief");
+	Doc_PrintLine(nDocID,0,StandardBrief_1);
 	Doc_SetFont(nDocID,0,FONT_Book);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla");
+	Doc_PrintLines(nDocID,0,StandardBrief_2);
 	Doc_Show(nDocID);
 };
 
@@ -45,6 +48,11 @@ instance StandardBuch(C_Item)
 };
 
 
+const string StandardBuch_1 = "StandardBuch Seite 1";
+const string StandardBuch_2 = "Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla";
+const string StandardBuch_3 = "Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bBla blaBla blaBla blaBlaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla";
+const string StandardBuch_4 = "StandardBuch Seite 2";
+
 func void UseStandardBuch()
 {
 	var int nDocID;
@@ -55,21 +63,21 @@ func void UseStandardBuch()
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
 	Doc_SetFont(nDocID,0,FONT_BookHeadline);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"StandardBuch Seite 1");
+	Doc_PrintLines(nDocID,0,StandardBuch_1);
 	Doc_SetFont(nDocID,0,FONT_Book);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla");
+	Doc_PrintLine(nDocID,0,StandardBuch_2);
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,0,"Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bBla blaBla blaBla blaBlaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla");
+	Doc_PrintLines(nDocID,0,StandardBuch_3);
 	Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 	Doc_SetFont(nDocID,1,FONT_BookHeadline);
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"StandardBuch Seite 2");
+	Doc_PrintLines(nDocID,1,StandardBuch_4);
 	Doc_SetFont(nDocID,1,FONT_Book);
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla");
+	Doc_PrintLines(nDocID,1,StandardBuch_2);
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla");
+	Doc_PrintLines(nDocID,1,StandardBuch_2);
 	Doc_Show(nDocID);
 };
 
@@ -185,6 +193,10 @@ instance ItWr_EinhandBuch(C_Item)
 };
 
 
+const string EinhandBuch_1 = "Die südländische Verteidigung";
+const string EinhandBuch_2 = "Der Südländer kämpft nun mehr weniger mit der Kraft des Nordmannes, als mit seiner Behendigkeit. Denn im heißen Klima seiner Heimat, bevorzugt er leichte Rüstungen welche ihm mehr Beweglichkeit erlauben. Durch diesen Umstand hat der Südländer einen ihm angepassten Kampstil entwickelt, der sich auf fundamentale Weise von den uns bekannten unterscheidet. ";
+const string EinhandBuch_3 = "Das wohl bekannnteste Manöver des Südländers ist wohl der einarmige Block mit rückwärtigen Ausfallschritt. Durch den Ausfallschritt gelingt es ihm, die Kraft des gegnerischen Angriffes zu mildern und so eine hervorragende Ausgangsposition zu erlangen, die zum direkten Gegenangriff genutzt werden kann.";
+
 func void UseEinhandBuch()
 {
 	var int nDocID;
@@ -202,16 +214,16 @@ func void UseEinhandBuch()
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
 	Doc_SetFont(nDocID,0,FONT_BookHeadline);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Die südländische Verteidigung");
+	Doc_PrintLines(nDocID,0,EinhandBuch_1);
 	Doc_SetFont(nDocID,0,FONT_Book);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Der Südländer kämpft nun mehr weniger mit der Kraft des Nordmannes, als mit seiner Behendigkeit. Denn im heißen Klima seiner Heimat, bevorzugt er leichte Rüstungen welche ihm mehr Beweglichkeit erlauben. Durch diesen Umstand hat der Südländer einen ihm angepassten Kampstil entwickelt, der sich auf fundamentale Weise von den uns bekannten unterscheidet. ");
+	Doc_PrintLines(nDocID,0,EinhandBuch_2);
 	Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 	Doc_SetFont(nDocID,1,FONT_BookHeadline);
 	Doc_PrintLine(nDocID,1,"");
 	Doc_SetFont(nDocID,1,FONT_Book);
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Das wohl bekannnteste Manöver des Südländers ist wohl der einarmige Block mit rückwärtigen Ausfallschritt. Durch den Ausfallschritt gelingt es ihm, die Kraft des gegnerischen Angriffes zu mildern und so eine hervorragende Ausgangsposition zu erlangen, die zum direkten Gegenangriff genutzt werden kann.");
+	Doc_PrintLines(nDocID,1,EinhandBuch_3);
 	Doc_PrintLine(nDocID,1,"");
 	Doc_Show(nDocID);
 };
@@ -235,6 +247,10 @@ instance ItWr_ZweihandBuch(C_Item)
 };
 
 
+const string ZweihandBuch_1 = "Der Doppelblock";
+const string ZweihandBuch_2 = "Das Abblocken der gegnerischen Klinge, mit einer beidhändig geführten Waffe, kann bei ausreichender Kraft dazu genutzt werden, sämtlichen Schwung des Angriffes aufzuhalten und den Gegner zu zwingen seien begonnene Kombination abrupt zu beenden. ";
+const string ZweihandBuch_3 = "Die daraufhin meist folgende Stagnation des Gegners sollte entschlossen genutzt werden, um selbst die Initiative zu ergreifen und den Gegner mit gekonnten Schlägen in die Niederlage zu treiben.    ";
+
 func void UseZweihandBuch()
 {
 	var int nDocID;
@@ -252,11 +268,11 @@ func void UseZweihandBuch()
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
 	Doc_SetFont(nDocID,0,FONT_BookHeadline);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Der Doppelblock");
+	Doc_PrintLines(nDocID,0,ZweihandBuch_1);
 	Doc_SetFont(nDocID,0,FONT_Book);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Das Abblocken der gegnerischen Klinge, mit einer beidhändig geführten Waffe, kann bei ausreichender Kraft dazu genutzt werden, sämtlichen Schwung des Angriffes aufzuhalten und den Gegner zu zwingen seien begonnene Kombination abrupt zu beenden. ");
+	Doc_PrintLines(nDocID,0,ZweihandBuch_2);
 	Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 	Doc_SetFont(nDocID,1,FONT_BookHeadline);
 	Doc_PrintLine(nDocID,1,"");
@@ -264,7 +280,7 @@ func void UseZweihandBuch()
 	Doc_SetFont(nDocID,1,FONT_Book);
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Die daraufhin meist folgende Stagnation des Gegners sollte entschlossen genutzt werden, um selbst die Initiative zu ergreifen und den Gegner mit gekonnten Schlägen in die Niederlage zu treiben.    ");
+	Doc_PrintLines(nDocID,1,ZweihandBuch_3);
 	Doc_Show(nDocID);
 };
 

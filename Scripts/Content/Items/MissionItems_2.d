@@ -24,6 +24,12 @@ instance ItWr_PaladinLetter_MIS(C_Item)
 };
 
 
+const string PaladinLetter_1 = "Lord Hagen!";
+const string PaladinLetter_2 = "Die Expedition in's Minental ist gescheitert. Viele Verluste zeichnen unseren Weg. Wir Überlebenden sitzen in der Burg fest, umgeben von Orks. ";
+const string PaladinLetter_3 = "Drachen habe uns mehrmals angegriffen und den konmpletten Landstrich um die Burg zerstört. Mit Innos Hilfe werden wir ausharren bis die Verstärkung eintrifft. Ein Ausfall ist unmöglich. ";
+const string PaladinLetter_4 = "Innos schütze uns alle";
+const string PaladinLetter_5 = "Garond";
+
 func void UsePaladinLetter()
 {
 	var int nDocID;
@@ -33,14 +39,14 @@ func void UsePaladinLetter()
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Lord Hagen!");
+	Doc_PrintLine(nDocID,0,PaladinLetter_1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Die Expedition in's Minental ist gescheitert. Viele Verluste zeichnen unseren Weg. Wir Überlebenden sitzen in der Burg fest, umgeben von Orks. ");
-	Doc_PrintLines(nDocID,0,"Drachen habe uns mehrmals angegriffen und den konmpletten Landstrich um die Burg zerstört. Mit Innos Hilfe werden wir ausharren bis die Verstärkung eintrifft. Ein Ausfall ist unmöglich. ");
+	Doc_PrintLines(nDocID,0,PaladinLetter_2);
+	Doc_PrintLines(nDocID,0,PaladinLetter_3);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Innos schütze uns alle");
+	Doc_PrintLine(nDocID,0,PaladinLetter_4);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Garond");
+	Doc_PrintLine(nDocID,0,PaladinLetter_5);
 	Doc_Show(nDocID);
 };
 
@@ -59,6 +65,11 @@ instance ItWr_LetterForGorn_MIS(C_Item)
 };
 
 
+const string LetterForGorn_1 = "Gorn!";
+const string LetterForGorn_2 = "Garond hat zugestimmt dich freizulassen - für 1000 Goldstücke. ";
+const string LetterForGorn_3 = "Also, falls du noch irgendwo Gold versteckt hast - jetzt ist die Zeit, damit rauszurücken. ";
+const string LetterForGorn_4 = "Milten ";
+
 func void UseLetterForGorn()
 {
 	var int nDocID;
@@ -71,13 +82,13 @@ func void UseLetterForGorn()
 	Doc_PrintLine(nDocID,0," ");
 	Doc_PrintLine(nDocID,0," ");
 	Doc_PrintLine(nDocID,0," ");
-	Doc_PrintLine(nDocID,0,"Gorn!");
+	Doc_PrintLine(nDocID,0,LetterForGorn_1);
 	Doc_PrintLine(nDocID,0," ");
-	Doc_PrintLines(nDocID,0,"Garond hat zugestimmt dich freizulassen - für 1000 Goldstücke. ");
-	Doc_PrintLines(nDocID,0,"Also, falls du noch irgendwo Gold versteckt hast - jetzt ist die Zeit, damit rauszurücken. ");
+	Doc_PrintLines(nDocID,0,LetterForGorn_2);
+	Doc_PrintLines(nDocID,0,LetterForGorn_3);
 	Doc_PrintLine(nDocID,0," ");
 	Doc_PrintLine(nDocID,0," ");
-	Doc_PrintLine(nDocID,0,"Milten ");
+	Doc_PrintLine(nDocID,0,LetterForGorn_4);
 	Doc_Show(nDocID);
 };
 
@@ -181,6 +192,14 @@ instance ItWr_Silvestro_MIS(C_Item)
 };
 
 
+const string Itwr_Silvestro_1 = "von Silvestro, Paladin des Königs ";
+const string Itwr_Silvestro_2 = "Ein weiterer Tag Schürferei liegt vor uns. Heute wollen wir die Wand durchbrechen und uns tiefer in den Fels hineingraben.";
+const string Itwr_Silvestro_3 = "Ich habe ein ungutes Gefühl - deshalb werde ich das Erz in ein Versteck bringen lassen.";
+const string Itwr_Silvestro_4 = "Diego ist der einzige von uns, der sich hier auskennt - ich muss ihm vertrauen. Er wird die Kisten in Sicherheit bringen - aber ich werde ihn nicht alleine losschicken.";
+const string Itwr_Silvestro_5 = "Das Erz muss unter allen Umständen geschützt werden, deshalb lasse ich Diego von zwei Rittern begleiten.";
+const string Itwr_Silvestro_6 = "Lang lebe der König";
+const string Itwr_Silvestro_7 = "Silvestro";
+
 func void UseItwr_Silvestro()
 {
 	var int nDocID;
@@ -189,16 +208,16 @@ func void UseItwr_Silvestro()
 	Doc_SetPage(nDocID,0,"letters.TGA",0);
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
-	Doc_PrintLine(nDocID,0,"von Silvestro, Paladin des Königs ");
+	Doc_PrintLine(nDocID,0,Itwr_Silvestro_1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Ein weiterer Tag Schürferei liegt vor uns. Heute wollen wir die Wand durchbrechen und uns tiefer in den Fels hineingraben.");
-	Doc_PrintLines(nDocID,0,"Ich habe ein ungutes Gefühl - deshalb werde ich das Erz in ein Versteck bringen lassen.");
-	Doc_PrintLines(nDocID,0,"Diego ist der einzige von uns, der sich hier auskennt - ich muss ihm vertrauen. Er wird die Kisten in Sicherheit bringen - aber ich werde ihn nicht alleine losschicken.");
-	Doc_PrintLines(nDocID,0,"Das Erz muss unter allen Umständen geschützt werden, deshalb lasse ich Diego von zwei Rittern begleiten.");
+	Doc_PrintLines(nDocID,0,Itwr_Silvestro_2);
+	Doc_PrintLines(nDocID,0,Itwr_Silvestro_3);
+	Doc_PrintLines(nDocID,0,Itwr_Silvestro_4);
+	Doc_PrintLines(nDocID,0,Itwr_Silvestro_5);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Lang lebe der König");
+	Doc_PrintLine(nDocID,0,Itwr_Silvestro_6);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Silvestro");
+	Doc_PrintLine(nDocID,0,Itwr_Silvestro_7);
 	Doc_Show(nDocID);
 };
 
@@ -320,6 +339,14 @@ instance ItWr_Bloody_MIS(C_Item)
 };
 
 
+const string BloodMIS_1 = "Der Stachel der Blutfliegen enthält ein tödliches Gift, das niemand, der klaren Verstandes ist, zu sich nehmen wird.";
+const string BloodMIS_2 = "Es sei denn er beherrscht die Kunst den Stachel zu entnehmen und kennt die folgende Regel. ";
+const string BloodMIS_3 = "Der Stachel wird mit scharfer Klinge von der Spitze zum Schaft säuberlich aufgeschnitten.";
+const string BloodMIS_4 = "Die obere Hautschicht wird entfernt. Das freigewordene Gewebe wird um die Drüsen herum aufgeschnitten. ";
+const string BloodMIS_5 = "Der besondere Saft des Gewebes ist mehr als genießbar, er hat heilende Kräfte. ";
+const string BloodMIS_6 = "Allerdings entwickelt der menschliche Körper im Laufe der Zeit eine Immunität gegen diesen heilenden Trunk.";
+const string BloodMIS_7 = "Damarok";
+
 func void UseBloodMIS()
 {
 	var int nDocID;
@@ -330,14 +357,14 @@ func void UseBloodMIS()
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Der Stachel der Blutfliegen enthält ein tödliches Gift, das niemand, der klaren Verstandes ist, zu sich nehmen wird.");
-	Doc_PrintLines(nDocID,0,"Es sei denn er beherrscht die Kunst den Stachel zu entnehmen und kennt die folgende Regel. ");
-	Doc_PrintLines(nDocID,0,"Der Stachel wird mit scharfer Klinge von der Spitze zum Schaft säuberlich aufgeschnitten.");
-	Doc_PrintLines(nDocID,0,"Die obere Hautschicht wird entfernt. Das freigewordene Gewebe wird um die Drüsen herum aufgeschnitten. ");
-	Doc_PrintLines(nDocID,0,"Der besondere Saft des Gewebes ist mehr als genießbar, er hat heilende Kräfte. ");
-	Doc_PrintLines(nDocID,0,"Allerdings entwickelt der menschliche Körper im Laufe der Zeit eine Immunität gegen diesen heilenden Trunk.");
+	Doc_PrintLines(nDocID,0,BloodMIS_1);
+	Doc_PrintLines(nDocID,0,BloodMIS_2);
+	Doc_PrintLines(nDocID,0,BloodMIS_3);
+	Doc_PrintLines(nDocID,0,BloodMIS_4);
+	Doc_PrintLines(nDocID,0,BloodMIS_5);
+	Doc_PrintLines(nDocID,0,BloodMIS_6);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Damarok");
+	Doc_PrintLine(nDocID,0,BloodMIS_7);
 	Doc_Show(nDocID);
 	if(Knows_Bloodfly == FALSE)
 	{
@@ -363,6 +390,15 @@ instance ItWr_Pfandbrief_MIS(C_Item)
 };
 
 
+const string Pfandbrief_1 = "Zur Tilgung der ausstehenden Schulden  ";
+const string Pfandbrief_2 = "wird ein Pfand ausgesetzt, der mit seinem Reinwert";
+const string Pfandbrief_3 = "der Höhe der Schulden entspricht.";
+const string Pfandbrief_4 = "Pfand: Verzierter Kelch aus Gold ";
+const string Pfandbrief_5 = "aus der Sammlung der Blutkelche";
+const string Pfandbrief_6 = "gez.";
+const string Pfandbrief_7 = "Lutero, Händler  ";
+const string Pfandbrief_8 = "Lehmar, Pfandleiher";
+
 func void UsePfandbrief()
 {
 	var int nDocID;
@@ -372,17 +408,17 @@ func void UsePfandbrief()
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0," ");
-	Doc_PrintLine(nDocID,0,"Zur Tilgung der ausstehenden Schulden  ");
-	Doc_PrintLine(nDocID,0,"wird ein Pfand ausgesetzt, der mit seinem Reinwert");
-	Doc_PrintLine(nDocID,0,"der Höhe der Schulden entspricht.");
+	Doc_PrintLine(nDocID,0,Pfandbrief_1);
+	Doc_PrintLine(nDocID,0,Pfandbrief_2);
+	Doc_PrintLine(nDocID,0,Pfandbrief_3);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Pfand: Verzierter Kelch aus Gold ");
-	Doc_PrintLines(nDocID,0,"aus der Sammlung der Blutkelche");
+	Doc_PrintLine(nDocID,0,Pfandbrief_4);
+	Doc_PrintLines(nDocID,0,Pfandbrief_5);
 	Doc_PrintLine(nDocID,0," ");
-	Doc_PrintLine(nDocID,0,"gez.");
-	Doc_PrintLine(nDocID,0,"Lutero, Händler  ");
+	Doc_PrintLine(nDocID,0,Pfandbrief_6);
+	Doc_PrintLine(nDocID,0,Pfandbrief_7);
 	Doc_PrintLine(nDocID,0," ");
-	Doc_PrintLine(nDocID,0,"Lehmar, Pfandleiher");
+	Doc_PrintLine(nDocID,0,Pfandbrief_8);
 	Doc_Show(nDocID);
 };
 
@@ -431,6 +467,17 @@ instance ItWr_Manowar(C_Item)
 };
 
 
+const string Manowar_1 = "Dominique's Ruf";
+const string Manowar_2 = "Wir werden seinen Ruhm ernten ";
+const string Manowar_3 = "Innos steht bei mir und meinen Brüdern";
+const string Manowar_4 = "Ich werde alle auf meinem Weg wie Schafe schlachten";
+const string Manowar_5 = "denn er ist das Feuer in meinem Herz";
+const string Manowar_6 = "Meine Klinge ist nur ihm geweiht  ";
+const string Manowar_7 = "an diesem Tag wird sein Name erklingen";
+const string Manowar_8 = "Jeder der sich in meinen Weg stellt";
+const string Manowar_9 = "wird durch meine Hand sterben";
+const string Manowar_10 = "denn ich bin ein Krieger Innos";
+
 func void UseManowar()
 {
 	var int nDocID;
@@ -440,17 +487,17 @@ func void UseManowar()
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Dominique's Ruf");
+	Doc_PrintLines(nDocID,0,Manowar_1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Wir werden seinen Ruhm ernten ");
-	Doc_PrintLines(nDocID,0,"Innos steht bei mir und meinen Brüdern");
-	Doc_PrintLines(nDocID,0,"Ich werde alle auf meinem Weg wie Schafe schlachten");
-	Doc_PrintLines(nDocID,0,"denn er ist das Feuer in meinem Herz");
-	Doc_PrintLines(nDocID,0,"Meine Klinge ist nur ihm geweiht  ");
-	Doc_PrintLines(nDocID,0,"an diesem Tag wird sein Name erklingen");
-	Doc_PrintLines(nDocID,0,"Jeder der sich in meinen Weg stellt");
-	Doc_PrintLines(nDocID,0,"wird durch meine Hand sterben");
-	Doc_PrintLines(nDocID,0,"denn ich bin ein Krieger Innos");
+	Doc_PrintLines(nDocID,0,Manowar_2);
+	Doc_PrintLines(nDocID,0,Manowar_3);
+	Doc_PrintLines(nDocID,0,Manowar_4);
+	Doc_PrintLines(nDocID,0,Manowar_5);
+	Doc_PrintLines(nDocID,0,Manowar_6);
+	Doc_PrintLines(nDocID,0,Manowar_7);
+	Doc_PrintLines(nDocID,0,Manowar_8);
+	Doc_PrintLines(nDocID,0,Manowar_9);
+	Doc_PrintLines(nDocID,0,Manowar_10);
 	Doc_Show(nDocID);
 };
 
@@ -469,6 +516,10 @@ instance ItWr_KDWLetter(C_Item)
 };
 
 
+const string KDWLetter_1 = "Wir haben das Lager verlassen. Jetzt da die Barriere endlich gefallen ist, werden wir das Zentrum der Zerstörung aufsuchen. Vielleicht finden wir dort die Antworten, die wir soviele Jahre gesucht haben. Wohin unsere Reise danach geht, weiß nur Adanos.";
+const string KDWLetter_2 = "Adanos ist bei uns";
+const string KDWLetter_3 = "Saturas";
+
 func void UseKDWLetter()
 {
 	var int nDocID;
@@ -479,12 +530,12 @@ func void UseKDWLetter()
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Wir haben das Lager verlassen. Jetzt da die Barriere endlich gefallen ist, werden wir das Zentrum der Zerstörung aufsuchen. Vielleicht finden wir dort die Antworten, die wir soviele Jahre gesucht haben. Wohin unsere Reise danach geht, weiß nur Adanos.");
+	Doc_PrintLines(nDocID,0,KDWLetter_1);
 	Doc_PrintLines(nDocID,0,"");
 	Doc_PrintLines(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Adanos ist bei uns");
-	Doc_PrintLine(nDocID,0,"Saturas");
+	Doc_PrintLines(nDocID,0,KDWLetter_2);
+	Doc_PrintLine(nDocID,0,KDWLetter_3);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_Show(nDocID);
@@ -505,6 +556,10 @@ instance ItWr_GilbertLetter(C_Item)
 };
 
 
+const string GilbertLetter_1 = "Mir reicht's. Ich habe mich hier lange genug versteckt. Und wenn ich das richtig mitgekriegt habe, ist die Barriere nun endlich gefallen.  ";
+const string GilbertLetter_2 = "Es wird wohl kaum noch jemand nach mir suchen. Ich hab die Schnauze voll von dieser Höhle und dem ganzen Tal. Wird Zeit das ich nach Hause komme.";
+const string GilbertLetter_3 = "Gilbert";
+
 func void UseGilbertLetter()
 {
 	var int nDocID;
@@ -516,12 +571,12 @@ func void UseGilbertLetter()
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Mir reicht's. Ich habe mich hier lange genug versteckt. Und wenn ich das richtig mitgekriegt habe, ist die Barriere nun endlich gefallen.  ");
-	Doc_PrintLines(nDocID,0,"Es wird wohl kaum noch jemand nach mir suchen. Ich hab die Schnauze voll von dieser Höhle und dem ganzen Tal. Wird Zeit das ich nach Hause komme.");
+	Doc_PrintLines(nDocID,0,GilbertLetter_1);
+	Doc_PrintLines(nDocID,0,GilbertLetter_2);
 	Doc_PrintLines(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLines(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Gilbert");
+	Doc_PrintLine(nDocID,0,GilbertLetter_3);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_Show(nDocID);

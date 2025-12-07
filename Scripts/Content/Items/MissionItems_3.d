@@ -100,6 +100,13 @@ instance ItWr_PermissionToWearInnosEye_MIS(C_Item)
 };
 
 
+const string PermissionToWearInnosEye_1 = "Dem Überbringer dieses Schreiben ist Einlass in die heiligen Hallen des Klosters zu gewähren.";
+const string PermissionToWearInnosEye_2 = "Seinen Wünschen, hinsichtlich der Inbesitznahme des Auges Innos ist unverzüglich nachzukommen";
+const string PermissionToWearInnosEye_3 = "Diese Anweisungen sind durch Kraft meines Amtes, als Generalbevollmächtigter der Insel und des Königs, sowie durch den Beschluss über die Zweiteilung der Kirche Innos, aus dem Jahre 2 des Feuers, als berechtigt zur Kenntnis zu nehmen.";
+const string PermissionToWearInnosEye_4 = "Ich werde hierzu keine weiteren Erklärungen abgeben und erwarte, dass meinen Anordnungen Folge geleistet wird.";
+const string PermissionToWearInnosEye_5 = "Innos schütze den König";
+const string PermissionToWearInnosEye_6 = "		Lord Hagen";
+
 func void Use_PermissionToWearInnosEye()
 {
 	var int nDocID;
@@ -111,14 +118,14 @@ func void Use_PermissionToWearInnosEye()
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Dem Überbringer dieses Schreiben ist Einlass in die heiligen Hallen des Klosters zu gewähren.");
-	Doc_PrintLines(nDocID,0,"Seinen Wünschen, hinsichtlich der Inbesitznahme des Auges Innos ist unverzüglich nachzukommen");
-	Doc_PrintLines(nDocID,0,"Diese Anweisungen sind durch Kraft meines Amtes, als Generalbevollmächtigter der Insel und des Königs, sowie durch den Beschluss über die Zweiteilung der Kirche Innos, aus dem Jahre 2 des Feuers, als berechtigt zur Kenntnis zu nehmen.");
-	Doc_PrintLines(nDocID,0,"Ich werde hierzu keine weiteren Erklärungen abgeben und erwarte, dass meinen Anordnungen Folge geleistet wird.");
+	Doc_PrintLines(nDocID,0,PermissionToWearInnosEye_1);
+	Doc_PrintLines(nDocID,0,PermissionToWearInnosEye_2);
+	Doc_PrintLines(nDocID,0,PermissionToWearInnosEye_3);
+	Doc_PrintLines(nDocID,0,PermissionToWearInnosEye_4);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Innos schütze den König");
+	Doc_PrintLine(nDocID,0,PermissionToWearInnosEye_5);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"		Lord Hagen");
+	Doc_PrintLine(nDocID,0,PermissionToWearInnosEye_6);
 	Doc_Show(nDocID);
 };
 
@@ -178,6 +185,12 @@ instance ItWr_CorneliusTagebuch_Mis(C_Item)
 };
 
 
+const string CorneliusTagebuch_1 = "Wenn Larius so weitermacht, werde ich mich nach einer anderen Stelle umsehen.";
+const string CorneliusTagebuch_2 = "Heute Nacht ist mir etwas seltsames passiert. Einer dieser Männer in den schwarzen Kapuzenmänteln, von denen man immer hört, hat mich in meinem Haus aufgesucht. Ich war gar nicht aufgeregt, obwohl man sich nur Schreckliches von ihnen erzählt. Die Macht, die diese Männer ausstrahlen war fast körperlich zu spüren. Die Stimme dagegen, war sehr ruhig und vertrauenserweckend.";
+const string CorneliusTagebuch_3 = "Er hat mir 20000 Goldstücke geboten, wenn ich dafür sorge, dass einer der Söldner verurteilt wird. Ich würde schon merken, wenn es soweit ist.";
+const string CorneliusTagebuch_4 = "Ich habe natürlich sofort zugestimmt, die Söldner haben es eh verdient. Wenn sie nicht gekommen wären, würde hier alles zu meiner Zufriedenheit verlaufen. Die Goldstücke werden mir einen ruhigen Lebensabend garantieren.";
+const string CorneliusTagebuch_5 = "Es ist soweit, sie haben einer dieser Söldner geschnappt. Es sollte ein Kinderspiel sein, mein Wort zu halten.";
+
 func void UseCorneliusTagebuch()
 {
 	var int nDocID;
@@ -190,15 +203,15 @@ func void UseCorneliusTagebuch()
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Wenn Larius so weitermacht, werde ich mich nach einer anderen Stelle umsehen.");
+	Doc_PrintLines(nDocID,0,CorneliusTagebuch_1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Heute Nacht ist mir etwas seltsames passiert. Einer dieser Männer in den schwarzen Kapuzenmänteln, von denen man immer hört, hat mich in meinem Haus aufgesucht. Ich war gar nicht aufgeregt, obwohl man sich nur Schreckliches von ihnen erzählt. Die Macht, die diese Männer ausstrahlen war fast körperlich zu spüren. Die Stimme dagegen, war sehr ruhig und vertrauenserweckend.");
+	Doc_PrintLines(nDocID,0,CorneliusTagebuch_2);
 	Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Er hat mir 20000 Goldstücke geboten, wenn ich dafür sorge, dass einer der Söldner verurteilt wird. Ich würde schon merken, wenn es soweit ist.");
-	Doc_PrintLines(nDocID,1,"Ich habe natürlich sofort zugestimmt, die Söldner haben es eh verdient. Wenn sie nicht gekommen wären, würde hier alles zu meiner Zufriedenheit verlaufen. Die Goldstücke werden mir einen ruhigen Lebensabend garantieren.");
+	Doc_PrintLines(nDocID,1,CorneliusTagebuch_3);
+	Doc_PrintLines(nDocID,1,CorneliusTagebuch_4);
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Es ist soweit, sie haben einer dieser Söldner geschnappt. Es sollte ein Kinderspiel sein, mein Wort zu halten.");
+	Doc_PrintLines(nDocID,1,CorneliusTagebuch_5);
 	Doc_Show(nDocID);
 	PrintScreen("",-1,-1,FONT_Screen,0);
 };
@@ -220,6 +233,20 @@ instance ITWR_DementorObsessionBook_MIS(C_Item)
 };
 
 
+const string DementorObsessionBook_1 = "edef Kon dirandorix";
+const string DementorObsessionBook_2 = "in Sparady bell ";
+const string DementorObsessionBook_3 = "el utoy";
+const string DementorObsessionBook_4 = " Kho ray xaondron";
+const string DementorObsessionBook_5 = "em piratoram endro";
+const string DementorObsessionBook_6 = "					      VINO";
+const string DementorObsessionBook_7 = "FERNANDO";
+const string DementorObsessionBook_8 = "		MALAK";
+const string DementorObsessionBook_9 = "BROMOR";
+const string DementorObsessionBook_10 = "				       ENGROM";
+const string DementorObsessionBook_11 = "		RANDOLPH";
+const string DementorObsessionBook_12 = "						SEKOB";
+const string DementorObsessionBook_13 = "			BRUTUS";
+
 func void Use_DementorObsessionBook()
 {
 	var int nDocID;
@@ -237,21 +264,21 @@ func void Use_DementorObsessionBook()
 		Doc_SetFont(nDocID,0,FONT_BookHeadline);
 		Doc_PrintLine(nDocID,0,"");
 		Doc_SetFont(nDocID,0,FONT_Book);
-		Doc_PrintLines(nDocID,0,"edef Kon dirandorix");
+		Doc_PrintLines(nDocID,0,DementorObsessionBook_1);
 		Doc_PrintLine(nDocID,0,"");
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLine(nDocID,0,"in Sparady bell ");
+		Doc_PrintLine(nDocID,0,DementorObsessionBook_2);
 		Doc_PrintLine(nDocID,0,"");
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLine(nDocID,0,"el utoy");
+		Doc_PrintLine(nDocID,0,DementorObsessionBook_3);
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLine(nDocID,0," Kho ray xaondron");
+		Doc_PrintLine(nDocID,0,DementorObsessionBook_4);
 		Doc_PrintLines(nDocID,0,"");
 		Doc_PrintLine(nDocID,0,"");
 		Doc_PrintLine(nDocID,0,"");
 		Doc_PrintLine(nDocID,0,"");
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLines(nDocID,0,"em piratoram endro");
+		Doc_PrintLines(nDocID,0,DementorObsessionBook_5);
 		Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 		Doc_SetFont(nDocID,1,FONT_BookHeadline);
 		Doc_SetFont(nDocID,1,FONT_Book);
@@ -259,30 +286,30 @@ func void Use_DementorObsessionBook()
 		Doc_PrintLine(nDocID,1,"");
 		if(Kapitel >= 3)
 		{
-			Doc_PrintLine(nDocID,1,"					      VINO");
-			Doc_PrintLine(nDocID,1,"FERNANDO");
+			Doc_PrintLine(nDocID,1,DementorObsessionBook_6);
+			Doc_PrintLine(nDocID,1,DementorObsessionBook_7);
 			Doc_PrintLine(nDocID,1,"");
-			Doc_PrintLine(nDocID,1,"		MALAK");
+			Doc_PrintLine(nDocID,1,DementorObsessionBook_8);
 			Doc_PrintLine(nDocID,1,"");
-			Doc_PrintLine(nDocID,1,"BROMOR");
+			Doc_PrintLine(nDocID,1,DementorObsessionBook_9);
 		};
 		if(Kapitel >= 4)
 		{
-			Doc_PrintLine(nDocID,1,"				       ENGROM");
+			Doc_PrintLine(nDocID,1,DementorObsessionBook_10);
 			Doc_PrintLine(nDocID,1,"");
 			Doc_PrintLine(nDocID,1,"");
-			Doc_PrintLine(nDocID,1,"		RANDOLPH");
+			Doc_PrintLine(nDocID,1,DementorObsessionBook_11);
 			Doc_PrintLine(nDocID,1,"");
 		};
 		if(Kapitel >= 5)
 		{
 			Doc_PrintLine(nDocID,1,"");
 			Doc_PrintLine(nDocID,1,"");
-			Doc_PrintLine(nDocID,1,"						SEKOB");
+			Doc_PrintLine(nDocID,1,DementorObsessionBook_12);
 			Doc_PrintLine(nDocID,1,"");
 			Doc_PrintLine(nDocID,1,"");
 			Doc_PrintLine(nDocID,1,"");
-			Doc_PrintLine(nDocID,1,"			BRUTUS");
+			Doc_PrintLine(nDocID,1,DementorObsessionBook_13);
 			Doc_PrintLine(nDocID,1,"");
 		};
 		Doc_Show(nDocID);
@@ -304,6 +331,16 @@ instance ItWr_PyrokarsObsessionList(C_Item)
 };
 
 
+const string PyrokarsObsessionList_1 = "Die Besessenen";
+const string PyrokarsObsessionList_2 = "FERNANDO";
+const string PyrokarsObsessionList_3 = "VINO";
+const string PyrokarsObsessionList_4 = "MALAK";
+const string PyrokarsObsessionList_5 = "BROMOR";
+const string PyrokarsObsessionList_6 = "ENGROM";
+const string PyrokarsObsessionList_7 = "RANDOLPH";
+const string PyrokarsObsessionList_8 = "SEKOB";
+const string PyrokarsObsessionList_9 = "BRUTUS";
+
 func void Use_PyrokarsObsessionList()
 {
 	var int nDocID;
@@ -312,33 +349,33 @@ func void Use_PyrokarsObsessionList()
 	Doc_SetPage(nDocID,0,"letters.TGA",0);
 	Doc_SetFont(nDocID,0,FONT_BookHeadline);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
-	Doc_PrintLine(nDocID,0,"Die Besessenen");
+	Doc_PrintLine(nDocID,0,PyrokarsObsessionList_1);
 	Doc_SetFont(nDocID,0,FONT_Book);
 	if(Kapitel >= 3)
 	{
 		Doc_PrintLine(nDocID,0,"");
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLine(nDocID,0,"FERNANDO");
+		Doc_PrintLine(nDocID,0,PyrokarsObsessionList_2);
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLine(nDocID,0,"VINO");
+		Doc_PrintLine(nDocID,0,PyrokarsObsessionList_3);
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLine(nDocID,0,"MALAK");
+		Doc_PrintLine(nDocID,0,PyrokarsObsessionList_4);
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLine(nDocID,0,"BROMOR");
+		Doc_PrintLine(nDocID,0,PyrokarsObsessionList_5);
 	};
 	if(Kapitel >= 4)
 	{
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLine(nDocID,0,"ENGROM");
+		Doc_PrintLine(nDocID,0,PyrokarsObsessionList_6);
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLine(nDocID,0,"RANDOLPH");
+		Doc_PrintLine(nDocID,0,PyrokarsObsessionList_7);
 	};
 	if(Kapitel >= 5)
 	{
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLine(nDocID,0,"SEKOB");
+		Doc_PrintLine(nDocID,0,PyrokarsObsessionList_8);
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLine(nDocID,0,"BRUTUS");
+		Doc_PrintLine(nDocID,0,PyrokarsObsessionList_9);
 		Doc_PrintLine(nDocID,0,"");
 		Doc_PrintLine(nDocID,0,"");
 		Doc_PrintLine(nDocID,0,"");
@@ -448,6 +485,11 @@ instance ItWr_BabosLetter_MIS(C_Item)
 };
 
 
+const string BabosLetter_1 = "Lieber Babo!";
+const string BabosLetter_2 = "Du wunderst dich bestimmt, wie wir dazu kommen dir diesen Brief zu schreiben. Wir haben alles Geld zusammengelegt und den Meister Marlas gebeten diese Zeilen hier zu schreiben. Also wir wünschen dir viel Glück auf deinem weiteren Weg und hoffen, dass du deine Freunde nicht vergisst. Als Abschiedsgeschenk haben wir die noch ein Bild eingepackt, damit du immer an uns denkst und dir die Nächte im Kloster nicht zu lang werden.";
+const string BabosLetter_3 = "Viel Erfolg im Kloster und viel Spass mit dem Bild.";
+const string BabosLetter_4 = "Feht und Bonka.";
+
 func void Use_BabosLetter()
 {
 	var int nDocID;
@@ -456,12 +498,12 @@ func void Use_BabosLetter()
 	Doc_SetPage(nDocID,0,"letters.TGA",0);
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
-	Doc_PrintLine(nDocID,0,"Lieber Babo!");
+	Doc_PrintLine(nDocID,0,BabosLetter_1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Du wunderst dich bestimmt, wie wir dazu kommen dir diesen Brief zu schreiben. Wir haben alles Geld zusammengelegt und den Meister Marlas gebeten diese Zeilen hier zu schreiben. Also wir wünschen dir viel Glück auf deinem weiteren Weg und hoffen, dass du deine Freunde nicht vergisst. Als Abschiedsgeschenk haben wir die noch ein Bild eingepackt, damit du immer an uns denkst und dir die Nächte im Kloster nicht zu lang werden.");
-	Doc_PrintLines(nDocID,0,"Viel Erfolg im Kloster und viel Spass mit dem Bild.");
+	Doc_PrintLines(nDocID,0,BabosLetter_2);
+	Doc_PrintLines(nDocID,0,BabosLetter_3);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Feht und Bonka.");
+	Doc_PrintLines(nDocID,0,BabosLetter_4);
 	Doc_Show(nDocID);
 };
 
@@ -545,6 +587,11 @@ instance ItWr_Astronomy_Mis(C_Item)
 
 var int Astronomy_once;
 
+const string Astronomy_1 = "...wenn nun aber die Kraft des Ochsen sich vereinigt mit den Prinzipien des Kriegers, so seien alle gewarnt vor den Ereignissen, die da kommen mögen.";
+const string Astronomy_2 = "Die unbändige Kraft des Ochsen und die Zielstrebigkeit des Kriegers ist in der Lage das Uralte Gleichgewicht der Mächte zu erschüttern. Die kosmische Grenze zwischen den Dimension wird schwächer, so schwach, dass die Schattenkreaturen Beliars auf ein leichtes in unsere Welt überwechseln können. ";
+const string Astronomy_3 = "Was so etwas bedeutet, zeigen uns die Kriege der vorderen Zeit, als das Band zwischen den Welten noch stärker war. Die Schergen des Bösen brachten Tod und Zerstörung über die Welt und nur mit der Hilfe Innos und seines Erwählten war es den Menschen möglich das Unheil zu besiegen. ";
+const string Astronomy_4 = "Wenn es jemals wieder soweit kommen mag, dann mag Innos uns schützen, denn einen Erwählten Innos hat es schon seit über hundert Jehren nicht mehr gegeben.";
+
 func void Use_Astronomy()
 {
 	var int nDocID;
@@ -561,12 +608,12 @@ func void Use_Astronomy()
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"...wenn nun aber die Kraft des Ochsen sich vereinigt mit den Prinzipien des Kriegers, so seien alle gewarnt vor den Ereignissen, die da kommen mögen.");
-	Doc_PrintLines(nDocID,0,"Die unbändige Kraft des Ochsen und die Zielstrebigkeit des Kriegers ist in der Lage das Uralte Gleichgewicht der Mächte zu erschüttern. Die kosmische Grenze zwischen den Dimension wird schwächer, so schwach, dass die Schattenkreaturen Beliars auf ein leichtes in unsere Welt überwechseln können. ");
+	Doc_PrintLines(nDocID,0,Astronomy_1);
+	Doc_PrintLines(nDocID,0,Astronomy_2);
 	Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Was so etwas bedeutet, zeigen uns die Kriege der vorderen Zeit, als das Band zwischen den Welten noch stärker war. Die Schergen des Bösen brachten Tod und Zerstörung über die Welt und nur mit der Hilfe Innos und seines Erwählten war es den Menschen möglich das Unheil zu besiegen. ");
-	Doc_PrintLines(nDocID,1,"Wenn es jemals wieder soweit kommen mag, dann mag Innos uns schützen, denn einen Erwählten Innos hat es schon seit über hundert Jehren nicht mehr gegeben.");
+	Doc_PrintLines(nDocID,1,Astronomy_3);
+	Doc_PrintLines(nDocID,1,Astronomy_4);
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLines(nDocID,1,"");
 	Doc_Show(nDocID);
@@ -678,6 +725,14 @@ instance ItWr_DiegosLetter_MIS(C_Item)
 };
 
 
+const string DiegosLetter_Mis_1 = "Gerbrandt, ";
+const string DiegosLetter_Mis_2 = "du hättest mich lieber töten sollen. ";
+const string DiegosLetter_Mis_3 = "Ich bin wieder in der Stadt und auf dem Weg zu dir. Wenn ich dich finde, werde ich dir deinen fetten Wanst aufschneiden. Du kennst mich lange genug um zu wissen, dass ich mich nicht ungestraft reinlegen lasse.";
+const string DiegosLetter_Mis_4 = "Als du mich damals hast in die Barriere werfen lassen, hast du sicherlich geglaubt mich für immer los zu sein. Du hast dich geirrt. ";
+const string DiegosLetter_Mis_5 = "Ich bin bekommen mir das zu holen, was mir zusteht. ";
+const string DiegosLetter_Mis_6 = "Deine einzige Chance am leben zu bleiben ist, dich aus deinem Haus zu verpissen und mir deine Geschäfte zu überlassen. Dann sind wir quitt.";
+const string DiegosLetter_Mis_7 = "Diego";
+
 func void Use_DiegosLetter_Mis()
 {
 	var int nDocID;
@@ -686,14 +741,14 @@ func void Use_DiegosLetter_Mis()
 	Doc_SetPage(nDocID,0,"letters.TGA",0);
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
-	Doc_PrintLine(nDocID,0,"Gerbrandt, ");
-	Doc_PrintLines(nDocID,0,"du hättest mich lieber töten sollen. ");
-	Doc_PrintLines(nDocID,0,"Ich bin wieder in der Stadt und auf dem Weg zu dir. Wenn ich dich finde, werde ich dir deinen fetten Wanst aufschneiden. Du kennst mich lange genug um zu wissen, dass ich mich nicht ungestraft reinlegen lasse.");
-	Doc_PrintLines(nDocID,0,"Als du mich damals hast in die Barriere werfen lassen, hast du sicherlich geglaubt mich für immer los zu sein. Du hast dich geirrt. ");
-	Doc_PrintLines(nDocID,0,"Ich bin bekommen mir das zu holen, was mir zusteht. ");
-	Doc_PrintLines(nDocID,0,"Deine einzige Chance am leben zu bleiben ist, dich aus deinem Haus zu verpissen und mir deine Geschäfte zu überlassen. Dann sind wir quitt.");
+	Doc_PrintLine(nDocID,0,DiegosLetter_Mis_1);
+	Doc_PrintLines(nDocID,0,DiegosLetter_Mis_2);
+	Doc_PrintLines(nDocID,0,DiegosLetter_Mis_3);
+	Doc_PrintLines(nDocID,0,DiegosLetter_Mis_4);
+	Doc_PrintLines(nDocID,0,DiegosLetter_Mis_5);
+	Doc_PrintLines(nDocID,0,DiegosLetter_Mis_6);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Diego");
+	Doc_PrintLine(nDocID,0,DiegosLetter_Mis_7);
 	Doc_Show(nDocID);
 };
 
@@ -755,6 +810,16 @@ instance ItWr_MinenAnteil_Mis(C_Item)
 };
 
 
+const string MinenAnteil_Mis_1 = "Erzminenanteil";
+const string MinenAnteil_Mis_2 = "Dem Eigentümer dieses Schreibens ist es, gemäss des königlichen Erlassess zur Gewinnung von Vermögen aus Reichsgrund, erlaubt, sich als Prospektor auf königlichem Grund und Boden zu verdingen.";
+const string MinenAnteil_Mis_3 = "Seine Schürftätigkeiten haben sich auf das Gebiet einer königlichen Reichskleinparzelle zu beschränken.";
+const string MinenAnteil_Mis_4 = "Reichskleinparzellen sind durch den Erlass zur Größe von Schürfgrund auf eine Fläche von 16 Rechtschritt, in der flächigen, und nicht mehr als 3 Schritt in der steigenden Ausdehnung definiert.";
+const string MinenAnteil_Mis_5 = "Der Reichsprospektor ist von allen Pflichten bezüglich des freien Zugangs und des Schutzes der Schürfparzellen befreit.";
+const string MinenAnteil_Mis_6 = "Ist es dem Pächter nicht möglich die fälligen Abgaben fristengerecht zu entgelten, fallen alle Rechte an Grund und Boden zurück an das Reich.";
+const string MinenAnteil_Mis_7 = "		 gezeichnet";
+const string MinenAnteil_Mis_8 = "      königlicher Prospektor";
+const string MinenAnteil_Mis_9 = "                Salandril";
+
 func void Use_MinenAnteil_Mis()
 {
 	var int nDocID;
@@ -763,18 +828,18 @@ func void Use_MinenAnteil_Mis()
 	Doc_SetPage(nDocID,0,"letters.TGA",0);
 	Doc_SetFont(nDocID,0,FONT_BookHeadline);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
-	Doc_PrintLine(nDocID,0,"Erzminenanteil");
+	Doc_PrintLine(nDocID,0,MinenAnteil_Mis_1);
 	Doc_SetFont(nDocID,0,FONT_Book);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Dem Eigentümer dieses Schreibens ist es, gemäss des königlichen Erlassess zur Gewinnung von Vermögen aus Reichsgrund, erlaubt, sich als Prospektor auf königlichem Grund und Boden zu verdingen.");
-	Doc_PrintLines(nDocID,0,"Seine Schürftätigkeiten haben sich auf das Gebiet einer königlichen Reichskleinparzelle zu beschränken.");
-	Doc_PrintLines(nDocID,0,"Reichskleinparzellen sind durch den Erlass zur Größe von Schürfgrund auf eine Fläche von 16 Rechtschritt, in der flächigen, und nicht mehr als 3 Schritt in der steigenden Ausdehnung definiert.");
-	Doc_PrintLines(nDocID,0,"Der Reichsprospektor ist von allen Pflichten bezüglich des freien Zugangs und des Schutzes der Schürfparzellen befreit.");
-	Doc_PrintLines(nDocID,0,"Ist es dem Pächter nicht möglich die fälligen Abgaben fristengerecht zu entgelten, fallen alle Rechte an Grund und Boden zurück an das Reich.");
-	Doc_PrintLine(nDocID,0,"		 gezeichnet");
-	Doc_PrintLine(nDocID,0,"      königlicher Prospektor");
+	Doc_PrintLines(nDocID,0,MinenAnteil_Mis_2);
+	Doc_PrintLines(nDocID,0,MinenAnteil_Mis_3);
+	Doc_PrintLines(nDocID,0,MinenAnteil_Mis_4);
+	Doc_PrintLines(nDocID,0,MinenAnteil_Mis_5);
+	Doc_PrintLines(nDocID,0,MinenAnteil_Mis_6);
+	Doc_PrintLine(nDocID,0,MinenAnteil_Mis_7);
+	Doc_PrintLine(nDocID,0,MinenAnteil_Mis_8);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"                Salandril");
+	Doc_PrintLine(nDocID,0,MinenAnteil_Mis_9);
 	Doc_Show(nDocID);
 	SC_KnowsProspektorSalandril = TRUE;
 	if(ItWr_MinenAnteil_Mis_OneTime == FALSE)
@@ -836,6 +901,14 @@ instance ItWr_RichterKomproBrief_MIS(C_Item)
 };
 
 
+const string RichterKomproBrief_1 = "Morgahard, du Nichtsnutz! Führe meinen Befehl endlich aus, sonst werde ich andere Seiten aufziehen und ihr werdet allesamt verhaftet.";
+const string RichterKomproBrief_2 = "Die Sache steigt morgen Nacht. Larius wird schon misstrauisch. ";
+const string RichterKomproBrief_3 = "Wenn wir ihm das Geld nicht jetzt aus der Tasche ziehen, gibt es vielleicht nicht noch eine Gelegenheit dazu. Ich werde dafür sorgen, dass ihr ihn heute abend auf dem Marktplatz antreffen werdet. ";
+const string RichterKomproBrief_4 = "Macht aber kein Aufsehen, sonst wird euch die Miliz niederprügeln, bevor ihr noch wisst, was los ist.";
+const string RichterKomproBrief_5 = "Nur so nebenbei: Wenn er dabei umkommen sollte, habe ich auch nichts dagegen.";
+const string RichterKomproBrief_6 = "          Oberster Richter und ";
+const string RichterKomproBrief_7 = "          königlicher Sekretär";
+
 func void Use_RichterKomproBrief()
 {
 	var int nDocID;
@@ -846,14 +919,14 @@ func void Use_RichterKomproBrief()
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_SetFont(nDocID,0,FONT_Book);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Morgahard, du Nichtsnutz! Führe meinen Befehl endlich aus, sonst werde ich andere Seiten aufziehen und ihr werdet allesamt verhaftet.");
-	Doc_PrintLines(nDocID,0,"Die Sache steigt morgen Nacht. Larius wird schon misstrauisch. ");
-	Doc_PrintLines(nDocID,0,"Wenn wir ihm das Geld nicht jetzt aus der Tasche ziehen, gibt es vielleicht nicht noch eine Gelegenheit dazu. Ich werde dafür sorgen, dass ihr ihn heute abend auf dem Marktplatz antreffen werdet. ");
-	Doc_PrintLines(nDocID,0,"Macht aber kein Aufsehen, sonst wird euch die Miliz niederprügeln, bevor ihr noch wisst, was los ist.");
-	Doc_PrintLines(nDocID,0,"Nur so nebenbei: Wenn er dabei umkommen sollte, habe ich auch nichts dagegen.");
+	Doc_PrintLines(nDocID,0,RichterKomproBrief_1);
+	Doc_PrintLines(nDocID,0,RichterKomproBrief_2);
+	Doc_PrintLines(nDocID,0,RichterKomproBrief_3);
+	Doc_PrintLines(nDocID,0,RichterKomproBrief_4);
+	Doc_PrintLines(nDocID,0,RichterKomproBrief_5);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"          Oberster Richter und ");
-	Doc_PrintLine(nDocID,0,"          königlicher Sekretär");
+	Doc_PrintLine(nDocID,0,RichterKomproBrief_6);
+	Doc_PrintLine(nDocID,0,RichterKomproBrief_7);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_Show(nDocID);
 };
@@ -873,6 +946,11 @@ instance ItWr_MorgahardTip(C_Item)
 };
 
 
+const string MorgahardTip_1 = "Ich bin schon mal vorraus gegangen. Ich hoffe, wir werden uns alle in etwas ruhigeren Zeiten wieder sehen.";
+const string MorgahardTip_2 = "Keine Bange, Jungs. Wenn alle Stricke reißen, werde ich Onar bitten, die Sache für uns zu erledigen.";
+const string MorgahardTip_3 = "Es wird schon alles gut gehen.";
+const string MorgahardTip_4 = "			               M.";
+
 func void Use_MorgahardTip()
 {
 	var int nDocID;
@@ -884,12 +962,12 @@ func void Use_MorgahardTip()
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLines(nDocID,0,"");
 	Doc_PrintLines(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Ich bin schon mal vorraus gegangen. Ich hoffe, wir werden uns alle in etwas ruhigeren Zeiten wieder sehen.");
-	Doc_PrintLines(nDocID,0,"Keine Bange, Jungs. Wenn alle Stricke reißen, werde ich Onar bitten, die Sache für uns zu erledigen.");
-	Doc_PrintLines(nDocID,0,"Es wird schon alles gut gehen.");
+	Doc_PrintLines(nDocID,0,MorgahardTip_1);
+	Doc_PrintLines(nDocID,0,MorgahardTip_2);
+	Doc_PrintLines(nDocID,0,MorgahardTip_3);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"			               M.");
+	Doc_PrintLine(nDocID,0,MorgahardTip_4);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_Show(nDocID);
 };
@@ -941,6 +1019,12 @@ instance ItWr_VinosKellergeister_Mis(C_Item)
 };
 
 
+const string VinosKellergeister_Mis_1 = "Die Kraft der Traube";
+const string VinosKellergeister_Mis_2 = "...ich habe schon eine Menge ausprobiert, doch diese Frucht, die mir letzte Woche von Übersee geliefert wurde, übertrifft meine kühnsten Erwartungen...";
+const string VinosKellergeister_Mis_3 = "...der Saft dieser Traube ist so früchtig, wie keine andere, die man in diesem Teil des Landes finden kann...";
+const string VinosKellergeister_Mis_4 = "...so weit so gut. Ich kann aber immer noch nicht den Gedanken verdrängen, hier in meiner geheimen Schnapsbrennerei erwischt zu werden. Keine Ahnung, was die mit mir machen, wenn die Miliz mich hier entdeckt, ich fürchte, dann werde ich höchstwahrscheilich in die Barriere geworfen...";
+const string VinosKellergeister_Mis_5 = "...sie haben Verdacht geschöpft. Ich werde hier erst mal alles stehen und liegen lassen, bis sich die Wogen geglättet haben und werde meine Arbeit erst wieder aufnehmen, wenn ich mir sicher sein kann, dass sie mir nicht mehr folgen...";
+
 func void Use_VinosKellergeister_Mis()
 {
 	var int nDocID;
@@ -951,22 +1035,22 @@ func void Use_VinosKellergeister_Mis()
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
 	Doc_SetFont(nDocID,0,FONT_BookHeadline);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Die Kraft der Traube");
+	Doc_PrintLines(nDocID,0,VinosKellergeister_Mis_1);
 	Doc_SetFont(nDocID,0,FONT_Book);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"...ich habe schon eine Menge ausprobiert, doch diese Frucht, die mir letzte Woche von Übersee geliefert wurde, übertrifft meine kühnsten Erwartungen...");
+	Doc_PrintLines(nDocID,0,VinosKellergeister_Mis_2);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"...der Saft dieser Traube ist so früchtig, wie keine andere, die man in diesem Teil des Landes finden kann...");
+	Doc_PrintLines(nDocID,0,VinosKellergeister_Mis_3);
 	Doc_PrintLines(nDocID,0,"");
 	Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 	Doc_SetFont(nDocID,1,FONT_BookHeadline);
 	Doc_SetFont(nDocID,1,FONT_Book);
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"...so weit so gut. Ich kann aber immer noch nicht den Gedanken verdrängen, hier in meiner geheimen Schnapsbrennerei erwischt zu werden. Keine Ahnung, was die mit mir machen, wenn die Miliz mich hier entdeckt, ich fürchte, dann werde ich höchstwahrscheilich in die Barriere geworfen...");
+	Doc_PrintLines(nDocID,1,VinosKellergeister_Mis_4);
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"...sie haben Verdacht geschöpft. Ich werde hier erst mal alles stehen und liegen lassen, bis sich die Wogen geglättet haben und werde meine Arbeit erst wieder aufnehmen, wenn ich mir sicher sein kann, dass sie mir nicht mehr folgen...");
+	Doc_PrintLines(nDocID,1,VinosKellergeister_Mis_5);
 	Doc_Show(nDocID);
 };
 

@@ -26,6 +26,18 @@ instance ItWr_Canthars_KomproBrief_MIS(C_Item)
 };
 
 
+const string Canthars_KomproBrief_1 = " 	Letzte Ermahnung";
+const string Canthars_KomproBrief_2 = "		Ich habe dir schon mehrere Male auf";
+const string Canthars_KomproBrief_3 = "		liebenswürdigste Weise mitgeteilt,";
+const string Canthars_KomproBrief_4 = "		daß ich die Waffen, die ich bei dir";
+const string Canthars_KomproBrief_5 = "		vor einer Woche bestellt habe, dringend";
+const string Canthars_KomproBrief_6 = "		brauche.";
+const string Canthars_KomproBrief_7 = "		Wenn ich nicht bald, etwas von dir höre,";
+const string Canthars_KomproBrief_8 = "		Sarah, dann sehe ich mich gezwungen,";
+const string Canthars_KomproBrief_9 = "		andere Seiten auf zu ziehen. Ich hoffe,";
+const string Canthars_KomproBrief_10 = "		wir verstehen uns!!!!!!!!!!!!";
+const string Canthars_KomproBrief_11 = "			Onar";
+
 func void Use_Canthars_KomproBrief()
 {
 	var int nDocID;
@@ -36,20 +48,20 @@ func void Use_Canthars_KomproBrief()
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0," 	Letzte Ermahnung");
+	Doc_PrintLine(nDocID,0,Canthars_KomproBrief_1);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_SetFont(nDocID,0,FONT_Book);
-	Doc_PrintLine(nDocID,0,"		Ich habe dir schon mehrere Male auf");
-	Doc_PrintLine(nDocID,0,"		liebenswürdigste Weise mitgeteilt,");
-	Doc_PrintLine(nDocID,0,"		daß ich die Waffen, die ich bei dir");
-	Doc_PrintLine(nDocID,0,"		vor einer Woche bestellt habe, dringend");
-	Doc_PrintLine(nDocID,0,"		brauche.");
-	Doc_PrintLine(nDocID,0,"		Wenn ich nicht bald, etwas von dir höre,");
-	Doc_PrintLine(nDocID,0,"		Sarah, dann sehe ich mich gezwungen,");
-	Doc_PrintLine(nDocID,0,"		andere Seiten auf zu ziehen. Ich hoffe,");
-	Doc_PrintLine(nDocID,0,"		wir verstehen uns!!!!!!!!!!!!");
+	Doc_PrintLine(nDocID,0,Canthars_KomproBrief_2);
+	Doc_PrintLine(nDocID,0,Canthars_KomproBrief_3);
+	Doc_PrintLine(nDocID,0,Canthars_KomproBrief_4);
+	Doc_PrintLine(nDocID,0,Canthars_KomproBrief_5);
+	Doc_PrintLine(nDocID,0,Canthars_KomproBrief_6);
+	Doc_PrintLine(nDocID,0,Canthars_KomproBrief_7);
+	Doc_PrintLine(nDocID,0,Canthars_KomproBrief_8);
+	Doc_PrintLine(nDocID,0,Canthars_KomproBrief_9);
+	Doc_PrintLine(nDocID,0,Canthars_KomproBrief_10);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"			Onar");
+	Doc_PrintLine(nDocID,0,Canthars_KomproBrief_11);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_SetMargins(nDocID,-1,200,50,50,50,1);
 	Doc_Show(nDocID);
@@ -197,6 +209,21 @@ instance ItWr_Kraeuterliste(C_Item)
 };
 
 
+const string Kraeuterliste_1 = "Alchemistische Kräuter";
+const string Kraeuterliste_2 = "Heilpflanze";
+const string Kraeuterliste_3 = "Heilkraut";
+const string Kraeuterliste_4 = "Heilwurzel";
+const string Kraeuterliste_5 = "Feuernessel";
+const string Kraeuterliste_6 = "Feuerkraut";
+const string Kraeuterliste_7 = "Feuerwurzel";
+const string Kraeuterliste_8 = "Goblin Beere";
+const string Kraeuterliste_9 = "Drachenwurzel";
+const string Kraeuterliste_10 = "Snapperkraut";
+const string Kraeuterliste_11 = "Feldknöterich";
+const string Kraeuterliste_12 = "Kronstöckl";
+const string Kraeuterliste_13 = "Anmerkung: Lass dir doch von einem Lehrlings - Anwärter die Pflanzen bringen, dann weißt du ob er was taugt. ";
+const string Kraeuterliste_14 = "Gruß, Zuris";
+
 func void Use_Kraeuterliste()
 {
 	var int nDocID;
@@ -206,23 +233,23 @@ func void Use_Kraeuterliste()
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Alchemistische Kräuter");
+	Doc_PrintLine(nDocID,0,Kraeuterliste_1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Heilpflanze");
-	Doc_PrintLine(nDocID,0,"Heilkraut");
-	Doc_PrintLine(nDocID,0,"Heilwurzel");
-	Doc_PrintLine(nDocID,0,"Feuernessel");
-	Doc_PrintLine(nDocID,0,"Feuerkraut");
-	Doc_PrintLine(nDocID,0,"Feuerwurzel");
-	Doc_PrintLine(nDocID,0,"Goblin Beere");
-	Doc_PrintLine(nDocID,0,"Drachenwurzel");
-	Doc_PrintLine(nDocID,0,"Snapperkraut");
-	Doc_PrintLine(nDocID,0,"Feldknöterich");
-	Doc_PrintLine(nDocID,0,"Kronstöckl");
+	Doc_PrintLine(nDocID,0,Kraeuterliste_2);
+	Doc_PrintLine(nDocID,0,Kraeuterliste_3);
+	Doc_PrintLine(nDocID,0,Kraeuterliste_4);
+	Doc_PrintLine(nDocID,0,Kraeuterliste_5);
+	Doc_PrintLine(nDocID,0,Kraeuterliste_6);
+	Doc_PrintLine(nDocID,0,Kraeuterliste_7);
+	Doc_PrintLine(nDocID,0,Kraeuterliste_8);
+	Doc_PrintLine(nDocID,0,Kraeuterliste_9);
+	Doc_PrintLine(nDocID,0,Kraeuterliste_10);
+	Doc_PrintLine(nDocID,0,Kraeuterliste_11);
+	Doc_PrintLine(nDocID,0,Kraeuterliste_12);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Anmerkung: Lass dir doch von einem Lehrlings - Anwärter die Pflanzen bringen, dann weißt du ob er was taugt. ");
+	Doc_PrintLines(nDocID,0,Kraeuterliste_13);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Gruß, Zuris");
+	Doc_PrintLine(nDocID,0,Kraeuterliste_14);
 	Doc_SetMargins(nDocID,-1,200,50,50,50,1);
 	Doc_Show(nDocID);
 };
@@ -242,6 +269,15 @@ instance ItWr_ManaRezept(C_Item)
 };
 
 
+const string ManaRezept_1 = "Magische Tränke";
+const string ManaRezept_2 = "Zur Herstellung von Tränken der magischen Kraft, benötigt der kundige Alchemist:";
+const string ManaRezept_3 = "Feuernessel";
+const string ManaRezept_4 = "Feuerkraut";
+const string ManaRezept_5 = "Feuerwurzel";
+const string ManaRezept_6 = "Dazu braucht er jeweils eine Pflanze ";
+const string ManaRezept_7 = "Feldknöterich";
+const string ManaRezept_8 = "Meister Neoras ";
+
 func void Use_ManaRezept()
 {
 	var int nDocID;
@@ -251,17 +287,17 @@ func void Use_ManaRezept()
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Magische Tränke");
+	Doc_PrintLine(nDocID,0,ManaRezept_1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Zur Herstellung von Tränken der magischen Kraft, benötigt der kundige Alchemist:");
+	Doc_PrintLines(nDocID,0,ManaRezept_2);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Feuernessel");
-	Doc_PrintLine(nDocID,0,"Feuerkraut");
-	Doc_PrintLine(nDocID,0,"Feuerwurzel");
-	Doc_PrintLines(nDocID,0,"Dazu braucht er jeweils eine Pflanze ");
-	Doc_PrintLine(nDocID,0,"Feldknöterich");
+	Doc_PrintLine(nDocID,0,ManaRezept_3);
+	Doc_PrintLine(nDocID,0,ManaRezept_4);
+	Doc_PrintLine(nDocID,0,ManaRezept_5);
+	Doc_PrintLines(nDocID,0,ManaRezept_6);
+	Doc_PrintLine(nDocID,0,ManaRezept_7);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Meister Neoras ");
+	Doc_PrintLine(nDocID,0,ManaRezept_8);
 	Doc_SetMargins(nDocID,-1,200,50,50,50,1);
 	Doc_Show(nDocID);
 };
@@ -283,6 +319,14 @@ instance ItWr_Passierschein(C_Item)
 };
 
 
+const string Passierschein_1 = " 	Passierschein";
+const string Passierschein_2 = "			Khorinis	";
+const string Passierschein_3 = "		Diese Urkunde berechtigt seinen";
+const string Passierschein_4 = "		Besitzer, sich auf unbestimmte Zeit in den";
+const string Passierschein_5 = "		unteren Vierteln von Khorinis aufzuhalten.";
+const string Passierschein_6 = "			Larius";
+const string Passierschein_7 = "			königlicher Statthalter";
+
 func void UsePassierschein()
 {
 	var int nDocID;
@@ -292,20 +336,20 @@ func void UsePassierschein()
 	Doc_SetFont(nDocID,-1,FONT_BookHeadline);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0," 	Passierschein");
-	Doc_PrintLine(nDocID,0,"			Khorinis	");
+	Doc_PrintLine(nDocID,0,Passierschein_1);
+	Doc_PrintLine(nDocID,0,Passierschein_2);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_SetFont(nDocID,0,FONT_Book);
-	Doc_PrintLine(nDocID,0,"		Diese Urkunde berechtigt seinen");
-	Doc_PrintLine(nDocID,0,"		Besitzer, sich auf unbestimmte Zeit in den");
-	Doc_PrintLine(nDocID,0,"		unteren Vierteln von Khorinis aufzuhalten.");
+	Doc_PrintLine(nDocID,0,Passierschein_3);
+	Doc_PrintLine(nDocID,0,Passierschein_4);
+	Doc_PrintLine(nDocID,0,Passierschein_5);
 	Doc_PrintLine(nDocID,0,"		");
 	Doc_PrintLine(nDocID,0,"		");
 	Doc_PrintLine(nDocID,0,"		");
-	Doc_PrintLine(nDocID,0,"			Larius");
+	Doc_PrintLine(nDocID,0,Passierschein_6);
 	Doc_PrintLine(nDocID,0,"		");
-	Doc_PrintLine(nDocID,0,"			königlicher Statthalter");
+	Doc_PrintLine(nDocID,0,Passierschein_7);
 	Doc_PrintLine(nDocID,0,"		");
 	Doc_PrintLine(nDocID,0,"		");
 	Doc_PrintLine(nDocID,0,"		");
@@ -407,6 +451,11 @@ instance ItWr_HalvorMessage(C_Item)
 };
 
 
+const string HalvorMessage_1 = "	Haltet euren Hintern unten Jungs! ";
+const string HalvorMessage_2 = "	Die Miliz ist aufmerksam geworden.";
+const string HalvorMessage_3 = "	Keine Überfälle mehr, bis ich mich wieder melde!";
+const string HalvorMessage_4 = "												   Halvor";
+
 func void UseHalvorMessage()
 {
 	var int nDocID;
@@ -421,11 +470,11 @@ func void UseHalvorMessage()
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"	Haltet euren Hintern unten Jungs! ");
-	Doc_PrintLine(nDocID,0,"	Die Miliz ist aufmerksam geworden.");
-	Doc_PrintLine(nDocID,0,"	Keine Überfälle mehr, bis ich mich wieder melde!");
+	Doc_PrintLine(nDocID,0,HalvorMessage_1);
+	Doc_PrintLine(nDocID,0,HalvorMessage_2);
+	Doc_PrintLine(nDocID,0,HalvorMessage_3);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"												   Halvor");
+	Doc_PrintLine(nDocID,0,HalvorMessage_4);
 	Doc_Show(nDocID);
 };
 
@@ -483,6 +532,13 @@ instance ItWr_VatrasMessage(C_Item)
 };
 
 
+const string VatrasMessage_1 = "Werter Isgaroth,";
+const string VatrasMessage_2 = "Ich spüre mehr und mehr die Anwesenheit einer anderen Macht.";
+const string VatrasMessage_3 = "Eine Macht, die uns nicht unbekannt ist. Mag es sein, das Diener Beliars nahe sind?";
+const string VatrasMessage_4 = "Möglich das ich irre, aber ich denke es wäre angebracht, das Vater Pyrokar sich der Angelegenheit annimmt. ";
+const string VatrasMessage_5 = "Mögen unsere Gebete erhört werden.";
+const string VatrasMessage_6 = "Vatras";
+
 func void UseVatrasMessage()
 {
 	var int nDocID;
@@ -492,14 +548,14 @@ func void UseVatrasMessage()
 	Doc_SetPage(nDocID,0,"letters.TGA",0);
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
-	Doc_PrintLine(nDocID,0,"Werter Isgaroth,");
-	Doc_PrintLines(nDocID,0,"Ich spüre mehr und mehr die Anwesenheit einer anderen Macht.");
-	Doc_PrintLines(nDocID,0,"Eine Macht, die uns nicht unbekannt ist. Mag es sein, das Diener Beliars nahe sind?");
-	Doc_PrintLines(nDocID,0,"Möglich das ich irre, aber ich denke es wäre angebracht, das Vater Pyrokar sich der Angelegenheit annimmt. ");
+	Doc_PrintLine(nDocID,0,VatrasMessage_1);
+	Doc_PrintLines(nDocID,0,VatrasMessage_2);
+	Doc_PrintLines(nDocID,0,VatrasMessage_3);
+	Doc_PrintLines(nDocID,0,VatrasMessage_4);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Mögen unsere Gebete erhört werden.");
+	Doc_PrintLines(nDocID,0,VatrasMessage_5);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Vatras");
+	Doc_PrintLine(nDocID,0,VatrasMessage_6);
 	Doc_Show(nDocID);
 };
 
@@ -521,6 +577,13 @@ instance ItWr_VatrasMessage_Open(C_Item)
 };
 
 
+const string VatrasMessageOpen_1 = "Werter Isgaroth,";
+const string VatrasMessageOpen_2 = "Ich spüre mehr und mehr die Anwesenheit einer anderen Macht.";
+const string VatrasMessageOpen_3 = "Eine Macht, die uns nicht unbekannt ist. Mag es sein, das Diener Beliars nahe sind?";
+const string VatrasMessageOpen_4 = "Möglich das ich irre, aber ich denke es wäre angebracht, das Vater Pyrokar sich der Angelegenheit annimmt. ";
+const string VatrasMessageOpen_5 = "Mögen unsere Gebete erhört werden.";
+const string VatrasMessageOpen_6 = "Vatras";
+
 func void UseVatrasMessageOpen()
 {
 	var int nDocID;
@@ -529,14 +592,14 @@ func void UseVatrasMessageOpen()
 	Doc_SetPage(nDocID,0,"letters.TGA",0);
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
-	Doc_PrintLine(nDocID,0,"Werter Isgaroth,");
-	Doc_PrintLines(nDocID,0,"Ich spüre mehr und mehr die Anwesenheit einer anderen Macht.");
-	Doc_PrintLines(nDocID,0,"Eine Macht, die uns nicht unbekannt ist. Mag es sein, das Diener Beliars nahe sind?");
-	Doc_PrintLines(nDocID,0,"Möglich das ich irre, aber ich denke es wäre angebracht, das Vater Pyrokar sich der Angelegenheit annimmt. ");
+	Doc_PrintLine(nDocID,0,VatrasMessageOpen_1);
+	Doc_PrintLines(nDocID,0,VatrasMessageOpen_2);
+	Doc_PrintLines(nDocID,0,VatrasMessageOpen_3);
+	Doc_PrintLines(nDocID,0,VatrasMessageOpen_4);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Mögen unsere Gebete erhört werden.");
+	Doc_PrintLines(nDocID,0,VatrasMessageOpen_5);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Vatras");
+	Doc_PrintLine(nDocID,0,VatrasMessageOpen_6);
 	Doc_Show(nDocID);
 };
 
@@ -743,6 +806,15 @@ instance ItWr_Passage_MIS(C_Item)
 };
 
 
+const string Passage_1 = "Ehrenwerter Lord Hagen,";
+const string Passage_2 = "Wir beide wissen um die Lage, in der Ihr euch befindet. Ich schlage daher folgenden Handel vor: ";
+const string Passage_3 = "Ihr erteilt mir und allen meinen Männern Generalabsolution vor Innos und dem König. ";
+const string Passage_4 = "Im Gegenzug bieten wir unsere Dienste für die Verteidigung der Stadt und des umliegenden Landes an. ";
+const string Passage_5 = "Desweiteren werde ich dafür sorgen, daß meine Männer von den umliegenden Höfen fernbleiben - natürlich mit Ausnahme des Hofes von Onar, auf dem wir weiterhin stationiert bleiben werden.";
+const string Passage_6 = "Ich weiß, daß auf dem Schiff, mit dem Ihr zum Festland aubrechen werdet, noch Platz für mich und einige meiner Männer ist. Wenn Ihr in See stecht, will ich an Bord sein.";
+const string Passage_7 = "Ich ersuche Euch, trefft Eure Entscheidung mit aller Euch gegebenen Weisheit. ";
+const string Passage_8 = "gezeichnet   General Lee";
+
 func void UsePassage()
 {
 	var int nDocID;
@@ -752,16 +824,16 @@ func void UsePassage()
 	Doc_SetFont(nDocID,-1,FONT_Book);
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Ehrenwerter Lord Hagen,");
+	Doc_PrintLine(nDocID,0,Passage_1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Wir beide wissen um die Lage, in der Ihr euch befindet. Ich schlage daher folgenden Handel vor: ");
-	Doc_PrintLines(nDocID,0,"Ihr erteilt mir und allen meinen Männern Generalabsolution vor Innos und dem König. ");
-	Doc_PrintLines(nDocID,0,"Im Gegenzug bieten wir unsere Dienste für die Verteidigung der Stadt und des umliegenden Landes an. ");
-	Doc_PrintLines(nDocID,0,"Desweiteren werde ich dafür sorgen, daß meine Männer von den umliegenden Höfen fernbleiben - natürlich mit Ausnahme des Hofes von Onar, auf dem wir weiterhin stationiert bleiben werden.");
-	Doc_PrintLines(nDocID,0,"Ich weiß, daß auf dem Schiff, mit dem Ihr zum Festland aubrechen werdet, noch Platz für mich und einige meiner Männer ist. Wenn Ihr in See stecht, will ich an Bord sein.");
-	Doc_PrintLines(nDocID,0,"Ich ersuche Euch, trefft Eure Entscheidung mit aller Euch gegebenen Weisheit. ");
+	Doc_PrintLines(nDocID,0,Passage_2);
+	Doc_PrintLines(nDocID,0,Passage_3);
+	Doc_PrintLines(nDocID,0,Passage_4);
+	Doc_PrintLines(nDocID,0,Passage_5);
+	Doc_PrintLines(nDocID,0,Passage_6);
+	Doc_PrintLines(nDocID,0,Passage_7);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"gezeichnet   General Lee");
+	Doc_PrintLine(nDocID,0,Passage_8);
 	Doc_SetMargins(nDocID,-1,200,50,50,50,1);
 	Doc_Show(nDocID);
 };
@@ -783,6 +855,22 @@ instance ItWr_BanditLetter_MIS(C_Item)
 };
 
 
+const string BanditLetter_1 = "Haltet alle Männer auf, ";
+const string BanditLetter_2 = " die aus den Bergen kommen.";
+const string BanditLetter_3 = "Falls jemand den Pass entlangkommt, ";
+const string BanditLetter_4 = " ist es wahrscheinlich ein alter Mann.";
+const string BanditLetter_5 = "Lasst euch nicht von ihm täuschen - ";
+const string BanditLetter_6 = "	er ist ein gefählicher Hexer.	";
+const string BanditLetter_7 = "Behaltet den Kerl im Auge";
+const string BanditLetter_8 = "Kann gut sein, das der Typ den wir suchen, ";
+const string BanditLetter_9 = "	mit ihm Kontakt aufnimmt.	";
+const string BanditLetter_10 = "Mit diesem Brief schicke ich euch ";
+const string BanditLetter_11 = "	dreissig Goldstücke.	";
+const string BanditLetter_12 = "Nochmal dreissig bekommt derjenige, ";
+const string BanditLetter_13 = "	der den Mann tötet.	";
+const string BanditLetter_14 = "Bringt seinen Kopf zur alten Mine, beim Großbauer.";
+const string BanditLetter_15 = "D.";
+
 func void UseBanditLetter()
 {
 	var int nDocID;
@@ -793,24 +881,24 @@ func void UseBanditLetter()
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_SetFont(nDocID,0,FONT_Book);
-	Doc_PrintLine(nDocID,0,"Haltet alle Männer auf, ");
-	Doc_PrintLine(nDocID,0," die aus den Bergen kommen.");
-	Doc_PrintLine(nDocID,0,"Falls jemand den Pass entlangkommt, ");
-	Doc_PrintLine(nDocID,0," ist es wahrscheinlich ein alter Mann.");
-	Doc_PrintLine(nDocID,0,"Lasst euch nicht von ihm täuschen - ");
-	Doc_PrintLine(nDocID,0,"	er ist ein gefählicher Hexer.	");
-	Doc_PrintLine(nDocID,0,"Behaltet den Kerl im Auge");
+	Doc_PrintLine(nDocID,0,BanditLetter_1);
+	Doc_PrintLine(nDocID,0,BanditLetter_2);
+	Doc_PrintLine(nDocID,0,BanditLetter_3);
+	Doc_PrintLine(nDocID,0,BanditLetter_4);
+	Doc_PrintLine(nDocID,0,BanditLetter_5);
+	Doc_PrintLine(nDocID,0,BanditLetter_6);
+	Doc_PrintLine(nDocID,0,BanditLetter_7);
 	Doc_PrintLine(nDocID,0,"		");
-	Doc_PrintLine(nDocID,0,"Kann gut sein, das der Typ den wir suchen, ");
-	Doc_PrintLine(nDocID,0,"	mit ihm Kontakt aufnimmt.	");
-	Doc_PrintLine(nDocID,0,"Mit diesem Brief schicke ich euch ");
-	Doc_PrintLine(nDocID,0,"	dreissig Goldstücke.	");
-	Doc_PrintLine(nDocID,0,"Nochmal dreissig bekommt derjenige, ");
-	Doc_PrintLine(nDocID,0,"	der den Mann tötet.	");
+	Doc_PrintLine(nDocID,0,BanditLetter_8);
+	Doc_PrintLine(nDocID,0,BanditLetter_9);
+	Doc_PrintLine(nDocID,0,BanditLetter_10);
+	Doc_PrintLine(nDocID,0,BanditLetter_11);
+	Doc_PrintLine(nDocID,0,BanditLetter_12);
+	Doc_PrintLine(nDocID,0,BanditLetter_13);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Bringt seinen Kopf zur alten Mine, beim Großbauer.");
+	Doc_PrintLine(nDocID,0,BanditLetter_14);
 	Doc_PrintLine(nDocID,0,"		");
-	Doc_PrintLine(nDocID,0,"D.");
+	Doc_PrintLine(nDocID,0,BanditLetter_15);
 	Doc_PrintLine(nDocID,0,"		");
 	Doc_SetMargins(nDocID,-1,200,50,50,50,1);
 	Doc_Show(nDocID);
@@ -1115,6 +1203,14 @@ instance ItWr_Schuldenbuch(C_Item)
 };
 
 
+const string SchuldBuch_1 = "Geschäfte und Schulden";
+const string SchuldBuch_2 = "Ich Meister Thorben, Schreiner von Khorinis, schulde dem ehrenwerten Herrn Lehmar 200 Goldmünzen";
+const string SchuldBuch_3 = "             Thorben";
+const string SchuldBuch_4 = "Ich Coragon, Wirt in Khorinis, schulde dem ehrenwerten Herrn Lehmar 150 Goldmünzen";
+const string SchuldBuch_5 = "             Coragon";
+const string SchuldBuch_6 = "Ich, Hanna, Besitzerin des Hotels in Khorinis, schulde Herrn Lehmar 250 Goldmünzen.";
+const string SchuldBuch_7 = "               Hanna";
+
 func void UseSchuldBuch()
 {
 	var int nDocID;
@@ -1125,26 +1221,26 @@ func void UseSchuldBuch()
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
 	Doc_SetFont(nDocID,0,FONT_BookHeadline);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Geschäfte und Schulden");
+	Doc_PrintLines(nDocID,0,SchuldBuch_1);
 	Doc_SetFont(nDocID,0,FONT_Book);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Ich Meister Thorben, Schreiner von Khorinis, schulde dem ehrenwerten Herrn Lehmar 200 Goldmünzen");
+	Doc_PrintLines(nDocID,0,SchuldBuch_2);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"             Thorben");
+	Doc_PrintLine(nDocID,0,SchuldBuch_3);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Ich Coragon, Wirt in Khorinis, schulde dem ehrenwerten Herrn Lehmar 150 Goldmünzen");
+	Doc_PrintLines(nDocID,0,SchuldBuch_4);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"             Coragon");
+	Doc_PrintLine(nDocID,0,SchuldBuch_5);
 	Doc_PrintLine(nDocID,0,"");
 	Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 	Doc_SetFont(nDocID,1,FONT_Book);
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Ich, Hanna, Besitzerin des Hotels in Khorinis, schulde Herrn Lehmar 250 Goldmünzen.");
+	Doc_PrintLines(nDocID,1,SchuldBuch_6);
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLine(nDocID,1,"               Hanna");
+	Doc_PrintLine(nDocID,1,SchuldBuch_7);
 	Doc_PrintLines(nDocID,1,"");
 	Doc_Show(nDocID);
 };
