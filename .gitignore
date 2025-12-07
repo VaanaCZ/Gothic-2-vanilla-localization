@@ -3,6 +3,8 @@ Sound/
 Video/
 PRESETS/
 *.[dD][aA][tT]
+*.[bB][iI][nN]
+*.[cC][sS][lL]
 .dls
 .vscode/
 .DS_Store
