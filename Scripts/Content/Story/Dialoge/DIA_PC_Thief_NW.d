@@ -72,7 +72,6 @@ func void DIA_DiegoNW_NeedHelp_Info()
 {
 	AI_Output(self,other,"DIA_DiegoNW_NeedHelp_11_00");	//Gut, dass du kommst. Du musst mir helfen.
 	Info_ClearChoices(DIA_DiegoNW_NeedHelp);
-	Info_AddChoice(DIA_DiegoNW_NeedHelp,"Wer bist du?",DIA_DiegoNW_NeedHelp_WhoAreYou);
 	Info_AddChoice(DIA_DiegoNW_NeedHelp,"Was sind das für Klamotten?",DIA_DiegoNW_NeedHelp_Clothes);
 	Info_AddChoice(DIA_DiegoNW_NeedHelp,"Was machst du hier?",DIA_DiegoNW_NeedHelp_Plan);
 	Info_AddChoice(DIA_DiegoNW_NeedHelp,"Worum geht´s?",DIA_DiegoNW_NeedHelp_Problem);

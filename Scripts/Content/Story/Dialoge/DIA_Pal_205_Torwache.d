@@ -137,8 +137,8 @@ func void DIA_PAL_205_Torwache_Attack_Info()
 {
 	other.aivar[AIV_LastDistToWP] = 0;
 	self.aivar[AIV_Guardpassage_Status] = GP_NONE;
-	B_Attack(self,other,AR_KILL,0);
 	AI_StopProcessInfos(self);
+	B_Attack(self,other,AR_GuardStopsIntruder,0);
 };
 
 

@@ -449,6 +449,7 @@ func void DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG()
 		AI_Output(self,other,"DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG_07_03");	//Na warte, diese Schweine werden mich noch kennen lernen.
 	};
 	AI_StopProcessInfos(self);
+	other.aivar[AIV_INVINCIBLE] = FALSE;
 	if((Npc_IsDead(Ferros) == FALSE) && (Npc_GetDistToNpc(self,Ferros) <= 2000))
 	{
 		B_Attack(self,Ferros,AR_NONE,1);

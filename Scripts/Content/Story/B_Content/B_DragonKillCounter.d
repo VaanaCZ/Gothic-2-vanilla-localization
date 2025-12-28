@@ -1,9 +1,41 @@
 
+var int SwapDragnIsDead;
+var int RckDragnIsDead;
+var int FreDragnIsDead;
+var int IcDragnIsDead;
+
 func int B_DragonKillCounter(var C_Npc current_dragon)
 {
+	var C_Npc SwapDragn;
+	var C_Npc RckDragn;
+	var C_Npc FreDragn;
+	var C_Npc IcDragn;
 	if(current_dragon.guild == GIL_DRAGON)
 	{
-		MIS_KilledDragons = MIS_KilledDragons + 1;
+		SwapDragn = Hlp_GetNpc(Dragon_Swamp);
+		RckDragn = Hlp_GetNpc(Dragon_Rock);
+		FreDragn = Hlp_GetNpc(Dragon_Fire);
+		IcDragn = Hlp_GetNpc(Dragon_Ice);
+		if((Hlp_GetInstanceID(current_dragon) == Hlp_GetInstanceID(SwapDragn)) && (SwapDragnIsDead == FALSE))
+		{
+			MIS_KilledDragons = MIS_KilledDragons + 1;
+			SwapDragnIsDead = TRUE;
+		};
+		if((Hlp_GetInstanceID(current_dragon) == Hlp_GetInstanceID(RckDragn)) && (RckDragnIsDead == FALSE))
+		{
+			MIS_KilledDragons = MIS_KilledDragons + 1;
+			RckDragnIsDead = TRUE;
+		};
+		if((Hlp_GetInstanceID(current_dragon) == Hlp_GetInstanceID(FreDragn)) && (FreDragnIsDead == FALSE))
+		{
+			MIS_KilledDragons = MIS_KilledDragons + 1;
+			FreDragnIsDead = TRUE;
+		};
+		if((Hlp_GetInstanceID(current_dragon) == Hlp_GetInstanceID(IcDragn)) && (IcDragnIsDead == FALSE))
+		{
+			MIS_KilledDragons = MIS_KilledDragons + 1;
+			IcDragnIsDead = TRUE;
+		};
 	};
 	if(MIS_KilledDragons == 4)
 	{

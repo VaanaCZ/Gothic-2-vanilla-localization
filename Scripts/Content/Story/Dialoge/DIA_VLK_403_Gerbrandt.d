@@ -26,7 +26,7 @@ func void DIA_Gerbrandt_EXIT_Info()
 		{
 			B_StartOtherRoutine(DiegoNW,"GERBRANDT");
 		};
-		B_StartOtherRoutine(Gerbrandt,"NEWLIFE");
+		Npc_ExchangeRoutine(self,"NEWLIFE");
 		B_StartOtherRoutine(GerbrandtsFrau,"NEWLIFE");
 		DIEGO_COMING = 2;
 	};
@@ -166,7 +166,10 @@ func void B_GErbrandt_PissOff()
 	AI_Output(self,other,"B_Gerbrandt_PissOff_10_00");	//Was soll das werden, willst du dich über mich lustig machen?
 	AI_Output(self,other,"B_Gerbrandt_PissOff_10_01");	//Du und dein Freund Diego haben schon genug Unheil angerichtet.
 	AI_Output(self,other,"B_Gerbrandt_PissOff_10_02");	//Lass mich in Ruhe!
-	AI_StopProcessInfos(self);
+	if(DIEGO_COMING != TRUE)
+	{
+		AI_StopProcessInfos(self);
+	};
 };
 
 

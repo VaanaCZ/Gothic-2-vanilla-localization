@@ -428,7 +428,7 @@ func void DIA_Onar_CollectGold_Info()
 		if(other.exp > (Onar_SOLD_XP + 200))
 		{
 			AI_Output(self,other,"DIA_Onar_CollectGold_14_13");	//(zerknirscht) Na gut. Hier ist dein Sold.
-			B_GiveInvItems(other,self,ItMi_Gold,SOLD);
+			B_GiveInvItems(self,other,ItMi_Gold,SOLD);
 			B_Say_Gold(self,other,SOLD);
 		}
 		else

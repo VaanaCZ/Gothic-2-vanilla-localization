@@ -138,7 +138,7 @@ instance DIA_Mortis_CanTeach(C_Info)
 	nr = 5;
 	condition = DIA_Mortis_CanTeach_Condition;
 	information = DIA_Mortis_CanTeach_Info;
-	permanent = FALSE;
+	permanent = TRUE;
 	description = "Ich will stärker werden.";
 };
 
