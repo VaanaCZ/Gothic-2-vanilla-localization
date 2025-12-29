@@ -26,7 +26,6 @@
 "Scripts/Content/Story/Dialoge/DIA_PAL_262_Wache.d:71","Unser Kommandant Garond und seine beiden Berater, die Paladine Oric und Parcival.","Наш командующий Гаронд и два его советника, паладины Орик и Парсиваль.","","False","DIA_Wache_PERM_10_01","",""
 "Scripts/Content/Story/Dialoge/DIA_PAL_262_Wache.d:72","Geh einfach rein. Tagsüber halten sie sich im Thronsaal im Erdgeschoss auf.","Днем ты можешь застать их в тронном зале на первом этаже.","","False","DIA_Wache_PERM_10_02","",""
 "Scripts/Content/Story/Dialoge/DIA_PC_Mage_NW.d:274","Ich werde sehen, was ich tun kann.","Я посмотрю, что можно сделать.","","False","DIA_MiltenNW_KAP3_NovizenChase_03_04","",""
-"Scripts/Content/Story/Dialoge/DIA_PC_Mage_OW.d:71","Klar kenne ich die Jungs noch.","Как здесь обстоят дела?","","False","DIA_MiltenOW_Hello_NO.DIA_MiltenOW_Hello.DIA_MiltenOW_Hello_Friends","AI_AddChoice",""
 "Scripts/Content/Story/Dialoge/DIA_PC_Thief_DI.d:262","Schlösser knacken","Использование отмычек","","False","DIA_PC_Thief_DI_Training_Talente_PICKLOCK.DIA_PC_Thief_DI_Training_Talente.DIA_PC_Thief_DI_Training_Talente_PICKLOCK","AI_AddChoice",""
 "Scripts/Content/Story/Dialoge/DIA_PC_Thief_NW.d:75","Wer bist du?","Кто ты?","","False","DIA_DiegoNW_NeedHelp_Info.DIA_DiegoNW_NeedHelp.DIA_DiegoNW_NeedHelp_WhoAreYou","AI_AddChoice",""
 "Scripts/Content/Story/Dialoge/DIA_PC_Thief_NW.d:147","Ich habe im Minental einen kleinen Schatz versteckt.","Я спрятал небольшое состояние в Долине Рудников.","","False","DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_11_01","",""

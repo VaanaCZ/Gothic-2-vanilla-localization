@@ -26,7 +26,6 @@
 "Scripts/Content/Story/Dialoge/DIA_PAL_262_Wache.d:71","Unser Kommandant Garond und seine beiden Berater, die Paladine Oric und Parcival.","Unser Kommandant Garond und seine beiden Berater, die Paladine Oric und Parcival.","","","DIA_Wache_PERM_10_01","",""
 "Scripts/Content/Story/Dialoge/DIA_PAL_262_Wache.d:72","Geh einfach rein. Tagsüber halten sie sich im Thronsaal im Erdgeschoss auf.","Geh einfach rein. Tagsüber halten sie sich im Thronsaal im Erdgeschoss auf.","","","DIA_Wache_PERM_10_02","",""
 "Scripts/Content/Story/Dialoge/DIA_PC_Mage_NW.d:274","Ich werde sehen, was ich tun kann.","Ich werde sehen, was ich tun kann.","","","DIA_MiltenNW_KAP3_NovizenChase_03_04","",""
-"Scripts/Content/Story/Dialoge/DIA_PC_Mage_OW.d:71","Klar kenne ich die Jungs noch.","Klar kenne ich die Jungs noch.","","","DIA_MiltenOW_Hello_NO.DIA_MiltenOW_Hello.DIA_MiltenOW_Hello_Friends","AI_AddChoice",""
 "Scripts/Content/Story/Dialoge/DIA_PC_Thief_DI.d:262","Schlösser knacken","Schlösser knacken","","","DIA_PC_Thief_DI_Training_Talente_PICKLOCK.DIA_PC_Thief_DI_Training_Talente.DIA_PC_Thief_DI_Training_Talente_PICKLOCK","AI_AddChoice",""
 "Scripts/Content/Story/Dialoge/DIA_PC_Thief_NW.d:75","Wer bist du?","Wer bist du?","","","DIA_DiegoNW_NeedHelp_Info.DIA_DiegoNW_NeedHelp.DIA_DiegoNW_NeedHelp_WhoAreYou","AI_AddChoice",""
 "Scripts/Content/Story/Dialoge/DIA_PC_Thief_NW.d:147","Ich habe im Minental einen kleinen Schatz versteckt.","Ich habe im Minental einen kleinen Schatz versteckt.","","","DIA_DiegoNW_NeedHelp_Problem_WillHelpYou_11_01","",""
