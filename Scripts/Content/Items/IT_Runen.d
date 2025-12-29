@@ -644,7 +644,7 @@ instance ItRu_SumSkel(C_Item)
 	visual = "ItRu_SumSkel.3DS";
 	material = MAT_STONE;
 	spell = SPL_SummonSkeleton;
-	mag_circle = 2;
+	mag_circle = 3;
 	description = NAME_SPL_SummonSkeleton;
 	text[0] = NAME_Mag_Circle;
 	count[0] = mag_circle;

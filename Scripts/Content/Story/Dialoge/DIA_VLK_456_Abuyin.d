@@ -223,19 +223,19 @@ func void DIA_Abuyin_Mischung_Info()
 	Info_AddChoice(DIA_Abuyin_Mischung,Dialog_Back,DIA_Abuyin_Mischung_BACK);
 	if(Npc_HasItems(other,ItMi_SumpfTabak) >= 1)
 	{
-		Info_AddChoice(DIA_Abuyin_Mischung,ItMi_SumpfTabak.name,DIA_Abuyin_Mischung_Sumpf);
+		Info_AddChoice(DIA_Abuyin_Mischung,PRINT_KRAUT,DIA_Abuyin_Mischung_Sumpf);
 	};
 	if(Npc_HasItems(other,ItMi_PilzTabak) >= 1)
 	{
-		Info_AddChoice(DIA_Abuyin_Mischung,ItMi_PilzTabak.name,DIA_Abuyin_Mischung_Pilz);
+		Info_AddChoice(DIA_Abuyin_Mischung,PRINT_PILZ,DIA_Abuyin_Mischung_Pilz);
 	};
 	if(Npc_HasItems(other,ItMi_DoppelTabak) >= 1)
 	{
-		Info_AddChoice(DIA_Abuyin_Mischung,ItMi_DoppelTabak.name,DIA_Abuyin_Mischung_Doppel);
+		Info_AddChoice(DIA_Abuyin_Mischung,PRINT_DOPPEL,DIA_Abuyin_Mischung_Doppel);
 	};
 	if(Npc_HasItems(other,ItMi_Honigtabak) >= 1)
 	{
-		Info_AddChoice(DIA_Abuyin_Mischung,ItMi_Honigtabak.name,DIA_Abuyin_Mischung_Super);
+		Info_AddChoice(DIA_Abuyin_Mischung,PRINT_HONIG,DIA_Abuyin_Mischung_Super);
 	};
 };
 

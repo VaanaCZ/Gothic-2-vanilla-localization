@@ -264,7 +264,6 @@ func void Use_Bookstand_Kreise_03_S1()
 	her = Hlp_GetNpc(PC_Hero);
 	if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	{
-		var int nDocID;
 		nDocID = Doc_Create();
 		Doc_SetPages(nDocID, 2);
 		Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);

@@ -362,7 +362,7 @@ instance ItMw_2h_Bau_Axe(C_Item)
 	count[2] = damageTotal;
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
-	text[4] = NAME_OneHanded;
+	text[4] = NAME_TwoHanded;
 	text[5] = NAME_Value;
 	count[5] = value;
 };
