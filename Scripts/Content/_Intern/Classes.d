@@ -93,8 +93,8 @@ class C_Item
 	var int range;
 	var int mag_circle;
 	var string description;
-	var string text[6];
-	var int count[6];
+	var string text[ITM_TEXT_MAX];
+	var int count[ITM_TEXT_MAX];
 	var int inv_zbias;
 	var int inv_rotx;
 	var int inv_roty;

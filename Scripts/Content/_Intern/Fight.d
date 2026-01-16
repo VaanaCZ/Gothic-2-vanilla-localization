@@ -21,6 +21,6 @@ const int MAX_FIGHTAI = 50;
 
 class C_FIGHTAI
 {
-	var int move[6];
+	var int move[MAX_MOVE];
 };
 
