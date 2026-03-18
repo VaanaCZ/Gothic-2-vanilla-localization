@@ -564,7 +564,7 @@ const int POTION_MegaDrink = 11;
 const int CHARGE_Innoseye = 12;
 const int MAX_POTION = 13;
 
-var int player_talent_alchemy[13];
+var int player_talent_alchemy[MAX_POTION];
 const int WEAPON_Common = 0;
 const int WEAPON_1H_Special_01 = 1;
 const int WEAPON_2H_Special_01 = 2;
@@ -576,7 +576,7 @@ const int WEAPON_1H_Special_04 = 7;
 const int WEAPON_2H_Special_04 = 8;
 const int MAX_WEAPONS = 9;
 
-var int player_talent_smith[9];
+var int player_talent_smith[MAX_WEAPONS];
 const int TROPHY_Teeth = 0;
 const int TROPHY_Claws = 1;
 const int TROPHY_Fur = 2;
@@ -592,7 +592,7 @@ const int TROPHY_DragonScale = 11;
 const int TROPHY_DragonBlood = 12;
 const int MAX_TROPHIES = 13;
 
-var int player_talent_takeanimaltrophy[13];
+var int player_talent_takeanimaltrophy[MAX_TROPHIES];
 
 const string TEXT_FONT_20 = "Font_old_20_white.tga";
 const string TEXT_FONT_10 = "Font_old_10_white.tga";

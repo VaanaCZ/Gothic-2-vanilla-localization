@@ -163,7 +163,7 @@ const string TXT_GUILDS[GIL_MAX] =
 	"Troll",
 	"Sumpfhai",
 	"Drache",
-	"Drache",
+	"Molerat",
 	"M",
 	"N",
 	"O",
