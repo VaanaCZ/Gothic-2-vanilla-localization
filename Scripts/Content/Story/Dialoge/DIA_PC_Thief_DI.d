@@ -169,7 +169,7 @@ func void DIA_PC_Thief_DI_Training_Talente_Info()
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,Dialog_Back,DIA_PC_Thief_DI_Training_Talente_BACK);
 	if(Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) == FALSE)
 	{
-		Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,"Schlösser knacken",DIA_PC_Thief_DI_Training_Talente_PICKLOCK);
+		Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,TXT_TALENTS[NPC_TALENT_PICKLOCK],DIA_PC_Thief_DI_Training_Talente_PICKLOCK);
 	};
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,B_BuildLearnString(PRINT_LearnDEX1,B_GetLearnCostAttribute(other,ATR_DEXTERITY)),DIA_PC_Thief_DI_Training_DEX_1);
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,B_BuildLearnString(PRINT_LearnDEX5,B_GetLearnCostAttribute(other,ATR_DEXTERITY) * 5),DIA_PC_Thief_DI_Training_DEX_5);
@@ -187,7 +187,7 @@ func void DIA_PC_Thief_DI_Training_DEX_1()
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,Dialog_Back,DIA_PC_Thief_DI_Training_Talente_BACK);
 	if(Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) == FALSE)
 	{
-		Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,"Schlösser knacken",DIA_PC_Thief_DI_Training_Talente_PICKLOCK);
+		Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,TXT_TALENTS[NPC_TALENT_PICKLOCK],DIA_PC_Thief_DI_Training_Talente_PICKLOCK);
 	};
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,B_BuildLearnString(PRINT_LearnDEX1,B_GetLearnCostAttribute(other,ATR_DEXTERITY)),DIA_PC_Thief_DI_Training_DEX_1);
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,B_BuildLearnString(PRINT_LearnDEX5,B_GetLearnCostAttribute(other,ATR_DEXTERITY) * 5),DIA_PC_Thief_DI_Training_DEX_5);
@@ -205,7 +205,7 @@ func void DIA_PC_Thief_DI_Training_DEX_5()
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,Dialog_Back,DIA_PC_Thief_DI_Training_Talente_BACK);
 	if(Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) == FALSE)
 	{
-		Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,"Schlösser knacken",DIA_PC_Thief_DI_Training_Talente_PICKLOCK);
+		Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,TXT_TALENTS[NPC_TALENT_PICKLOCK],DIA_PC_Thief_DI_Training_Talente_PICKLOCK);
 	};
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,B_BuildLearnString(PRINT_LearnDEX1,B_GetLearnCostAttribute(other,ATR_DEXTERITY)),DIA_PC_Thief_DI_Training_DEX_1);
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,B_BuildLearnString(PRINT_LearnDEX5,B_GetLearnCostAttribute(other,ATR_DEXTERITY) * 5),DIA_PC_Thief_DI_Training_DEX_5);
@@ -223,7 +223,7 @@ func void DIA_PC_Thief_DI_Training_Combat_BOW_1()
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,Dialog_Back,DIA_PC_Thief_DI_Training_Talente_BACK);
 	if(Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) == FALSE)
 	{
-		Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,"Schlösser knacken",DIA_PC_Thief_DI_Training_Talente_PICKLOCK);
+		Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,TXT_TALENTS[NPC_TALENT_PICKLOCK],DIA_PC_Thief_DI_Training_Talente_PICKLOCK);
 	};
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,B_BuildLearnString(PRINT_LearnDEX1,B_GetLearnCostAttribute(other,ATR_DEXTERITY)),DIA_PC_Thief_DI_Training_DEX_1);
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,B_BuildLearnString(PRINT_LearnDEX5,B_GetLearnCostAttribute(other,ATR_DEXTERITY) * 5),DIA_PC_Thief_DI_Training_DEX_5);
@@ -241,7 +241,7 @@ func void DIA_PC_Thief_DI_Training_Combat_BOW_5()
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,Dialog_Back,DIA_PC_Thief_DI_Training_Talente_BACK);
 	if(Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) == FALSE)
 	{
-		Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,"Schlösser knacken",DIA_PC_Thief_DI_Training_Talente_PICKLOCK);
+		Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,TXT_TALENTS[NPC_TALENT_PICKLOCK],DIA_PC_Thief_DI_Training_Talente_PICKLOCK);
 	};
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,B_BuildLearnString(PRINT_LearnDEX1,B_GetLearnCostAttribute(other,ATR_DEXTERITY)),DIA_PC_Thief_DI_Training_DEX_1);
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,B_BuildLearnString(PRINT_LearnDEX5,B_GetLearnCostAttribute(other,ATR_DEXTERITY) * 5),DIA_PC_Thief_DI_Training_DEX_5);
@@ -259,7 +259,7 @@ func void DIA_PC_Thief_DI_Training_Talente_PICKLOCK()
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,Dialog_Back,DIA_PC_Thief_DI_Training_Talente_BACK);
 	if(Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) == FALSE)
 	{
-		Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,"Schlösser knacken",DIA_PC_Thief_DI_Training_Talente_PICKLOCK);
+		Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,TXT_TALENTS[NPC_TALENT_PICKLOCK],DIA_PC_Thief_DI_Training_Talente_PICKLOCK);
 	};
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,B_BuildLearnString(PRINT_LearnDEX1,B_GetLearnCostAttribute(other,ATR_DEXTERITY)),DIA_PC_Thief_DI_Training_DEX_1);
 	Info_AddChoice(DIA_PC_Thief_DI_Training_Talente,B_BuildLearnString(PRINT_LearnDEX5,B_GetLearnCostAttribute(other,ATR_DEXTERITY) * 5),DIA_PC_Thief_DI_Training_DEX_5);
